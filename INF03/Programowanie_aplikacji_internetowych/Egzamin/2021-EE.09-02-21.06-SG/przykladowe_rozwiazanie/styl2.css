@@ -1,0 +1,61 @@
+body
+{
+    font-family: Garamond;
+}
+
+h2
+{
+    text-align: right;
+}
+
+h5
+{
+    background-color:#00600f;
+    color:white;
+    font-size: 200%;
+    text-align: center;
+    margin: 0;
+}
+
+.gen
+{
+    margin: 10px;
+    border: 1px solid #00600f;
+    width: 300px;
+    float: left;
+    height: 350px;
+}
+
+header{
+    display: flex;
+}
+.banerL
+{
+    background-color: #00600f;
+    color: white;
+    text-align: center;
+    width: 75%;
+    height: 90px;
+    /* float: left; */
+}
+.banerP
+{
+    background-color: #00600f;
+    color: white;
+    width: 25%;
+    height: 90px;
+    /* float: left; */
+}
+
+main
+{
+    background-color:  #C8E6C9;
+    height: 600px;
+    /* clear: both; */
+    overflow-y: scroll;
+}
+footer
+{
+    background-color: #00600f;
+    color: white;
+}
