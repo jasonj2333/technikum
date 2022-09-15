@@ -1,0 +1,22 @@
+<?php 
+    include './includes/autoloader.inc.php'
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php 
+               
+        $person = new Person("Zosia", "brown", 19);
+        echo $person->getName();
+        echo '<br>';
+        $house = new House("Szkolna", 1);
+        echo $house->getAddress();
+    ?>
+</body>
+</html>
