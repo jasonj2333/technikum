@@ -1,6 +1,6 @@
 -- https://dbase.jasonek.pl/northwind/
 
--- Zapytania zapisz w pliku kwerendy.txt - plik prześlij na maila jerzy.jasonek@gmail.com
+-- Zapytania zapisz w pliku kwerendy.sql - plik prześlij na maila jerzy.jasonek@gmail.com
 
 
 -- 1. Pokaż wszystkie kategorie produktów
