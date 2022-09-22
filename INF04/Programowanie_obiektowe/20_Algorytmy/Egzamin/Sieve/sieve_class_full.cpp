@@ -7,7 +7,7 @@ private:
     static const int maxNumber = 120;
     bool numbers[maxNumber+1] {};
     int intNumbers[maxNumber+1] {};
-    bool checkPrimary(int);
+    bool checkPrime(int);
     bool checkRange(int);
     void fillIntNumbers();
     void deleteNumbers();
@@ -17,23 +17,23 @@ public:
         deleteNumbers();
         deleteIntNumbers();
     }
-    void outputPrimaryNumbers();
+    void outputPrimeNumbers();
     void decompositionIntoPrimeFactors(int);
-    void isPrimary(int);
+    void isPrime(int);
 };
 
-void Sieve::outputPrimaryNumbers(){
+void Sieve::outputPrimeNumbers(){
     cout << "Liczby pierwsze z przedziału od 2 do " << maxNumber << endl;
-    for (int i = 2; i < maxNumber; i++)
+    for (int i = 2; i < maxNumber+1; i++)
     {
-        if(checkPrimary(i)) cout << i << " ";
+        if(checkPrime(i)) cout << i << " ";
     }
     cout << endl;
     
 }
 
 void Sieve::deleteNumbers(){
-    for (int i = 2; i*i < maxNumber; i++)
+    for (int i = 2; i*i < maxNumber+1; i++)
     {
         if(!numbers[i])	
             for (int j = i*i ; j<=maxNumber; j+=i) numbers[j] = 1;
@@ -43,15 +43,16 @@ void Sieve::deleteNumbers(){
 
 void Sieve::deleteIntNumbers(){
     fillIntNumbers();
-    for (int i = 2; i*i < maxNumber; i++)
+    for (int i = 2; i*i < maxNumber+1; i++)
     {
-        for (int j = i*i ; j<=maxNumber; j+=i) intNumbers[j] = i;
+        for (int j = i*i ; j<=maxNumber; j+=i) 
+            if(intNumbers[j] > i) intNumbers[j] = i;
     }
     
 }
 
 void Sieve::fillIntNumbers(){
-    for (int i = 2; i < maxNumber; i++)
+    for (int i = 2; i < maxNumber+1; i++)
     {
         intNumbers[i] = i;
     }
@@ -66,22 +67,28 @@ bool Sieve::checkRange(int number){
     return true; 
 }
 
-bool Sieve::checkPrimary(int number){
+bool Sieve::checkPrime(int number){
     if(numbers[number]) return false;
 
     return true; 
 }
 
-void Sieve::isPrimary(int number){
+void Sieve::isPrime(int number){
     if(checkRange(number))
-        if(checkPrimary(number)) {
+        if(checkPrime(number)) {
             cout << "Liczba " << number << " jest liczbą pierwszą" << endl;
         } else {
             cout << "Liczba " << number << " nie jest liczbą pierwszą" << endl;
         }
     else cout << "Liczba spoza zakresu od 2 do " << maxNumber  << endl;   
 }
-
+// ******************************************************
+//  nazwa funkcji: decompositionIntoPrimeFactors
+//  argumenty: number - liczba która ma być rozłożona na czynniki pierwsze
+//  typ zwracany: void, ciąg tektowy zawierający czynniki pierwsze lub informacje, że liczba jest spoza zakresu - komunikat na ekranie monitora
+//  informacje: metoda korzysta z wersji sita Erastotenesa w której wykreślanie wielokrotności liczb pierwszych następuję poprzez zastąpienie tych wielokrotności liczbą pierwszą, której wielokrotności wykreślamy
+//  autor: 111222333
+// *****************************************************
 void Sieve::decompositionIntoPrimeFactors(int number){
     if(checkRange(number)){
         cout << "Rozkład na czynniki pierwsze liczby: " << number << endl;
@@ -99,8 +106,8 @@ void Sieve::decompositionIntoPrimeFactors(int number){
 int main()
 {
     Sieve s;
-    s.outputPrimaryNumbers();
-    s.isPrimary(113);
+    s.outputPrimeNumbers();
+    s.isPrime(113);
     s.decompositionIntoPrimeFactors(50);
     return 0;
 }
