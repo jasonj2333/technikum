@@ -1,0 +1,56 @@
+Za pomocą znaczników języka HTML zaprojektuj stronę internetową. Strona nie powinna się różnić wyglądem od strony widocznej na rysunku.
+
+Na stronie należy zastosować standard kodowania polskich znaków (UTF-8). 
+Tytuł strony: Nowe technologie powinien być widocznych w karcie przeglądarki.
+Do sekcji head dodaj znaczniki meta ze słowami kluczowymi i krótkim opisem strony.
+Dołącz do strony arkusz stylów css - style.css.
+
+Strona powinna być podzielona na bloki za pomocą znacznika <div> - nagłówek, dwa bloki opisu, stopka.
+
+Tekst bloku nagłówka - Rewolucja przemysłowa 4.0 powinien być umieszczony w nagłówku pierwszego stopnia. Tekst Co się kryje ... nagłówku trzeciego stopnia, a tekst Autor.. w akapicie.
+W bloku nagłówkach umieść obrazek etapy-rewolucji-przemyslowej.jpg z tekstem alternatywnym "Etapy rewolucji przemysłowej"
+
+Teksty wyróżnione w pierwszym bloku opisu powinny zostać umieszczone w nagłówku 2 stopnia, a pozostałe teksty w akapicie, zwróć uwagę na pogrubione teksty w akapitach.
+
+Tekst zamieszczony w drugim bloku opisu powinien znaleźć się w całości w jednym akapicie.
+
+Teksty w bloku stopka powinny być zapisane w oddzielnych akapitach.
+
+-----------------------------------------------------------------------------------
+Teksty na stronę:
+
+
+Rewolucja przemysłowa 4.0
+Co się kryje za 4 rewolucją przemysłową?
+
+Autor: Imię Nazwisko
+
+Pierwsza rewolucja przemysłowa
+Pierwsza rewolucja przemysłowa to wiek pary. Produkcja przemysłowa jest wspomagana siłą pary i wody.
+
+Druga rewolucja przemysłowa
+Druga rewoluacja przemysłowa to wiek elektryczności. Rozpoczyna się produkcja z zastosowaniem energii elektrycznej.
+
+Trzecia rewolucja przemysłowa
+Trzecia rewoluacja przemysłowa to wiek komputerów. Postępuje automatyzacja produkcji przemysłowej z wykorzystaniem sterowników programowalnych.
+
+Czwarta rewoluacja przemysłowa
+Czwarta rewoluacja przemysłowa to zanikanie bariery między ludźmi i maszynami. Powstają inteligentne fabryki z cyberfizycznymi systemami produkcji w otoczeniu: Internetu ludzi, Internetu rzeczy, Internetu usług, Internetu danych.
+
+Czwarta rewulucja przemysłowa to:
+-> nowa jakość komunikacji, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, velit nulla! Libero facere, minima tempora illo magni nisi impedit illum?
+-> inteligentne sensory z wbudowanymi systemami indywidualnej identyfikacji, przetwarzania danych i komunikacji;
+-> przetwarzanie danych w chmurze lub we mgle, z dynamiką reakcji na poziomie milisekund;
+-> analityka dużych zbiorów danych dotyczących wszystkich aspektów rozwoju produktów i produkcji;
+-> techniki symulacji fukcjonowania obiektów rzeczywistych Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur facilis, consequuntur neque dicta illum ipsa minus cumque eius quibusdam modi;
+-> bezpośrednia komunikacja między urządzeniami;
+-> zaawansowane interfejsy człowiek - maszyna;
+-> rozwiązania cybersecurity, zapewniające bezposrednią, pewną komunikacje i inddntyfikacje oraz dostęp zarządczy do systemów i urządzeń;
+-> nowa genereacja robotów, charakteryzyjących się aktywną interakcją z otoczeniem i z innymi robotami oraz adaptacją do zmieniających się warunkow i wymagań;
+-> systemy rzeczywistości rozszerzonej, wspomagające projektowanie i serwisowanie urządzeń;
+-> technologie wytwarzania przyrostowego, np. 3-D printing - zarówno prototypowania, jak i realizacji indywidualnych zamówień
+
+Przedstawiona wyżej krótka notatka na temat czwartej rewolucji przemysłowej pochodzi ze stron:
+Wikidepia
+Rewolucja przemysłowa
+Copyright 2022
