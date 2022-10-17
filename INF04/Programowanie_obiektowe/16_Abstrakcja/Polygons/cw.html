@@ -78,7 +78,23 @@ Zwróć szczególną uwagę na implementację konstruktorów - <code>Polygon</co
 <p>W powyższym przykładzie widzimy, że aby zadeklarować klasę jako abstrakcyjną należy utworzyć w niej przynajmniej jedną metodę czysto abstrakcyjną <br><code>virtual Package getPackageType() = 0;</code> </p>
 
 <p>Podobnie jak w przypadku interfejsów, klasa która rozszerza klasę abstrakcyjną <strong>musi</strong> zdefiniować wszystkie zadeklarowane wyżej metody abstrakcyjne... chyba że sama jest klasą abstrakcyjną.</p>  
+<hr>
+<h4>Dla porównania przykład w Javie: </h4>
+<pre class="java" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">abstract</span> <span style="color: #000000; font-weight: bold;">class</span> Product <span style="color: #009900;">&#123;</span>
+  <span style="color: #000000; font-weight: bold;">private</span> Barcode code<span style="color: #339933;">;</span>
+&nbsp;
+  <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000066; font-weight: bold;">int</span> scan<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+     <span style="color: #000000; font-weight: bold;">return</span> code.<span style="color: #006633;">getValue</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #666666; font-style: italic;">// przykładowe skanowanie kodu kreskowego</span>
+  <span style="color: #009900;">&#125;</span>
+&nbsp;
+  <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">abstract</span> <span style="color: #000000; font-weight: bold;">Package</span> getPackageType<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #666666; font-style: italic;">// metoda abstrakcyjna zwracająca rodzaj opakowania</span>
+<span style="color: #009900;">&#125;</span>
+&nbsp;
+<span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">class</span> Bread <span style="color: #000000; font-weight: bold;">extends</span> Product <span style="color: #009900;">&#123;</span>
+&nbsp;
+ <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">Package</span> getPackageType<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+     <span style="color: #000000; font-weight: bold;">return</span> <span style="color: #000000; font-weight: bold;">new</span> <span style="color: #000000; font-weight: bold;">Package</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;Paper bag&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #666666; font-style: italic;">// przykładowe opakowanie</span>
+ <span style="color: #009900;">&#125;</span>
+<span style="color: #009900;">&#125;</span></pre>
 </div>
-
-
 </body></html>
