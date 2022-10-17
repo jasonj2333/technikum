@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://dydaktyka.fracz.pl/labs/java-basic/15-wielokaty.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Wielokaty</title>
+  <link rel="stylesheet" href="./Wielokaty_files/github-markdown.css">
+  <link rel="stylesheet" href="./Wielokaty_files/prism.css">
+  <style>
+    .markdown-body {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer {
+      color: #AAA;
+      text-align: right;
+    }
+
+    .box-yellow {
+      background: lightyellow;
+      padding: 10px;
+      border: yellowgreen 1px solid;
+      margin: 5px auto;
+    }
+
+    ol li > img {
+      vertical-align: top;
+    }
+  </style>
+<meta name="d41d8cd98f00b204e9800998ecf8427e_lib_detect" id="d41d8cd98f00b204e9800998ecf8427e_lib_detect"><script src="chrome-extension://cgaocdmhkmfnkdkbnckgmpopcbpaaejo/library/libraries.js"></script><script src="chrome-extension://cgaocdmhkmfnkdkbnckgmpopcbpaaejo/content_scripts/lib_detect.js"></script></head>
+<body>
+<div class="markdown-body">
+    <h2>Wielokąty</h2>
+<p>Stwórz hierarchię klas opisujących różne rodzaje wielokątów, tak by odpowiadała sytuacji przedstawionej poniżej:</p>
+<pre><code>     Polygon
+    /      \
+Rectangle   Triangle
+   |
+Square</code></pre>
+<p><code>Polygon</code> powinien zawierać:</p>
+<ul>
+<li>atrybut <code>sides</code> - listę (vector) długości boków wielokąta (dla uproszczenia wyrażonych jako liczby całkowite)</li>
+<li>metodę <code>perimeter()</code> obliczającą i zwracającą obwód wielokąta</li>
+<li>metodę <code>area()</code> obliczającą pole powierzchni wielokąta</li>
+</ul>
+<p>Zastanów się, czy klasa <code>Polygon</code> posiada wystarczające informacje by dostarczyć implementacji obu metod.
+Zwróć szczególną uwagę na implementację konstruktorów - <code>Polygon</code> powinien przyjmować listę boków, <code>Triangle</code> dokładnie trzy konkretne boki, <code>Rectangle</code> dwa boki, a <code>Square</code> jeden.</p>
+<h2>Przydatne informacje</h2>
+<h3>Klasy abstrakcyjne</h3>
+<p>Klasy abstrakcyjne wyglądają jak zwykłe klasy, ale posiadają dwie cechy upodabniające je do interfejsu:</p>
+<ul>
+<li>nie można tworzyć obiektów tych klas</li>
+<li>niektóre lub wszystkie metody mogą nie mieć zdefiniowanego ciała - metody czysto abstrakcyjne</li>
+</ul>
+<p>Czym zatem różni się klasa abstrakcyjna od interfejsu? Przede wszytkim może posiadać atrybuty i operować na nich tak jak normalna klasa. Ponadto wybrane metody mogą być w pełni zdefiniowane. </p>
+<p>W praktyce klas abstrakcyjnych używamy wtedy, gdy mamy do czynienia z typem, który sam w sobie nie posiada sensu (patrz przykład z samochodem i pojazdem), ale jesteśmy w stanie precyzyjnie opisać część jego zachowań.</p>
+<p>Przykład: Każdy towar w sklepie posiada kod kreskowy. Sposób kasowania produktu, niezależnie od jego rodzaju jest taki sam. Ale już sposób pakowania zależy od wielu czynników. Przetwory przechowywane są w słoikach, mięso w folii, a pieczywo w papierowych torebkach. Jesteśmy w stanie powiedzieć, że produkt będzie miał opakowanie, ale nie wiemy dokładnie jakie. Potrzebujemy do tego informacji o typie produktu.</p>
+<p>Zwróćmy także uwagę, że możemy stworzyć obiekt typu "chleb", ale tworzenie obiektu typu "towar" nie ma sensu i znaczenia (towar to pojęcie <strong>abstrakcyjne</strong>).</p>
+<p>Klasę abstrakcyjną możemy zdefiniować w następujący sposób:</p>
+<pre class="cpp" style="font-family:monospace;"><span style="color: #0000ff;">class</span> Product <span style="color: #008000;">&#123;</span>
+  Barcode code<span style="color: #008080;">;</span>
+<span style="color: #0000ff;">public</span><span style="color: #008080;">:</span>
+  <span style="color: #0000ff;">int</span> scan<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+      <span style="color: #0000ff;">return</span> code.<span style="color: #007788;">getValue</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008080;">;</span> <span style="color: #666666;">//Przykładowe skanowanie kodu kreskowego</span>
+  <span style="color: #008000;">&#125;</span>
+  <span style="color: #0000ff;">virtual</span> Package getPackageType<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span> <span style="color: #000080;">=</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span>
+<span style="color: #008000;">&#125;</span><span style="color: #008080;">;</span>
+&nbsp;
+<span style="color: #0000ff;">class</span> Bread <span style="color: #008080;">:</span> Product <span style="color: #008000;">&#123;</span>
+<span style="color: #0000ff;">public</span><span style="color: #008080;">:</span>
+  Package getPackageType<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+      Package package<span style="color: #008000;">&#40;</span><span style="color: #FF0000;">&quot;Paper bag&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008080;">;</span>
+      <span style="color: #0000ff;">return</span> package<span style="color: #008080;">;</span>
+  <span style="color: #008000;">&#125;</span>
+<span style="color: #008000;">&#125;</span><span style="color: #008080;">;</span></pre>
+<p>W powyższym przykładzie widzimy, że aby zadeklarować klasę jako abstrakcyjną należy utworzyć w niej przynajmniej jedną metodę czysto abstrakcyjną <br><code>virtual Package getPackageType() = 0;</code> </p>
+
+<p>Podobnie jak w przypadku interfejsów, klasa która rozszerza klasę abstrakcyjną <strong>musi</strong> zdefiniować wszystkie zadeklarowane wyżej metody abstrakcyjne... chyba że sama jest klasą abstrakcyjną.</p>  
+</div>
+
+
+</body></html>
