@@ -64,29 +64,54 @@ FROM suppliers ORDER BY country;
 SELECT DISTINCT country
 FROM suppliers ORDER BY country;
 
---1 .Znajdź państwa, z których pochodzą pracownicy
-
---2. Znajdź różne docelowe kraje i miasta wysyłki zamówień. Wyniki posortuj tak,
+--Znajdź państwa, z których pochodzą pracownicy
+SELECT DISTINCT Country FROM Customers;
+--Znajdź różne docelowe kraje i miasta wysyłki zamówień. Wyniki posortuj tak,
 --jak chciałbyś / chciałabyś je widzieć na raporcie.
-
+SELECT DISTINCT ShipCountry, ShipCity FROM Orders ORDER BY ShipCountry, ShipCity;
+-----------------------------------------
 --Nadawanie nazw kolumnom - AS
 SELECT firstname AS First, lastname AS Last,
 employeeid AS 'Employee ID:'
 FROM employees
-
+------------------------------------------
 --LIMIT
 SELECT * FROM Orders LIMIT 5;
 
--- 1. Wybierz pięć najdroższych produktów
+-- Wybierz pięć najdroższych produktów
+SELECT * FROM products ORDER BY UnitPrice DESC LIMIT 5;
+-- Wybierz pięć najtańszych produktów
+SELECT * FROM products ORDER BY UnitPrice LIMIT 5;
+-- Wybierz trzy produkty czekoladowe (choco), których jest najwięcej wmagazynie
+SELECT * FROM products WHERE ProductName LIKE '%choco%' ORDER BY UnitsInStock DESC LIMIT 3;
+------------------------------------------
+-- KOLUMNY WYLICZANE
+SELECT OrderId, UnitPrice,
+UnitPrice * 1.05 AS NewUnitPrice
+FROM `Order Details`
 
--- 2. Wybierz pięć najtańszych produktów
+SELECT CONCAT(firstname, ' ', lastname) AS imie_nazwisko
+FROM Employees
 
--- 3. Wybierz trzy produkty czekoladowe (choco), których jest najwięcej wmagazynie
+-- Wybierz wyjściowe ceny produktów, poziom zniżki i ceny 
+-- uwzględniające zniżkę dla wszystkich pozycji zamówień, 
+-- którym zniżka została przyznana.
+-- UWAGA zniżka Discount została podana w procentach
+SELECT ProductID, UnitPrice, Discount, UnitPrice * (1-Discount/100) AS FinalPrice
+FROM `Order Details`
+WHERE Discount > 0;
+
+-- Wybierz imiona, nazwiska oraz miasta pochodzenia klientów tak,
+-- by w kolumnie były zaprezentowane w formie "osoba from miasto",
+-- np. "Maria Anders from Berlin". Posortuj rekordy po nazwach miast. 
+SELECT CONCAT(ContactName, ' from ', City) AS CustomerDescription
+FROM Customers
+ORDER BY City;
 
 -- FUNKCJE AGREGUJĄCE - COUNT -----------------------------------------------
 SELECT COUNT (*) FROM employees;
 SELECT COUNT(Region) FROM employees;
-SELECT COUNT (*) AS liczba_pracownikowFROM employees;
+SELECT COUNT (*) AS liczba_pracownikow FROM employees;
 
 -- 1. Podaj liczbę pracowników z UK.
 
@@ -110,3 +135,56 @@ SELECT COUNT(*), AVG(unitprice) FROM products;
 -- 4. Wyświetl średnią cenę produktów z kategorii ID=2.
 
 -- 5. Wyświetl liczbę produktów o cenie powyżej średniej.
+
+-- FUNKCJE AGREGUJĄCE - MIN, MAX, SUM -----------------------------------------------
+
+-- 1. Podaj liczbę sprzedanych produktów (jednostek).
+-- 2. Wyświetl informacje o najdroższym produkcie.
+-- 3. Podaj maksymalną cenę produktu dla produktów o cenach poniżej 20$
+-- 4. Podaj maksymalną i minimalną i średnią cenę produktu dla produktów sprzedawanych w butelkach ('bottle')
+-- 5. Podaj sumaryczną wartość zamówienia o numerze 10250. Uwzględnij zniżki!
+
+
+-- GRUPOWANIE ---------------------------------------------------------------
+SELECT OrderID, SUM(Quantity) AS total_quantity
+FROM `Order Details`
+GROUP BY OrderID;
+
+SELECT ProductID, SUM(Quantity) AS total_quantity
+FROM `Order Details`
+GROUP BY ProductID
+
+-- WHERE filtruje rekordy przed wykonaniem grupowania
+SELECT ProductID,
+SUM(Quantity) AS total_quantity
+FROM `Order Details`
+WHERE ProductId >= 2
+GROUP BY ProductID
+
+-- 1. Wyświetl liczbę pracowników z poszczególnych krajów.
+-- 2. Wyświetl liczbę kupionych produktów z podziałem na produkty.
+-- 3. Wyświetl minimalną, maksymalną i średnią cenę zakupu produktów z podziałem na produkty.
+-- 4. Wybierz 30 zamówień zawierających najdrożej sprzedane produkty.
+-- 5. Podaj liczbę przesyłek dostarczonych przez poszczególnych przewoźników z podziałem na miasta.
+-- 6. Podaj liczbę i sumaryczny koszt przesyłki dla zamówień dostarczanych przez poszczególnych spedytorów (przewoźników).
+-- 7. Który ze spedytorów był najaktywniejszy w 1997 roku?
+
+-- Grupowanie z HAVING------------------
+-- HAVING dodaje warunek na kolumny
+-- zawierające wynik agregacji (po grupowaniu)
+SELECT ProductID,
+SUM(Quantity) AS total_quantity
+FROM `Order Details`
+GROUP BY ProductID
+HAVING SUM(Quantity) < 40;
+
+-- 1. Wyświetl listę identyfikatorów produktów i liczbę sprzedanych sztuk dla tych
+-- produktów, których zamówiono ponad 1200 jednostek.
+-- 2. Wyświetl zamówienia, w których zamówiono ponad 5 różnych produktów.
+-- 3. Wyświetl identyfikatory klientów dla których w 1998 roku zrealizowano
+-- więcej niż 8 zamówień (wyniki posortuj malejąco wg łącznej kwoty za
+-- dostarczenie zamówień dla każdego z klientów)
+-- 4. Wyświetl dane klientów dla których w 1998 roku zrealizowano więcej niż 8
+-- zamówień.
+-- 5*. Podaj liczbę zamówionych jednostek produktów dla produktów z
+-- kategorii Seafood i których zamówiono więcej niż 800
