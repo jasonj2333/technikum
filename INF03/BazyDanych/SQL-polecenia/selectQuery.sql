@@ -127,14 +127,33 @@ SELECT AVG(unitprice) FROM products;
 SELECT COUNT(*), AVG(unitprice) FROM products;
 
 -- 1. Wyświetl średnią przyznaną zniżkę.
-
 -- 2. Wyświetl średnią przyznaną zniżkę dla pozycji zamówień, dla których ją przyznano.
-
 -- 3. Wyświetl średnią liczbę zamawianych sztuk w jednej pozycji zamówienia.
-
 -- 4. Wyświetl średnią cenę produktów z kategorii ID=2.
-
 -- 5. Wyświetl liczbę produktów o cenie powyżej średniej.
+
+-- Wyświetl średnią przyznaną zniżkę.
+SELECT AVG(Discount) AvgDiscount FROM `Order Details`;
+
+-- Wyświetl średnią przyznaną zniżkę 
+-- dla pozycji zamówień, dla których ją przyznano.
+SELECT AVG(Discount) AvgDiscount 
+FROM `Order Details`
+WHERE Discount > 0;
+
+-- Wyświetl średnią liczbę zamawianych sztuk 
+-- w jednej pozycji zamówienia.
+SELECT AVG(Quantity) FROM `Order Details`;
+
+-- Wyświetl średnią cenę produktów z kategorii ID=2.
+SELECT AVG(UnitPrice) FROM Products WHERE CategoryID = 2;
+
+-- Wyświetl liczbę produktów o cenie powyżej średniej.
+SELECT AVG(UnitPrice) FROM Products;
+SELECT COUNT(*) FROM Products WHERE UnitPrice > 28.8663;
+
+SELECT COUNT(*) FROM Products WHERE UnitPrice > (SELECT AVG(UnitPrice) FROM Products);
+
 
 -- FUNKCJE AGREGUJĄCE - MIN, MAX, SUM -----------------------------------------------
 
@@ -144,6 +163,26 @@ SELECT COUNT(*), AVG(unitprice) FROM products;
 -- 4. Podaj maksymalną i minimalną i średnią cenę produktu dla produktów sprzedawanych w butelkach ('bottle')
 -- 5. Podaj sumaryczną wartość zamówienia o numerze 10250. Uwzględnij zniżki!
 
+-- Podaj liczbę sprzedanych produktów (jednostek).
+SELECT SUM(Quantity) FROM `Order Details`;
+
+-- Wyświetl informacje o najdroższym produkcie.
+SELECT MAX(UnitPrice) FROM Products;
+SELECT * FROM Products WHERE UnitPrice = 263.5;
+
+-- Podaj maksymalną cenę produktu dla produktów 
+-- o cenach poniżej 20$
+SELECT MAX(UnitPrice) FROM Products WHERE UnitPrice < 20;
+
+-- Podaj maksymalną i minimalną i średnią cenę produktu 
+-- dla produktów o produktach sprzedawanych w butelkach (‘bottle’)
+SELECT MAX(UnitPrice), MIN(UnitPrice), AVG(UnitPrice)
+FROM Products
+WHERE QuantityPerUnit LIKE '%bottle%';
+
+-- Podaj wartość zamówienia o numerze 10250
+SELECT SUM(UnitPrice * (1-Discount/100)) FROM `Order Details`
+WHERE OrderID = 10250;
 
 -- GRUPOWANIE ---------------------------------------------------------------
 SELECT OrderID, SUM(Quantity) AS total_quantity
