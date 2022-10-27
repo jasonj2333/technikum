@@ -1,0 +1,17 @@
+1. Utwórz bazę danych studia
+2. Zaimportuj do bazy danych studia dane z pliku studia.sql
+3. Utwórz plik tekstowy ImieNazwisko_kwerendy.txt i zapisz w nim wszystkie kwerendy jakie wykonasz.
+Kwerendy:
+1. Utwórz użytkownika anna na localhost z hasłem @nna321
+2. Do tabeli przedmiot dodaj nowy przedmiot Administrowanie bazami danych
+3. W tabeli wydział, zmień nazwę Wydziału Zarządzania na "Wydział Marketingu i Zarządzania"
+4. Wyświetl informacje o wszystkich studentach 1 roku studiów.
+5. Wyświetl pola imie, nazwisko, nr_albumu, rok_studiow, status, nazwa wydziału dla wszystkich aktywnych studentów na wydziale informatyki posortuj studentów po numerze nr_albumu.
+6. Wyświetl listę województw w których są zameldowani studenci (bez duplikatów - każde województwo tylko raz) posortuj województwa alfabetycznie.
+7. Wyświetl wszystkie nazwy przedmiotów na które jest zapisany "Jan Kowalski"
+8. Policz studentów biorących udział w zajęciach poszczególnych kół naukowych użyj grupowania
+9. Wybierz imiona i nazwiska studentów oraz miasto zamieszkania i wyświetl je tak, żeby
+był zaprezentowane w kolumnie w formie "imie nazwisko z miasta" np. "Andrzej Nowak z Krakowa"
+10. Policz ilu łącznie i średnio studentów uczestniczy zajęciach kół naukowych; Pola wynikowe powinny nazywać się "Średnio na jedno koło naukowe", "Łącznie na kołach naukowych"
+
+* Zmodyfikuj powyższą kwerendę, żeby wyświetlić dodatkowo "Liczbę kół naukowych" wszystkie trzy kolumny wyświetl za pomocą jednego zapytania.

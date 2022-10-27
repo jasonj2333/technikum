@@ -184,6 +184,52 @@ WHERE QuantityPerUnit LIKE '%bottle%';
 SELECT SUM(UnitPrice * (1-Discount/100)) FROM `Order Details`
 WHERE OrderID = 10250;
 
+-- PODZAPYTANIA  -----------------------------------------------
+-- Podzapytanie jako warunek
+SELECT * FROM Products WHERE CategoryID = (
+    SELECT CategoryID FROM Categories WHERE CategoryName = 'Seafood'
+); 
+-- Podzapytanie jako tabela tymczasowa ("widok")
+SELECT MIN(FinalPrice), MAX(FinalPrice), AVG(FinalPrice) FROM (
+    SELECT UnitPrice * (1-Discount/100) AS FinalPrice
+    FROM `Order Details`
+) AS temp_table;
+
+-- 1. Wybierz nazwy oraz informacje o stanie magazynowym dla produktów dostarczanych przez firmę 'Tokyo Traders'
+-- 2. Wyświetl informacje o najdroższym produkcie.
+-- 3. Wyświetl liczbę produktów o cenie powyżej średniej.
+-- 4. Podaj liczbę sprzedanych produktów z kategorii Seafood.
+-- 5. Wyświetl maksymalną, minimalną, średnią i sumaryczną wartość
+-- produktów, które są w magazynie.
+
+-- Wybierz nazwy oraz informacje o stanie magazynowym dla 
+-- produktów dostarczanych przez firmę 'Tokyo Traders'
+SELECT ProductName, UnitsInStock FROM Products
+WHERE SupplierID = (
+  SELECT SupplierID FROM Suppliers WHERE CompanyName = 'Tokyo Traders'
+);
+
+-- Wyświetl informacje o najdroższym produkcie.
+SELECT * FROM Products WHERE UnitPrice = (SELECT MAX(UnitPrice) FROM Products);
+
+-- Wyświetl liczbę produktów o cenie powyżej średniej.
+SELECT COUNT(*) FROM Products WHERE UnitPrice > (
+  SELECT AVG(UnitPrice) FROM Products
+);
+
+-- Podaj liczbę sprzedanych produktów z kategorii Seafood.
+SELECT SUM(Quantity) FROM `Order Details` WHERE ProductID IN (
+  SELECT ProductID FROM Products WHERE CategoryID IN (
+    SELECT CategoryID FROM Categories WHERE CategoryName = 'Seafood'
+  )
+);
+
+-- Wyświetl maksymalną, minimalną, średnią i sumaryczną wartość 
+-- produktów, które są w magazynie.
+SELECT MAX(TheValue) MAX, MIN(TheValue) MIN, AVG(TheValue) AVG, SUM(TheValue) SUM FROM (
+  SELECT UnitPrice * UnitsInStock AS TheValue FROM Products WHERE UnitsInStock > 0
+) AS t;
+
 -- GRUPOWANIE ---------------------------------------------------------------
 SELECT OrderID, SUM(Quantity) AS total_quantity
 FROM `Order Details`
@@ -208,6 +254,45 @@ GROUP BY ProductID
 -- 6. Podaj liczbę i sumaryczny koszt przesyłki dla zamówień dostarczanych przez poszczególnych spedytorów (przewoźników).
 -- 7. Który ze spedytorów był najaktywniejszy w 1997 roku?
 
+-- Wyświetl liczbę pracowników z poszczególnych krajów.
+SELECT Country, COUNT(*) FROM Employees GROUP BY Country;
+
+-- Wyświetl liczbę kupionych produktów z podziałem na produkty.
+SELECT ProductID, COUNT(*) FROM `Order Details`
+GROUP BY ProductID;
+
+-- Wyświetl minimalną, maksymalną i średnią cenę zakupu produktów
+-- z podziałem na produkty.
+SELECT ProductID, MIN(UnitPrice) MIN, MAX(UnitPrice) MAX, AVG(UnitPrice) AVG
+FROM `Order Details`
+GROUP BY ProductID;
+
+-- Wybierz 30 zamówień zawierających najdrożej sprzedane produkty.
+SELECT OrderID, MAX(UnitPrice) MAX
+FROM `Order Details`
+GROUP BY OrderID
+ORDER BY MAX DESC LIMIT 30;
+
+-- Podaj liczbę przesyłek dostarczonych przez poszczególnych 
+-- przewoźników z podziałem na miasta.
+SELECT ShipVia, ShipCity, COUNT(*)
+FROM Orders
+GROUP BY ShipVia, ShipCity
+ORDER BY ShipCity;
+
+-- Podaj liczbę i sumaryczny koszt przesyłki dla zamówień 
+-- dostarczanych przez poszczególnych spedytorów (przewoźników).
+SELECT ShipVia, COUNT(*), SUM(Freight)
+FROM `Orders` 
+GROUP BY ShipVia;
+
+-- Który z spedytorów był najaktywniejszy w 1997 roku?
+SELECT ShipVia, COUNT(*) HandledOrders
+FROM Orders 
+WHERE OrderDate BETWEEN '1997-01-01' AND '1997-12-31'
+GROUP BY ShipVia
+ORDER BY HandledOrders DESC LIMIT 1;
+
 -- Grupowanie z HAVING------------------
 -- HAVING dodaje warunek na kolumny
 -- zawierające wynik agregacji (po grupowaniu)
@@ -225,5 +310,51 @@ HAVING SUM(Quantity) < 40;
 -- dostarczenie zamówień dla każdego z klientów)
 -- 4. Wyświetl dane klientów dla których w 1998 roku zrealizowano więcej niż 8
 -- zamówień.
--- 5*. Podaj liczbę zamówionych jednostek produktów dla produktów z
+-- 5. Podaj liczbę zamówionych jednostek produktów dla produktów z
 -- kategorii Seafood i których zamówiono więcej niż 800
+
+-- Wyświetl listę identyfikatorów produktów i liczbę sprzedanych
+-- sztuk dla tych produktów, których zamówiono ponad 1200 jednostek.
+SELECT ProductID, SUM(Quantity)
+FROM `Order Details`
+GROUP BY ProductID
+HAVING SUM(Quantity) > 1200
+ORDER BY SUM(Quantity) DESC;
+
+-- Wyświetl zamówienia, w których zamówiono ponad 5 różnych produktów.
+SELECT OrderID, COUNT(*)
+FROM `Order Details`
+GROUP BY OrderID
+HAVING COUNT(*) > 5;
+
+-- Wyświetl identyfikatory klientów dla których w 1998 roku zrealizowano więcej 
+-- niż 8 zamówień (wyniki posortuj malejąco wg łącznej kwoty za 
+-- dostarczenie zamówień dla każdego z klientów)
+SELECT CustomerID, COUNT(*), SUM(Freight)
+FROM Orders
+WHERE OrderDate BETWEEN '1998-01-01' AND '1998-12-31'
+GROUP BY CustomerID
+HAVING COUNT(*) > 8
+ORDER BY SUM(Freight) DESC;
+
+-- Wyświetl dane klientów dla których w 1998 roku zrealizowano 
+-- więcej niż 8 zamówień.
+SELECT * FROM Customers WHERE CustomerID IN(
+	SELECT CustomerID
+	FROM Orders
+	WHERE OrderDate BETWEEN '1998-01-01' AND '1998-12-31'
+	GROUP BY CustomerID
+	HAVING COUNT(*) > 8
+);
+
+-- Podaj liczbę zamówionych jednostek produktów dla produktów 
+-- z kategorii Seafood i których zamówiono więcej niż 800 
+SELECT ProductID, SUM(Quantity)
+FROM `Order Details`
+WHERE ProductID IN (
+  SELECT ProductID FROM Products WHERE CategoryID = (
+    SELECT CategoryID FROM Categories WHERE CategoryName = 'Seafood'
+  )
+)
+GROUP BY ProductID
+HAVING SUM(Quantity) > 800;
