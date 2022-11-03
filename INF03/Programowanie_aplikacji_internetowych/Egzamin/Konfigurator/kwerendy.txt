@@ -1,0 +1,12 @@
+CREATE USER Agnieszka IDENTIFIED BY "haslo4"; 
+SELECT AVG(samochody.rocznik) FROM `samochody` WHERE marka = "opel"; 
+SELECT samochody.marka, klienci.imie FROM wypozyczenia INNER JOIN klienci ON wypozyczenia.klienci_id = klienci.id JOIN samochody ON wypozyczenia.samochody_id = samochody.id; 
+ALTER TABLE klasa DROP COLUMN cena;
+
+
+
+
+
+
+
+# Jan Kupczyk
