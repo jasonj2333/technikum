@@ -1,0 +1,26 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #a396ff;
+}
+
+
+#wrapper{
+    max-width: 1440px;
+    margin: 0 auto;
+    text-align: center;
+}
+#computers > figure {
+    display: inline-block;
+    cursor: pointer;
+}
+#computers > figure > img {
+    max-width: 100px;
+}
+#cssOptions{
+    display: flex;
+    margin-top: 20px;
+}
+
+#cssOptions div {
+    width: 25%;
+}

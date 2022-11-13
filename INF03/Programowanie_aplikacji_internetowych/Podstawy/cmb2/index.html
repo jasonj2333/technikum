@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Strona Commodore</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="image">
+            <h1>Commodore 128 DCR</h1>
+            <img id="img" src="./img/C128dcr.jpg" alt="Commodore 128 DCR">
+        </div>
+        <div id="controls">
+            <div id="computers">
+                <figure id="c128">
+                    <img src="./img/C128dcr.jpg" alt="Commodore 128 DCR">
+                    <figcaption>Commodore 128 DCR</figcaption>
+                </figure>
+                <figure id="c64" onclick="changeImg('c64')">
+                    <img src="./img/C64c.jpg" alt="Commodore 64">
+                    <figcaption>Commodore 64</figcaption>
+                </figure>
+                <figure id="c4">
+                    <img src="./img/Cplus4.jpg" alt="Commodore +4">
+                    <figcaption>Commodore +4</figcaption>
+                </figure>
+                <figure id="a500">
+                    <img src="./img/Amiga500.jpg" alt="Amiga 500">
+                    <figcaption>Amiga 500</figcaption>
+                </figure>
+                <figure id="a600">
+                    <img src="./img/amiga600.jpg" alt="Amiga 600">
+                    <figcaption>Amiga 600</figcaption>
+                </figure>
+                <figure id="a1200">
+                    <img src="./img/amiga1200.jpg" alt="Amiga 1200">
+                    <figcaption>Amiga 1200</figcaption>
+                </figure>
+            </div>
+            <div id="cssOptions">
+                <div>
+                    <label>Kolor tła</label>
+                    <input id="backgroundColor" type="text" value="#a396ff">
+                </div>
+                <div>
+                    <label>Rozmiar czcionki</label>
+                    <input id="fontSize" type="text" value="100%">
+                </div>
+                <div>
+                    <p>Rozmiar obrazka</p>
+                    <input type="radio" checked name="obrazek" value="1">100%<br>
+                    <input type="radio" name="obrazek" value="0.5">50%<br>
+                    <input type="radio" name="obrazek" value="2">200%<br>
+                </div>
+                <div>
+                   <p>Kolor czcionki</p>
+                    <select id="lista">
+                        <option value="white">Biały</option>
+                        <option value="black">Czarny</option>
+                        <option value="red">Czerwony</option>
+                        <option value="blue">Niebieski</option>
+                    </select> 
+                </div>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
