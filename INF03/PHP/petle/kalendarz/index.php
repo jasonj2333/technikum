@@ -53,19 +53,55 @@
             <form action="" method="post">
             <label for="miesias">Miesiąc:</label>
                 <select name="miesiac" id="miesiac">
-                    <!-- Tutaj skrypt PHP generujący opcje styczeń, luty ... dla pola select na podstawie tablicy miesiące -->
+                    
+                    <?php
+                        foreach($miesiace as $m=>$d){
+                            echo "<option value='$m'>$m</option>";
+                        } ;
+                    ?>
                 </select>
                 
                 <label for="tydzien">1 wypada w:</label>
                 <select name="tydzien" id="tydzien">
                     
-                    <!-- Tutaj skrypt PHP generujący opcje Pon, Wto ... dla pola select na podstawie tablicy tydzien -->
-
+                    <?php
+                        foreach($tydzien as $k=>$v){
+                            echo "<option value='$k'>$v</option>";
+                        } ;
+                    ?>
                 </select>
                 <input type="submit" value="Generuj">
             </form>
-            
-            <!-- Tutaj skrypt PHP Jeżeli formularz został wysłany generuj kalendarz -->
+            <?php if(isset($_POST['miesiac'])):?>
+                <?php 
+                    $m = $_POST['miesiac'];
+                    $t = $_POST['tydzien'];    
+                ?>
+                <h1>
+                    <?php echo $m ?>
+                    </h1>
+                <table>
+                    <tr>
+                    <?php
+                        foreach($tydzien as $v){
+                            echo "<th>$v</th>";
+                        } ;
+                    ?>
+                    </tr>
+                    <tr>
+                    <?php 
+                        
+                        $tr = 0;
+                        for ($i=1-$t; $i <= $miesiace[$m]; $i++) {
+                            $tr++;
+                            echo ($i>0) ? "<td>$i</td>" : "<td>&nbsp;</td>";
+                            if($tr%7 == 0) {
+                                echo "</tr><tr>";
+                            }
+                        }
+                    ?>
+                </table>
+            <?php endif;?>
             
     </div>
 </body>
