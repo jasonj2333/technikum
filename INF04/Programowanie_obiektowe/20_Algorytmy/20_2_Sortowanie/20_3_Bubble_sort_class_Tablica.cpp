@@ -20,6 +20,7 @@ public:
     //Deklaracja metod klasy
     void tablicaWejscie();
     void sortowanieBabelkowe();
+    void zamienElementy(int index1, int index2);
     void tablicaWyjscie();
     void tablicaWejscieKlawiatura();
 };
@@ -27,18 +28,23 @@ public:
 //Definicje metod klasy Tablica
 void Tablica::sortowanieBabelkowe() {
     int i, j;
-    float temp;
+    
     for (i = 0; i < liczbaElementowTablicy; i++)
     {
         for (j = i + 1; j < liczbaElementowTablicy; j++)
         {
             if (wskTablica[j] < wskTablica[i]) {
-                temp = wskTablica[i];
-                wskTablica[i] = wskTablica[j];
-                wskTablica[j] = temp;
+                zamienElementy(i, j);
             }
         }
     }
+}
+
+void Tablica::zamienElementy(int index1, int index2) {
+    float temp;
+    temp = wskTablica[index1];
+    wskTablica[index1] = wskTablica[index2];
+    wskTablica[index2] = temp;
 }
 
 void Tablica::tablicaWejscie() {
