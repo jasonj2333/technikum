@@ -70,7 +70,7 @@ class Faker extends Dbh{
             (1,'2022.12.04', '8:30', NULL, NULL, NULL),
             (3,'2022.12.06', '8:30', NULL, NULL, NULL)
             ;"];
-
+        // execute the sql commands to create new tables
         foreach ($commands as $command) {
             $stmt->exec($command);
         }
