@@ -1,0 +1,1 @@
+<h3>To jest reklama firmy - <?php echo firma(); ?></h3>

@@ -7,7 +7,7 @@
     <title>Dzień tygodnia</title>
     <style>
         #wrapper{
-            width:600px
+            width:600px;
             margin: 30px auto;
             text-align: center;
         }
