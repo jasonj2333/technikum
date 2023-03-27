@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-//use App\Http\Controllers\PageController;
+use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,12 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    //return view('welcome');
     return view('start');
 });
 
-// Route::get('/strony', [App\Http\Controllers\PageController::class, 'index']);
-// Route::get('/strony/{title?}', [PageController::class, 'show']);
-Route::get('/strony/{title?}', function (string $title="główna") {
-    echo "<h1>Strona $title</h1>";
-})->where('title', '[A-Za-z]+');
+Route::get('strony', [PagesController::class, 'index']);
+Route::get('/strony/{title}', [PagesController::class, 'show'])->where('title', '[A-Za-z]+');
