@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spis stron</title>
-</head>
-<body>
+@extends('layout.app')
+
+@section('title', 'Spis stron')
+
+@section('content')
     <h1>Spis treści</h1>
     @foreach ($pages as $page)
         <p>{{ $page->title }} - {{ $page->content }}</p>
     @endforeach
-</body>
-</html>
+@endsection

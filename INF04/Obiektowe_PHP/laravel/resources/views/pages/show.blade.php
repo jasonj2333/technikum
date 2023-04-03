@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strona {{ $title }}</title>
-</head>
-<body>
+@extends('layout.app')
+
+@section('title', $title)
+
+@section('content')
     <h1>Strona {{ $title }}</h1>
-</body>
-</html>
+@endsection
