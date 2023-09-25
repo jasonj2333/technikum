@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operatory</title>
+</head>
+<body>
+    <script>
+        let a = 15;
+        let b = 8;
+
+        let obwod = a + a + b + b;
+        document.write(`Obwód prostokąta wynosi ${obwod}<br>`);
+        let roznica = a - b;
+        document.write(`Różnica liczb ${a} - ${b} =  ${roznica}<br>`);
+        document.write(`Iloczyn liczb ${a} * ${b} =  ${a*b}<br>`);
+        document.write(`Iloraz liczb ${a} / ${b} =  ${a/b}<br>`);
+        document.write(`Reszta z dzielenia ${a} % ${b} =  ${a%b}<br>`);
+        //obwod = obwod + 5;
+        obwod += 5;
+        document.write(`Zmienna obwod wynosi ${obwod}<br>`);
+        obwod *= 5;
+        document.write(`Zmienna obwod wynosi ${obwod}<br>`);
+        obwod /= 5;
+        document.write(`Zmienna obwod wynosi ${obwod}<br>`);
+        obwod %= 5;
+        document.write(`Zmienna obwod wynosi ${obwod}<br>`);
+
+        document.write(`Porównanie ${a} == ${b}+7 ${a == b+7}<br>`);
+        document.write(`Nierówność ${a} != ${b} ${a != b}<br>`);
+        document.write(`Większość ${a} > ${b} ${a > b}<br>`);
+        document.write(`Większe lub równe ${a} >= ${b} ${a >= b}<br>`);
+        document.write(` ${a >= 5 && b < 0}<br>`);
+
+    </script>
+</body>
+</html>
