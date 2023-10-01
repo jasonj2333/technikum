@@ -1,7 +1,0 @@
-Utwórz nowy obraz o wielkości 1280x1024 piksele.
-
-1. Utwórz warstwę tła w kolorze ciemno niebieskiem np. 1311c6
-2. Z obrazka ziemia.jpg skopiuj ziemię i wklej swojego obrazka na nową warstwę - nazwij ją ziemia.
-3. Z obrazka ufo.jpg skopiuj latający spodek i wklej do swojego obrazka na nową warstwę - nazwij ją ufo
-4. Utwórz warstwę o nazwie gwiazdy i umiejść na niej kilka gwiazd, przenieś tą warstwę pod warstwę ziemia.
-5. Zapisz swój obraz na pulpicie pod nazwą planeta w formacie jpg.

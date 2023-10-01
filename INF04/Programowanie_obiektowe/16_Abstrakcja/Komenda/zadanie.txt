@@ -1,5 +1,0 @@
-Napisz program pozwalający przetwarzać dane wybranych pracowników komendy policji.
-Uwzględnij policjantów oraz naczelników wydziału. Założ, że każdy policjant ma określony stopień służbowy(np. komisarz), a każdy naczelnik jest policjantem i jednocześnie kieruje jednym wydziałem w komendzie (np. wydziałem ruchu drugowego).
-Wykorzystaj mechanizmy dziedziczenia i abstrakcji. 
-Mechanizm abstrakcji zrealizuj przy pomocy klas abstrakcyjnych lub/i interfejsów.
-Wykonaj testy działania programu dla danych kilku policjantów i naczelników wydziału.
