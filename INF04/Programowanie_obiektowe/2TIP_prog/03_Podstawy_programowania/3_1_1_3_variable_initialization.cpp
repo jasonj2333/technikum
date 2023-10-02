@@ -1,6 +1,16 @@
 #include<iostream>
 using namespace std;
 
+// - typy predefiniowane
+// - typy zdefiniowane przez użytkownika
+
+// Typy wbudowane
+// - typy całkowite
+// - typy zmiennoprzecinkowe
+// - typ znakowy
+// - typ logiczny
+// - typ void
+
 int main()
 {
     int zmienna1 = 1; //C-inicjalizacja, inicjalizacja kopiująca
@@ -12,7 +22,6 @@ int main()
     int zmienna5 = {zmienna4 + 1}; //inicjalizacja jednolita kopiująca
 
     //Zalecanym sposobem inicjalizacji zmiennej jest inicjalizacja bezpośrednia jednolita.
-
 
     return 0;
 }
