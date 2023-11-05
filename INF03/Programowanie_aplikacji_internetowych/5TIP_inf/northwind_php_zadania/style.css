@@ -1,0 +1,17 @@
+main{
+    display: flex;
+}
+
+#lewa{
+    padding-top: 10px;
+}
+
+#lewa ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#prawa{
+    padding: 10px;
+}

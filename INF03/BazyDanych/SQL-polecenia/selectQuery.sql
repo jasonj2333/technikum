@@ -261,6 +261,9 @@ SELECT Country, COUNT(*) FROM Employees GROUP BY Country;
 SELECT ProductID, COUNT(*) FROM `Order Details`
 GROUP BY ProductID;
 
+SELECT p.ProductID, p.ProductName, COUNT(*) FROM `Order Details` od LEFT JOIN products p ON p.ProductID = od.ProductID
+GROUP BY od.ProductID;
+
 -- Wyświetl minimalną, maksymalną i średnią cenę zakupu produktów
 -- z podziałem na produkty.
 SELECT ProductID, MIN(UnitPrice) MIN, MAX(UnitPrice) MAX, AVG(UnitPrice) AVG
