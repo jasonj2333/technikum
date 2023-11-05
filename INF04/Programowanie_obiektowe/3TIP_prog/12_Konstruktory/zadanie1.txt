@@ -1,0 +1,15 @@
+Utwórz klasę Smartphone posiadającą pola:
+prywatne:
+- marka (string)
+- model (string)
+- imei (int)
+- dataProdukcji(struct Data{dd,mm,rr})
+
+metody publiczne:
+- Smartphone() - konstruktor domyślny tworzący domyślnego smartphona
+	marka: Phone, model: MyPhone, imei: 111112222233333, dataProdukcji: 1.1.2022;
+- Smartphone(marka, model, imei) - ustawiające wymienione pola z parametrów, dataProdukcji: 1.1.2022;
+- Smartphone(marka, model, imei, dataProdukcji) - ustawiające pole klasy za pomocą listy inicjalizatorów zmiennych członkowskich - patrz przykłady 12_12
+- void zadzwon() - stwórz prostą implementacji metody 
+- void zrobZdjecie() - stwórz prostą implementacji metody
+
