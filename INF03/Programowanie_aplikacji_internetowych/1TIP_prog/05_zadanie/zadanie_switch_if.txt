@@ -1,0 +1,7 @@
+Napisz program w którym do zmiennej nrMiesiaca przypiszesz liczbę od 1 do 12
+Jeżeli nrMiesiaca jest z przedziału od 1 do 2 oraz 12 wypisz komunikat - zima trzeba się dobrze ubrać
+Dla nr miesiąca 3 do 5 - wiosna, wszystko budzi się do życia
+Dla nr miesiąca 6 do 8 - lato, czas wakacji
+Dla nr miesiąca 9 do 11 - jesień, czas szykować się na zimę.
+Dla innego numeru - nie ma takiego miesiąca.
+

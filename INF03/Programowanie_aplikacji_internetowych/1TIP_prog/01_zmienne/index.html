@@ -9,45 +9,10 @@
 <body>
     <h1>Zmienne</h1>
     <script>
-        let imie = "Tomek";
+        let imie = "Jan";
         let wiek = 15;
-        const rokUrodzenia = "2008";
-        let zmienna;
-        document.write("Pogadajmy o zmiennych <br>");
-        document.write("Mam na imię " + imie + "<br>");
-        document.write("Mam " + wiek + " lat<br>");
-        document.write(`Urodziłem się w ${rokUrodzenia} roku<br>`);
-        document.write(`Typ zmiennej zmienna: ${typeof zmienna}<br>`);
-        zmienna = false;
-        document.write(`Typ zmiennej zmienna: ${typeof zmienna}<br>`);
-        document.write(`<h2>Zmienne złożone</h2>`);
-        let uczniowie = [
-            "Bartłomiej", 
-            "Rafał", 
-            "Kajetan"
-        ];
-        document.write(uczniowie[2] + "<br>");
-        document.write(uczniowie.length + "<br>");
-        uczniowie.push("Mateusz");
-        document.write(uczniowie + "<br>");
-        document.write(uczniowie.length + "<br>");
-
-        let uczen = {
-            imie: "Tomek",
-            nazwisko: "Atomek",
-            wiek: 24,
-            rokUrodzenia: 1999,
-            id: 1234,
-            przedmioty: ["jezyk polski", "informatyka", "matematyka"],
-            adres: {
-                ulica: "Poziomkowa",
-                numer: 13,
-                miejscowosc: "Niepołomice"
-            }
-        }
-
-        document.write(uczen.adres.miejscowosc);
-
+        const rokUrodzenia = 2008;
+        const szkolaSrednia = "LO Niepołomice";
     </script>
 </body>
 </html>
