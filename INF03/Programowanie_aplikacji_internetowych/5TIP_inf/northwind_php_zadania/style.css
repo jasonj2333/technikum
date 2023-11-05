@@ -1,16 +1,27 @@
+header{
+    background-color: antiquewhite;
+    display: flex;
+}
+
+header  > h1 {
+    padding-left: 40px;
+}
+
 main{
     display: flex;
 }
 
 #lewa{
     padding-top: 10px;
+    max-width: 400px;
 }
 
 #lewa ul{
     margin: 0;
-    padding: 0;
+    padding: 20px 0;
     list-style: none;
 }
+
 
 #prawa{
     padding: 10px;
