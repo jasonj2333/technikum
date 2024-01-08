@@ -1,0 +1,1 @@
+bmi = waga / ( Math.pow(wzrost / 100, 2) )
