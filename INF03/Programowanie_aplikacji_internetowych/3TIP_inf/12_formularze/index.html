@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularze</title>
+</head>
+<body>
+    <h1>Kontakt</h1>
+    <form action="" method="post">
+        <label for="imie">Imię</label>
+        <input type="text" id="imie" name="imie"><br>
+
+        <label for="nazwisko">Nazwisko</label>
+        <input type="text" id="nazwisko" name="nazwisko"><br>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="wiadomosc">Wiadomość</label>
+        <textarea name="wiadomosc" id="wiadomosc" cols="30" rows="10"></textarea><br>
+
+        
+        <input type="checkbox" name="rodo" id="rodo">
+        <label for="rodo">Zapoznałem się z RODO</label>
+        <br>
+
+        <input type="button" value="Wyślij" onclick="wyslij();">
+        <input type="reset" value="Wyczyść">
+
+    </form>
+    <div id="wynik"></div>
+    <script src="skrypt.js"></script>
+</body>
+</html>
