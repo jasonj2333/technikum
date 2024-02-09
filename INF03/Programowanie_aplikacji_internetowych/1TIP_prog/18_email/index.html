@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+</head>
+<body>
+    <form>
+        <label for="imie">Imię</label>
+        <input type="text" id="imie"><br>
+
+        <label for="nazwisko">Nazwisko</label>
+        <input type="text" id="nazwisko"><br>
+
+        <label for="email">Email</label>
+        <input type="email" id="email"><br>
+
+        <label for="temat">Temat:</label>
+        <select id="temat">
+            <option value="0"> >>>wybierz z listy</option>
+            <option value="awaria">Awaria sprzętu</option>
+            <option value="oprogramowanie">Niedziałający program</option>
+            <option value="pomoc">Konieczna pomoc</option>
+            <option value="inne">Inne</option>
+        </select>
+        <br>
+
+        <label for="wiadomosc">Treść wiadomości:</label>
+        <textarea id="wiadomosc" cols="50" rows="10"></textarea><br>
+
+        <label for="regulamin">Zapoznałem się z regulaminem</label>
+        <input type="checkbox" id="regulamin"><br>
+
+        <button type="submit">Wyślij</button>
+        <button type="reset">Wyczyść</button>
+    </form>
+    <div id="wynik"></div>
+    <script src="main.js"></script>
+</body>
+</html>
