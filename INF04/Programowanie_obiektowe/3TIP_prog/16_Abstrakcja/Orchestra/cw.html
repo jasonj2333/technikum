@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orchestra</title>
+    <style>
+        code{
+            font-size: 12px;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="markdown-body">
+    <h2>Orkiestra</h2>
+    <p>Wiele pojęć z rzeczywistego świata jesteśmy w stanie przenieść bezpośrednio na język obiektowo-orientowany. Rozważmy na przykład kilka instrumentów muzycznych, np. gitarę, flet i puzon. Każdy z nich wygląda i działa inaczej, ale wszytkie posiadają jedną istotną cechę - można na nich grać! Powiemy zatem, że:</p>
+    <ul>
+        <li>Gitara <em>jest</em> Instrumentem i można na niej grać.</li>
+        <li>Flet <em>jest</em> Instrumentem i można na nim grać.</li>
+        <li>Puzon <em>jest</em> Instrumentem i można na nim grać.</li>
+    </ul>
+    <p>Najczęściej słowo <strong>jest</strong> określa nam relację między typami danych, która odpowiada dziedziczeniu. Widzimy więc, że w tym przypadku Instrument będzie pełnił rolę klasy bazowej... ale czy na pewno klasy? Czy możemy powiedzieć, czym jest i w jaki sposób zachowuje się po prostu "instrument"? Wiemy jedynie, że może grać, ale nie wiemy w jaki sposób. W takiej sytuacji powinniśmy posłużyć się <strong>interfejsem</strong>. W C++ interfejsy realizujemy jako klasy abstrakcyjne zawierające tylko metody czysto wirtualne, ewentualnie definicje metod statycznych.</p>
+    <p>Napisz deklaracje dla wszystkich wymaganych typów i przetestuj ich działanie:</p>
+    <ol>
+        <li>Stwórz klasy <code>Guitar</code>, <code>Flute</code> i <code>Trombone</code> które definiują odpowiednią metodę <code>play()</code>.</li>
+        <li>W funkcji <code>main()</code> zagraj na każdym z instrumentów. Czy możesz zagrać na instrumentach w pętli?</li>
+        <li>Stwórz klasę bazową <code>Instrument</code> i zadeklaruj w nim metodę <code>play()</code>. Zaimplementuj dziedziczenie w stworzonych wcześniej klasach.</li>
+        <li>Spróbuj teraz zagrać na swoich instrumentach w pętli, tworząc z nich wcześniej odpowiednią
+        kolekcję (tablicę). Co obserwsujesz? Jaką rolę w realizacji zadania pełni polimorfizm?</li>
+        <li>Zmień klasę bazową w klasę abstrakcyjną (Interfejs) zawierającą tylko metodę czysto wirtualną <code>play()</code>.</li>
+        <li>Stwórz klasę <code>Orchestra</code>, która:
+            <ul>
+                <li>również dziedziczy po <code>Instrument</code></li>
+                <li>posiada pole prywatne <code>name</code>, typu string oraz publiczną metodę <code>setName()</code> ustawiającą pole name</li>
+                <li>posiada pole prywatne <code>instruments</code>, który jest listą (vectorem) obiektów typu <code>Instrument</code></li>
+                <li>posiada metodę <code>addInstrument(Instrument)</code>, która dodaje do orkiestry nowy instrument</li>
+                <li>definiuje metodę <code>play()</code>, w której gra na wszystkich instrumentach - wołając w pętli na każdym z nich <code>play()</code>.</li>
+            </ul>
+        </li>
+        <li>W funkcji <code>main()</code> stwórz instancje orkiestry i dodaj do niej kilka różnych instrumentów.  Zagraj na orkiestrze.   </li>
+    </ol>
+    <hr>
+    <h4>Przykład zastosowania interfejsu w Javie:</h4>
+    <pre class="java" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">interface</span> Vehicle <span style="color: #009900;">&#123;</span>
+        <span style="color: #000066; font-weight: bold;">void</span> drive<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #009900;">&#125;</span>
+    &nbsp;
+    <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">class</span> Car <span style="color: #000000; font-weight: bold;">implements</span> Vehicle <span style="color: #009900;">&#123;</span>
+        <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000066; font-weight: bold;">void</span> drive<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+           <span style="color: #666666; font-style: italic;">// tu odpalamy silnik i jedziemy</span>
+        <span style="color: #009900;">&#125;</span>
+    <span style="color: #009900;">&#125;</span>
+    &nbsp;
+    <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">class</span> Bike <span style="color: #000000; font-weight: bold;">implements</span> Vehicle <span style="color: #009900;">&#123;</span>
+        <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000066; font-weight: bold;">void</span> drive<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+           <span style="color: #666666; font-style: italic;">// tu pedałujemy!</span>
+        <span style="color: #009900;">&#125;</span>
+    <span style="color: #009900;">&#125;</span></pre>
+    </div>
+</body>
+</html>
