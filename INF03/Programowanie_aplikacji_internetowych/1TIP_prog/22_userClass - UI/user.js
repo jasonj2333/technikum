@@ -27,4 +27,6 @@ class User{
 }
 
 const user1 = new User("jasonj", "Jerzy", "Jasonek", "jasonj@wp.pl", "admin");
+const user2 = new User("tomek", "Tomek", "Atomek", "tomek@wp.pl", "user");
+const user3 = new User("tytus", "Tytus", "de Zoo", "tytus@wp.pl", "user");
 
