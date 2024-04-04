@@ -1,10 +1,11 @@
-class User{
-    constructor(nick, name, surname, email, role){
+export class User{
+    constructor(nick, name, surname, email, role, pass){
         this.nick = nick;
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.role = role;
+        this.pass = pass;
         this.loginDates = [];
         this.active = true;
     }
@@ -18,7 +19,15 @@ class User{
         });
     }
     showUser(){
-        console.log(`Uzytkownik ${this.name} ${this.surname} -  ${this.nick} - ${this.email} - ${this.active}`);
+        return `<tr>
+                    <td>${this.nick}</td>
+                    <td>${this.name}</td>
+                    <td>${this.surname}</td>
+                    <td>${this.email}</td>
+                    <td>${this.role}</td>
+                    <td>${this.loginDates[this.loginDates.length - 1]}</td>
+                    <td>${this.active ? "Aktywny" : "Nieaktywny"}</td>
+                </tr>`;
     }
     toggleActive(){
         this.active = !this.active;
@@ -26,7 +35,6 @@ class User{
 
 }
 
-const user1 = new User("jasonj", "Jerzy", "Jasonek", "jasonj@wp.pl", "admin");
-const user2 = new User("tomek", "Tomek", "Atomek", "tomek@wp.pl", "user");
-const user3 = new User("tytus", "Tytus", "de Zoo", "tytus@wp.pl", "user");
+
+
 

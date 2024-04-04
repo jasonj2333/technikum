@@ -4,8 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Users</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="user.js"></script>
+    <main>
+        <section id="login">
+            <h2>Panel sterowania - zaloguj się!</h2>
+            <form>
+                <div>
+                    <label for="nick">Login</label>
+                    <input type="text" name="nick" id="nick">
+                </div>
+                <div>
+                    <label for="pass">Hasło</label>
+                    <input type="password" name="pass" id="pass">
+                </div>
+                <div>
+                    <input type="button" name="signIn" id="signIn" value="Zaloguj się">
+                </div>
+                
+            </form>
+        </section>
+        <section id="admin">
+            <h2>Panel sterowania - lista uzytkowników - strefa admina <button class="logout">Wyloguj</button></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nick</th>
+                        <th>Imię</th>
+                        <th>Nazwisko</th>
+                        <th>Email</th>
+                        <th>Rola</th>
+                        <th>Ostatnie logowanie</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                        
+                </tbody>
+            </table>
+        </section>
+        <section id="user">
+            <h2>Panel sterowania - profil uzytkownika <button class="logout">Wyloguj</button></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nick</th>
+                        <th>Imię</th>
+                        <th>Nazwisko</th>
+                        <th>Email</th>
+                        <th>Rola</th>
+                        <th>Ostatnie logowanie</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                        
+                </tbody>
+            </table>
+        </section>
+        
+    </main>
+    <!-- <script src="tools.js"></script>
+    <script src="user.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+    <script src="main.js" type="module"></script>
 </body>
 </html>

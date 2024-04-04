@@ -1,4 +1,4 @@
-function stringToHash(string) {
+export function stringToHash(string) {
  
     let hash = 0;
  
@@ -14,6 +14,6 @@ function stringToHash(string) {
 }
 
 
-function findUserByNick(list, nick, pass) {
+export function findUserByNick(list, nick, pass) {
     return list.find((obj) => obj.nick === nick && obj.pass === pass);
 }

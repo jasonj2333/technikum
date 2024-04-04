@@ -1,0 +1,17 @@
+Stwórz klasę User. Każdy obiekt budowany na jego bazie powinien mieć właściwości:
+- nick
+- name
+- surname
+- email
+- role - typ użytkownika - "editor", "reader", "admin"
+- loginDates - tablica - początkowo pusta - z datami kolejnych logowań
+- active - boolean - domyślnie ustawione na true - czy dany użytkownik jest aktywny
+Właściwości nick, name, surname, email, role powinny być podawane podczas tworzenia pojedynczego obiektu.
+
+Dodaj także metody:
+- logIn(), która wstawi do tablicy loginDates nową datę logowania. 
+- showLoginDates(), która w pętli pokaże wszystkie daty logowań
+- showUser(), która wypisze w konsoli wszystkie informacje o danym użytkowniku
+- toggleActive(), która przełączy właściwość active na odwrotną wartość.
+
+Stwórz tablicę users i dodaj do niej 3 obiekty utworzone na bazie powyższej klasy. Poeksperymentuj z ich metodami.
