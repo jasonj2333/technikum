@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sklep - rejestracja</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+    <section id="blok_boczny">
+        <img src="obraz.png" alt="promocje">
+        <h2>Sprawdź promocje</h2>
+        <table>
+            <tr>
+                <th>co?</th>
+                <th>ile taniej?</th>
+            </tr>
+            <tr>
+                <td>ubrania</td>
+                <td>15%</td>
+            </tr>
+            <tr>
+                <td>buty</td>
+                <td>25%</td>
+            </tr>
+        </table>
+    </section>
+    <section>
+        <header>
+            <h1>Zarejestruj się w sklepie</h1>
+        </header>
+        <main>
+            <button id="klient">Klient</button>
+            <button id="adres">Adres</button>
+            <button id="kontakt">Kontakt</button>
+            <section id="pierwszy">
+                <p>Imię</p>
+                <input type="text" placeholder="Wpisz imię" id="imie">
+                <p>Nazwisko</p>
+                <input type="text" id="nazwisko">
+                <p>Data urodzenia</p>
+                <input type="date" id="data_urodzenia">
+            </section>
+            <section id="drugi">
+                <p>Ulica</p>
+                <input type="text" id="ulica">
+                <p>Numer</p>
+                <input type="number" id="numer">
+                <p>Miasto</p>
+                <input type="text" id="miasto">
+            </section>
+            <section id="trzeci">
+                <p>Numer komórkowy</p>
+                <input type="text" id="nr_komorkowy">
+                <div>
+                    <input type="checkbox" id="rodo"> Akceptuję RODO
+                </div>
+                <button id="zatwierdz">Zatwierdź dane</button>
+            </section>
+        </main>
+        <section id="pasek">
+            <section></section>
+        </section>
+    </section>
+    <footer id="stopka">
+        <h4>Rejestracje do sklepu wykonał: 11122233344</h4>
+    </footer>
+</body>
+
+</html>
