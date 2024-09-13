@@ -27,25 +27,46 @@
             </tr>
         </table>
     </section>
-    <section>
+    
         <header>
             <h1>Zarejestruj się w sklepie</h1>
         </header>
         <main>
-            <button id="klient">Klient</button>
-            <button id="adres">Adres</button>
-            <button id="kontakt">Kontakt</button>
+            <button id="klient" onclick="aktywuj('klient')">Klient</button>
+            <button id="adres" onclick="aktywuj('adres')">Adres</button>
+            <button id="kontakt" onclick="aktywuj('kontakt')">Kontakt</button>
             <section id="pierwszy">
                 <p>Imię</p>
-                <input type="text" placeholder="Wpisz dane...">
+                <input type="text" placeholder="Wpisz dane..." id="imie" onblur="zmianaPaska()">
+                <p>Nazwisko</p>
+                <input type="text" id="nazwisko" onblur="zmianaPaska()">
+                <p>Data urodzenia</p>
+                <input type="date" id="data_urodzenia" onblur="zmianaPaska()">
             </section>
-            <section id="drugi"></section>
-            <section id="trzeci"></section>
+            <section id="drugi">
+                <p>Ulica</p>
+                <input type="text" id="ulica" onblur="zmianaPaska()">
+                <p>Numer</p>
+                <input type="number" id="numer" onblur="zmianaPaska()">
+                <p>Miasto</p>
+                <input type="text" id="miasto" onblur="zmianaPaska()">
+            </section>
+            <section id="trzeci">
+                <p>Numer telefonu</p>
+                <input type="text" id="telefon" onblur="zmianaPaska()">
+                <p><input type="checkbox" id="rodo" onblur="zmianaPaska()"><label for="rodo">Akceptuję RODO</label></p>
+                <button id="zatwierdz" onclick="zatwierdzDane()">Zatwierdź dane</button>
+            </section>
         </main>
-        <section id="pasek"></section>
-    </section>
-    <footer></footer>
-
+        <section id="pasek">
+            <section></section>
+        </section>
+    
+    <footer>
+        <h4>Rejestracje do sklepu wykonał: 1112223334</h4>
+    </footer>
+    
+    <script src="skrypt.js"></script>
 </body>
 
 </html>
