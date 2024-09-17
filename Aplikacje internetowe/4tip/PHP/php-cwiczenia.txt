@@ -1,0 +1,6 @@
+1. Utwórz plik index.php zawierający szablon dokumentu HTML
+2. Wstaw do niego skrypt PHP
+3. Utwórz zmienne a = 7, b = 12, c = 'Tomek';
+4. Wypisz zdanie korzystając ze zmiennych a, b, c o treści "Mam na imię (wartość c), mam (b) lat i chodzę do klasy (a)".
+5. Inkrementuj zmienną a i b
+6. Wykonaj obliczenia b reszta z dzielenia przez a i wypisz wynik na ekran.
