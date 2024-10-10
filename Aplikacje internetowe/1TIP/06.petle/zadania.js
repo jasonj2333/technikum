@@ -66,3 +66,92 @@ for(let i = 1; i <= 5; i++){
 }
 
 //http://www.informatyka.orawskie.pl/?pl_petle,147
+
+document.write("<hr>");
+
+// Zadanie 9.
+// Napisz program, który wyprowadzi na ekran monitora trójką narysowany za pomocą znaków "*" według przykładu:
+
+
+//       *
+//      ***
+//     *****
+//    *******
+//   *********
+
+for(let i = 1; i < 10; i+=2){
+    for(let j = 1; j <= 9 - i; j++){
+        document.write("&nbsp;");
+    }
+    for(let j = 1; j <= i; j++){
+        document.write("*");
+    }
+    document.write("<br>");
+}
+
+document.write("<hr>");
+
+// Zadanie 10.
+
+// Napisz program, który wyprowadzi na ekran monitora trójką narysowany za pomocą znaków "*" według przykładu:
+
+ 
+
+//       *
+//      ***
+//     *****
+//       *
+//      ***
+//     *****
+//       *
+//      ***
+//     *****
+
+
+for(let k = 0; k < 3; k++){
+    for(let i = 1; i < 6; i+=2){
+        for(let j = 1; j <= 5 - i; j++){
+            document.write("&nbsp;");
+        }
+        for(let j = 1; j <= i; j++){
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+}
+
+
+
+document.write("<hr>");
+ 
+
+// Zadanie 11.
+
+// Napisz program, który wyprowadzi na ekran monitora trójką narysowany za pomocą znaków "*" według przykładu:
+
+ 
+
+//             *
+//            ***
+//           *****
+//             *
+//            ***
+//           *****
+//          *******
+//             *
+//            ***
+//           *****
+//          *******
+//         *********
+
+for(let k = 0; k < 3; k++){
+    for(let i = 1; i < 6; i+=2){
+        for(let j = 1; j <= 5 + k - i; j++){
+            document.write("&nbsp;");
+        }
+        for(let j = 1; j <= i; j++){
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+}
