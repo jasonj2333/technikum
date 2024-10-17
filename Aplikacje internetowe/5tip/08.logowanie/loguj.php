@@ -6,7 +6,8 @@
     }elseif(isset($_POST['login']) && isset($_POST['haslo'])){
         $login = $_POST['login'];
         $haslo = $_POST['haslo'];
-        if($login == 'janek' && $haslo == 'jan23'){
+        require_once 'users.php';
+        if( zaloguj($login, $haslo) ){
             //Zalogujemy użytkownika
             $_SESSION['user'] = $login;
             header('location: index.php');
