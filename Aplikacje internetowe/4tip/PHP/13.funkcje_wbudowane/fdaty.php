@@ -33,6 +33,17 @@ echo date('Y-m-d H:i:s', $czas);
 // i wyświetla datę w formacie:
 //     Dzisiaj jest wtorek 23 listopada 2017 roku.
 
-function wyswietlCzas($znacznik = time()) {
-    
+function wyswietlCzas($znacznik) {
+    $date = getdate($znacznik);
+    //var_dump($date);
+    $day = $date['wday'];
+    $days = ["", "poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota", "niedziela"];
+
+    $mon = $date["mon"];
+    $months = ["", "stycznia", "", "", "", "", "", "", "", "", "października", "listopada", "grudnia"];
+
+    $printDate = "Dzisiaj jest " . $days[$day] ." ". $date["mday"]." ".$months[$mon] ." ".$date["year"]." roku";
+    return $printDate;
 }
+echo "<br>";
+echo wyswietlCzas(time());
