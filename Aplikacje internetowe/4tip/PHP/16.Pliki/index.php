@@ -1,27 +1,17 @@
-<?php
-$plik = 'imiona.txt';
+<?php 
+$dane = "dane.txt";
 
-if(file_exists($plik)){
-
-    if(is_file($plik)){
-        echo "<p>Plik istnieje</p>";
-        echo "<p>Rozmiar:" . filesize($plik). "</p>";
-        
-        if( $file = fopen($plik, 'r') ){
-            while(!feof($file)){ //feof() - zwraca true jeżeli osiągniemy koniec pliku
-                $row = fgets($file); //czyta plik po wierszu
-                echo "<p>$row</p>";
-            }
-            fclose($file);
-        }
-
-    }else{
-        echo "<p>Folder istnieje</p>";
-    }
-  
-}else{
-    echo "<p>Nie ma takiego pliku</p>";
-    touch($plik);
+if(!file_exists($dane)){
+    touch($dane);
 }
 
-//unlink($plik); //usuwa plik
+$tekst = "Jakiś tam tekst2\n";
+
+if($file = fopen($dane, 'a')){
+    if(fwrite($file, $tekst)){
+        echo "<p>Plik zapisano</p>";
+    }else{
+        echo "<p>Nie udało się zapisać danych do pliku.</p>";
+    }
+    fclose($file);
+}
