@@ -1,0 +1,24 @@
+pastebin.com/2cefaTu8
+
+Utwórz klasę Wielokat, posiadająca dwie prywatne zmienne członkowskie *boki, iloscBokow.
+Zdefiniuj konstruktory dla klasy Wielokat:
+ - domyślny - inicjujący zmienne członkowskie iloscBokow = 4 i boki jako 4 elementową tablicę dynamiczną a wartościami {2, 2, 2, 2}
+ - parametryczny z jednym parametrem iloscBokow - inicjujący zmienne członkowskie iloscBokow parametrem iloscBokow oraz boki dynamiczną tablicą o wielkości iloscBokow 
+ - kopiujący - tworzący nowy obiekt na podstawie już istniejącego, ale ale zwiększający długość każdego boku 2 razy.
+    Np. prostokat źródłowy ma boki a=2, b=7 to utworzony na pomocą konstruktora kopiującego nowy obiekt będzie miał boki równe a=4, b=14.
+Zdefiniuj prywatną metodę członkowską o nazwie dodajBoki, za pomocą której użytkownik będzie mógł wprowadzać z klawiatury długości boków wielokąta w ilości iloscBokow.
+    np. jeśli iloscBokow = 3, to użytkownik będzie mógł wprowadzić długości 3 boków
+Zdefiniuj publiczne metody:
+- Info - wyświetlającą wszystkie boki wielokata w formacie: Bok a = 5, Bok b = 3  itd.
+    wskazówka: kod ascii małej litery a to 97, b 98 itd.
+- Obwod - obliczającą i zwracającą odwód danego wielokąta.
+
+Zdefiniuj destruktor zwalniający pamięć zaalokowaną dynamicznie
+
+
+Przetestuj działanie aplikacji tworząc 3 obiekty:
+- w1 z wykorzystaniem konstruktora domyślnego
+- w2 z wykorzystaniem konstruktora parametrycznego z ilość boków 5;
+- w3 z wykorzystaniem konstruktora kopiującego na podstawie obiektu w2.
+
+Dla każdego obiektu wywołaj metody Info oraz Obwod;

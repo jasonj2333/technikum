@@ -1,6 +1,10 @@
 <?php
 
-//var_dump($_POST);
+//var_dump($_FILES);
+
+if(isset($_FILES['plik'])){
+    move_uploaded_file($_FILES['plik']['tmp_name'], "./".$_FILES['plik']['name']);
+}
 
 if(!isset($_POST['imie'])) die('Błąd. Przejdź do strony z formularzem');
 
@@ -21,6 +25,24 @@ if($rodo == 'nie') $errors[] = "Pole rodo musi być zaznaczone";
 
 if(empty($errors)){
     echo "<p>Rejestracja przebiegła pomyślnie.</p>";
+    echo "<p>Wprowadzone dane: </p>";
+    echo "<p>Imię: $name </p>";
+    echo "<p>Nazwisko: $surname </p>";
+    echo "<p>Zawód: $profession </p>";
+    echo "<p>Email: $email </p>";
+    echo "<p>Wykształcenie: $education </p>";
+    if(!empty($languages)){
+        echo "<p>Języki obce:</p>";
+        echo "<ul>";
+        foreach($languages as $lang){
+            echo "<li>$lang</li>";
+        }
+        echo "</ul>";
+    }else{
+        echo "<p>Brak znajmości języków</p>";
+    }
+    echo "<p>Zgoda na przetwarzanie danych osobowych $rodo</p>";
+
 }else{
     foreach($errors as $error){
         echo"<p style='color:red'>$error</p>";

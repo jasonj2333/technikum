@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Rejestracja do programu "Czyste Powietrze"</h1>
-    <form action="poczta.php" method="post">
+    <form enctype="multipart/form-data" action="poczta.php" method="post">
         <div>
             <label for="imie">Podaj imię</label>
             <input type="text" id="imie" name="imie">
@@ -49,6 +49,10 @@
         <div>
             <input type="checkbox" name="rodo" id="rodo" value="tak">
             <label for="rodo">Wyrażam zgodę na przetwarzanie danych osobowych</label>
+        </div>
+
+        <div>
+            <input type="file" name="plik" id="plik">
         </div>
 
         <button>Wyślij</button>
