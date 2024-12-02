@@ -1,5 +1,8 @@
 <?php 
-    $imie = "Tomek";
+    session_start();
+    if(isset($_SESSION['login'])){
+        $imie = $_SESSION['login'];
+    }
 ?>
 <!DOCTYPE html>
 <html lang="pl">
