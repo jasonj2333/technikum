@@ -18,6 +18,7 @@
     <?php else: ?>
         <h1>Witaj <?php echo $imie ?> </h1>
         <p>Jesteś w strefie dla zalogowanych użytkowników, przed opuszczeniem strony   - <a href="wyloguj.php">Wyloguj się!!</a></p>
+        <p>Przejdź do strefy dla <a href="strefa.php">zalogowanych użytkowników</a></p>
     <?php endif; ?>
 </body>
 </html>

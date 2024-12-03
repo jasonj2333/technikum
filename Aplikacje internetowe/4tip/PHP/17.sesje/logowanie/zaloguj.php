@@ -5,7 +5,8 @@
         header('location: index.php');
         exit;
     }elseif( isset($_POST['login']) ){
-        if($_POST['login'] == 'janek' && $_POST['password'] = 'Jan23'){
+        require_once 'users.php';
+        if( zaloguj($_POST['login'], $_POST['password']) ){
             $_SESSION['login'] = $_POST['login'];
             header('location: index.php');
             exit;
