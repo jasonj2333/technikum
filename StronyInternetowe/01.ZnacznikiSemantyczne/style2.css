@@ -1,0 +1,20 @@
+aside{
+    width: 20%;
+}
+
+main{
+    width: 80%;
+}
+
+#wrapper{
+    display: flex;
+}
+
+article{
+    width: 33%;
+}
+
+#artykuly{
+    display: flex;
+    flex-direction: row-reverse;
+}

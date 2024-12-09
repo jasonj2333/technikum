@@ -1,0 +1,31 @@
+aside{
+    width: 20%;
+    float: left;
+}
+
+main {
+    width: 80%;
+    float: left;
+}
+
+body > footer{
+    clear: both;
+    background-color: aquamarine;
+}
+
+#news > article{
+    width: 33%;
+    float: left;
+}
+
+#js{
+    clear: both;
+}
+
+#stopkaStrony{
+    font-size: 20px;
+}
+
+#imgJs{
+    float: right;
+}
