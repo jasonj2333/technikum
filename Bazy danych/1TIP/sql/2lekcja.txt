@@ -1,0 +1,9 @@
+Zmiana struktury tabeli może polegać na dodaniu kolumny, usunięciu kolumny, dodaniu atrybutu lub usunięciu atrybutu. Do modyfikowania struktury tabeli służy polecenie:
+
+ALTER TABLE nazwa_tabeli zmiana
+ALTER TABLE ksiazki ADD liczba_stron varchar(5);
+ALTER TABLE książki MODIFY COLUMN liczba_stron int NOT NULL;
+ALTER TABLE ksiazki DROP COLUMN liczba_stron;
+
+ALTER TABLE ksiazki  DROP COLUMN autor;
+ALTER TABLE książki ADD id_autora int NOT NULL;

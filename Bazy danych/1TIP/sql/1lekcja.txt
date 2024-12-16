@@ -1,0 +1,54 @@
+Język definiowania danych (DDL - Data definition language)
+- CREATE nazwa_obiektu
+- ALTER nazwa_obiektu
+- DROP nazwa_obiektu
+
+CREATE DATABASE dane_osobowe;
+DROP DATABASE dane_osobowe;
+
+CREATE DATABASE ksiegarnia;
+
+CREATE TABLE Osoba
+(
+   nazwa_kolumny typ_kolumny [atrybuty],
+   nazwa_kolumny typ_kolumny [atrybuty]
+)
+
+CREATE TABLE Osoba
+(
+    id_osoby int, 
+    nazwisko varchar(60),
+    imie varchar(40),
+    miasto varchar(50),
+    ulica varchar(50),
+    nr_domu varchar(7)
+);
+
+USE ksiegarnia;
+CREATE TABLE Klient
+(
+    id_klienta int NOT NULL,
+    nazwisko varchar(60) NOT NULL,
+    imie varchar(40) NOT NULL,
+    kod_pocztowy varchar(6),
+    miejscowosc varchar(50),
+    ulica varchar(50),
+    nr_domu varchar(7),
+    PESEL varchar(11),
+    email varchar(70)
+);
+
+CREATE TABLE Ksiazki
+(
+    id_ksiazki int,
+    tytul varchar(100) NOT NULL,
+    autor varchar(80) NOT NULL,
+    cena decimal,
+    wydawnictwo varchar(20),
+    temat varchar(30),
+    miejsce_wydania varchar(28),
+    jezyk_ksiazki varchar(15),
+    opis varchar(100)
+);
+
+DROP TABLE Osoba;
