@@ -1,0 +1,25 @@
+const sprawdzButton = document.querySelector("#sprawdz");
+const odpowiedzInput = document.querySelector("#odpowiedz");
+const wynikDiv = document.querySelector("#wynik");
+
+let liczba = Math.floor(Math.random() * 100) + 1;
+
+sprawdzButton.onclick = function(){
+    let odp = Number(odpowiedzInput.value);
+    if(isNaN(odp) || odp == 0){
+        odpowiedzInput.value = "";
+        return;
+    }
+    if(odp == liczba){
+        wynikDiv.innerHTML = "Brawo!!";
+        return;
+    }
+    if(odp > liczba){
+        wynikDiv.innerHTML = "Za dużo";
+        return;
+    }
+    if(odp < liczba){
+        wynikDiv.innerHTML = "Za mało";
+        return;
+    }
+}
