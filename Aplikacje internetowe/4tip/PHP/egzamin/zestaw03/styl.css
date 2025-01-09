@@ -1,0 +1,70 @@
+* {
+    font-family: Georgia;
+}
+
+header{
+    background-color: navy;
+    color: white;
+    text-align: center;
+    height: 100px;
+    display: flex;
+}
+
+header > section {
+    width: 50%;
+}
+
+nav{
+    background-color: navy;
+    padding: 20px;
+}
+
+.stany{
+    color: silver;
+    margin: 50px;
+}
+
+.stany:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+#lewy, #prawy{
+    background-color: Azure;
+    height: 550px;
+}
+
+#lewy{
+    width: 70%;
+}
+
+#prawy{
+    width: 30%;
+}
+
+footer{
+    background-color: navy;
+    color: white;
+}
+
+table{
+    border: solid 1px navy;
+    margin: auto;
+    width: 70%;
+}
+
+tr:hover{
+    background-color: skyblue;
+}
+
+#prawy img {
+    width: 90%;
+}
+
+main{
+    display: flex;
+}
+
+footer > p{
+    margin-top: 0;
+}
