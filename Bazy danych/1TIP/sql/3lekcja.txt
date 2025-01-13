@@ -1,0 +1,18 @@
+ALTER TABLE ksiazki ADD PRIMARY KEY (id_ksiazki);
+ALTER TABLE klient ADD PRIMARY KEY (id_klienta);
+ALTER TABLE ksiazki MODIFY COLUMN id_ksiazki int NOT NULL AUTO_INCREMENT;
+ALTER TABLE klient MODIFY COLUMN id_klienta int NOT NULL AUTO_INCREMENT;
+
+CREATE TABLE Autor(
+    id_autora INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    nazwisko varchar(50) NOT NULL,
+    imie varchar(30) NOT NULL,
+    narodowosc varchar(30),
+    okres_tworzenia varchar(40),
+    jezyk varchar(30),
+    rodzaj_tworczosci varchar(35),
+    osiagniecia varchar(100)
+);
+
+ALTER TABLE autor ALTER `jezyk` SET DEFAULT 'polski';
+ALTER TABLE klient ALTER `miejscowosc` SET DEFAULT 'Kraków';
