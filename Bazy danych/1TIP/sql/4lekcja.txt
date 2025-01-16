@@ -1,0 +1,27 @@
+Utwórz bazę danych zadanie1tip
+Utwórz tabele oceny:
+	- id int primary key not null AUTO_INCREMENT
+	- ocena int not null
+	- komentarz varchar(100)
+	- status boolean not null default TRUE
+
+CREATE DATABASE zadanie1tip;
+
+CREATE TABLE ocena(
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    ocena INT NOT NULL,
+    komentarz VARCHAR(100),
+    status BOOLEAN NOT NULL DEFAULT TRUE
+);
+
+- Zmień typ pola ocena w tabeli ocena na TINYINT(1)
+ALTER TABLE ocena MODIFY ocena TINYINT(1) NOT NULL;
+
+- Ustaw wartość domyślną dla pola ocena na 5
+ALTER TABLE ocena ALTER ocena SET DEFAULT 5;
+
+
+
+
+
+
