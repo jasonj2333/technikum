@@ -35,12 +35,16 @@
                     <td>{$wiersz['nazwisko']}</td>
                     <td>{$wiersz['telefon']}</td>
                     <td>{$wiersz['email']}</td>
-                    <td> </td>
+                    <td> 
+                        <a href='edytuj.php?id={$wiersz['id']}'>Edytuj</a> | 
+                        <a href='usun.php?id={$wiersz['id']}' class='usun'>Usuń</a>
+                    </td>
                     </tr>";
             }
             mysqli_close($polaczenie);
         ?>
         </table>
     </div>
+    <script src="skrypt.js"></script>
 </body>
 </html>
