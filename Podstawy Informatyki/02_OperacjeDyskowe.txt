@@ -1,0 +1,25 @@
+help komenda
+komenda /?
+dir /?
+dir /p
+dir /w
+dir /s
+dir /o:n dir /o:-n dir /o:e dir /o:g
+dir /a: dir /a:d dir /a:r
+dir *.txt
+dir t*.*
+tree
+tree /f
+cd
+cd /
+cd..
+cd c:\Users\admin
+cd User\admin
+MD katalog LUB MKDIR katalog
+MD Jurek
+MD C:\admin\Jurek
+echo tekst - wyświetla tekst
+echo > nazwa.txt - tworzy plik
+echo Jakis tekst > tekst.txt - z zawartoscia
+del nazwa.txt - usuwa
+rd, rmdir nazwaKatalogu

@@ -1,0 +1,11 @@
+ipconfig
+ipconfig /all
+ping onet.pl
+tracert onet.pl
+hostname
+systeminfo
+cls
+dir
+cd katalog
+cd..
+cd \ 
