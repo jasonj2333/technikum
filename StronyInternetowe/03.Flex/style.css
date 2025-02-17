@@ -2,7 +2,7 @@ section{
     background-color: red;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     /* flex-flow: row wrap; */
     /* height: 500px; */
     justify-content: space-evenly;
@@ -14,4 +14,30 @@ div{
     color: blue;
     margin:10px;
     width: 150px;
+}
+
+#a{
+    order: 4;
+    flex-grow: 5;
+    height: 200px;
+    
+}
+
+#b{
+    order: 1;
+    flex-basis: 200px;
+    height: 200px;
+    flex-shrink: 0.5;
+}
+
+#c{
+    order: 2;
+    flex-grow: 2;
+    height: 200px;
+}
+
+#d{
+    order: 3;
+    height: 100px;
+    align-self: center;
 }
