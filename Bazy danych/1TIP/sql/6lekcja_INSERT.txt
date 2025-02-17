@@ -1,0 +1,12 @@
+INSERT INTO ksiazki (tytul, id_autora) VALUES ("Potop", 1);
+INSERT INTO autor (nazwisko, imie) VALUES ("Sienkiewicz", "Henryk");
+INSERT INTO autor(nazwisko, imie) VALUES ("Słowacki", "Juliusz"), ("Mickiewicz", "Adam");
+INSERT INTO autor VALUES (NULL, "Sapkowski", "Andrzej", "polska", NULL, NULL, NULL, NULL);
+INSERT INTO ksiazki (tytul, id_autora) VALUES ("Pan Tadeusz", 2), ("Kordian", 3), ("Wiedźmin", 4);
+
+INSERT INTO klient (nazwisko, imie, kod_pocztowy, miejscowosc, ulica, nr_domu, PESEL) VALUES ("Adamska", "Anna", "87-100", "Toruń", "Górna", 7, "60062544863"), ("Bolecki", "Miłosz", "45-404", "Opole", "Nowa", 24, "64120563126"), ("Wilk", "Dawid", "87-100", "Toruń", "Szeroka", 1, "98040468241");
+
+Adamska Anna, ul. Górna 7, 87-100 Toruń, tel. 123 456 789, pesel: 60062544863
+Bolecki Miłosz, ul. Nowa 24, 45-404 Opole, tel. 234 567 890, pesel: 64120563126
+Wilk Dawid, ul. Szeroka 1, 87-100 Toruń, tel. 345 678 901, pesel: 98040468241
+
