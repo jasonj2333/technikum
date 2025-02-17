@@ -1,0 +1,17 @@
+section{
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* flex-flow: row wrap; */
+    /* height: 500px; */
+    justify-content: space-evenly;
+}
+
+div{
+    background-color: yellow;
+    font-size: 40px;
+    color: blue;
+    margin:10px;
+    width: 150px;
+}
