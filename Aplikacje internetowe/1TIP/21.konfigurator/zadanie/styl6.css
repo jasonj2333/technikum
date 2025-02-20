@@ -1,0 +1,53 @@
+body {
+	margin: 0;
+	font-family: Georgia;
+}
+#wrapper{
+	max-width: 1024px;
+	margin: auto;
+}
+main{
+	display: flex;
+}
+#lewy {
+	background: Maroon;
+	color: white;
+	height: 800px;
+	width: 30%;
+	padding:5px;
+}
+#prawy {
+	background: Maroon;
+	color: white;
+	height: 800px;
+	width: 70%;
+	overflow-y: scroll;
+	padding:5px;
+}
+#stopka {
+	background: DimGray;
+	color: white;
+
+}
+#prawy img, ul{
+	float: left;
+}
+#prawy p {
+	clear: both;
+}
+p {
+	padding: 10px;
+}
+img {
+	padding: 10px;
+	
+}
+#indigo {
+	background: Indigo
+}
+#steelblue {
+	background: SteelBlue;
+}
+#olive {
+	background: Olive;
+}

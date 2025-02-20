@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Style w JavaScript</title>
+	<link rel="stylesheet" href="styl6.css" />
+</head>
+<body>
+	<div id="wrapper">
+		<main>
+			<div id="lewy">
+				<h1>Konfigurator stylów</h1>
+				<p>Podaj kolor tła</p>
+				<!-- <button type="button" id="indigo" class="buttons" onclick="kolorTla('indigo')">Indigo</button> -->
+				<button type="button" id="indigo" class="buttons">Indigo</button>
+				<button type="button" id="steelblue" class="buttons">SteelBlue</button>
+				<button type="button" id="olive" class="buttons">Olive</button>
+				<p>Podaj kolor czcionki</p>
+				<select id="kolorC">
+					<option value="White">White</button>
+					<option value="Tan">Tan</option>
+					<option value="Bisque">Bisque</option>
+					<option value="Plum">Plum</option>
+				</select>
+				<p>Podaj rozmiar czcionki w procentach, np. 200%</p>
+				<input type="number" id="rozmiar" value="100"  />
+				<p>Czy rysunek ma mieć ramkę?</p>
+				<label>
+					<input type="checkbox" id="ramka" />
+					Rysuj ramkę
+				</label>
+				<p>Jaki jest typ punktora listy?</p>
+				<label>
+					<input type="radio" name="punktor" value="disc" checked />dysk<br/>
+				</label>
+				<label>
+					<input type="radio" name="punktor" value="square" />kwadrat<br/>
+				</label>
+				<label>
+					<input type="radio" name="punktor" value="circle" />okrąg<br/>
+				</label>
+			</div>
+			<div id="prawy">
+				<img src="gibraltar.jpg" alt="Gibraltar" id="obraz" />
+				<ul id="lista">
+					<li>element 1</li>
+					<li>element 2</li>
+					<li>element 3</li>
+				</ul>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+				<div></div>
+			</div>
+		</main>
+		
+		<div id="stopka">
+			Autor: Chriskyy#0181
+		</div>
+	</div>
+	<script src="skrypt.js"></script>
+</body>
+</html>
