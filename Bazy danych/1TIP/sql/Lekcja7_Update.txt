@@ -1,0 +1,4 @@
+UPDATE ksiazki SET jezyk_ksiazki = "polski"; //Wszystkie rekordy w bazie - Bardzo UWAŻAJ!!!
+UPDATE ksiazki SET cena=20 WHERE id_ksiazki = 1;
+UPDATE ksiazki SET wydawnictwo = "ABC", temat = "Historia", miejsce_wydania = "Kraków", opis = "Literacka wizja Potopu szwedzkiego z 1655 r." WHERE id_ksiazki = 1;
+UPDATE autor SET narodowosc = "polska", okres_tworzenia = "pozytywizm", jezyk = "polski", rodzaj_tworczosci = "literatura piękna", osiagniecia = "Nagroda Nobla 1905 r" WHERE id_autora = 1;
