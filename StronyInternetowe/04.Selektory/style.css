@@ -1,0 +1,23 @@
+* {
+    font-family: Verdana;
+}
+
+header{
+    background-color: yellow;
+}
+
+section{
+    background-color: antiquewhite;
+}
+
+h3{
+    color: blue;
+}
+
+#klasy > h3{
+    color: red;
+}
+
+.nieparzyste{
+    font-size: 2em;
+}
