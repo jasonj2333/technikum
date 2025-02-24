@@ -1,0 +1,27 @@
+Anna Kowalska 		Miejscowość: Kraków, 	Ulica: Wawelska 12
+Jan Nowak 		Miejscowość: Warszawa, 	Ulica: Marszałkowska 45
+Katarzyna Wiśniewska 	Miejscowość: Gdańsk, 	Ulica: Długa 21
+Michał Zieliński 	Miejscowość: Opole, 	Ulica: Św. Marcin 8
+Monika Lewandowska 	Miejscowość: Wrocław, 	Ulica: Słowiańska 33
+Paweł Król 		Miejscowość: Lublin, 	Ulica: Zamojska 19
+Ewa Wójcik 		Miejscowość: Szczecin, 	Ulica: Brama Portowa 7
+Tomasz Jankowski 	Miejscowość: Wrocław, 	Ulica: Piotrkowska 120
+Agnieszka Kaczmarek 	Miejscowość: Katowice, 	Ulica: Mariacka 5
+Piotr Majewski 		Miejscowość: Wrocław, 	Ulica: Piotrkowska 16
+
+INSERT INTO klient (imie, nazwisko, miejscowosc, ulica, nr_domu)
+VALUES ('Anna', 'Kowalska', 'Kraków', 'Wawelska', '12'),
+('Jan', 'Nowak', 'Warszawa', 'Marszałkowska', '45'),
+('Katarzyna', 'Wiśniewska', 'Gdańsk', 'Długa', '21'),
+('Michał', 'Zieliński', 'Opole', 'Św. Marcin', '8'),
+('Monika', 'Lewandowska', 'Wrocław', 'Słowiańska', '33'),
+('Paweł', 'Król', 'Lublin', 'Zamojska', '19'),
+('Ewa', 'Wójcik', 'Szczecin', 'Brama Portowa', '7'),
+('Tomasz', 'Jankowski', 'Wrocław', 'Piotrkowska', '120'),
+('Agnieszka', 'Kaczmarek', 'Katowice', 'Mariacka', '5'),
+('Piotr', 'Majewski', 'Wrocław', 'Piotrkowska', '16');
+
+UPDATE klient SET `kod_pocztowy` = "41-009" WHERE `imie` = "Ewa" AND `nazwisko` = "Wójcik";
+DELETE FROM klient; //Usuwa wszystkie rekordy z tabeli klient
+DELETE FROM klient WHERE kod_pocztowy = "41-009";
+DELETE FROM klient WHERE miejscowosc = "Toruń" AND PESEL is NULL;
