@@ -1,0 +1,8 @@
+SELECT tytul, cena, wydawnictwo FROM ksiazki;
+SELECT * FROM ksiazki;
+SELECT imie, nazwisko, PESEL FROM klient;
+SELECT imie, nazwisko, PESEL FROM klient WHERE miejscowosc = "Toruń";
+SELECT imie, nazwisko, PESEL as indentyfikator FROM klient WHERE miejscowosc = "Toruń";
+SELECT DISTINCT kod_pocztowy, miejscowosc FROM klient;
+SELECT imie, nazwisko FROM autor WHERE jezyk = "polski";
+SELECT imie, nazwisko FROM autor WHERE jezyk IS NULL;
