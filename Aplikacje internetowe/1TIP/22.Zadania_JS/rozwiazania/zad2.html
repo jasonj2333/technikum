@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadania JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="zadanie">
+            <summary>Wymagania dotyczące skryptu:</summary>
+            <ul>
+                <li>skrypt uruchamia się po wciśnięciu przycisku OBLICZ na stronie kalkulacja.html</li>
+                <li>skrypt pobiera wartości z obu pól edycyjnych numerycznych</li>
+                <li>następnie oblicza ilość potrzebnego paliwa ze względu na drogę do przebycia w km i spalanie
+                    w litrach na 100 km</li>
+                <li>następnie skrypt wyświetla wynik działania pod przyciskiem OBLICZ według wzoru:
+                    „Potrzebujesz: [wartość] litrów paliwa”, gdzie [wartość] oznacza obliczoną wcześniej ilość paliwa
+                </li>
+            </ul>
+
+        <h2>Oblicz, ile litrów musisz zatankować</h2>
+        <label>
+            dystans do przejechania w km:<br />
+            <input type="number" id="dystansKM" /><br />
+        </label>
+        <label>
+            spalanie samochodu w l/100km:<br />
+            <input type="number" id="spalanie" /><br />
+        </label>
+        <button type="button">OBLICZ</button>
+        <p id="wynik_16"></p>
+    </div>
+    <script src="skrypt2.js"></script>
+</body>
+
+</html>

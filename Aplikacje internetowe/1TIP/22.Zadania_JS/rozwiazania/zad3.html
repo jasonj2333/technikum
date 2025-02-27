@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadania JS z poprzednich egzaminów</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="zadanie">
+
+
+            <summary>Wymagania dotyczące skryptu:</summary>
+            <ul>
+                <li>Uruchamia się po wciśnięciu przycisku na stronie twarz.html</li>
+                <li>Oblicza łączną cenę zabiegów wybranych za pomocą pól checkbox zgodnie z cennikiem w tabeli</li>
+                <li>Wyświetla wynik działania pod przyciskiem według wzoru „Cena zabiegów: [suma]”, gdzie [suma] oznacza
+                    całkowitą cenę wybranych zabiegów</li>
+            </ul>
+            <table>
+                <tr>
+                    <th>Usługa</th>
+                    <th>Cena</th>
+                </tr>
+                <tr>
+                    <td>Piling</td>
+                    <td>45</td>
+                </tr>
+                <tr>
+                    <td>Maska</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Masaż</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Regulacja brwi</td>
+                    <td>5</td>
+                </tr>
+            </table>
+
+        <h2>Sprawdź cenę swojej wizyty</h2>
+        <label>
+            <input type="checkbox" id="piling" />Piling<br />
+        </label>
+        <label>
+            <input type="checkbox" id="maska" />Maska<br />
+        </label>
+        <label>
+            <input type="checkbox" id="masaz" />Masaż<br />
+        </label>
+        <label>
+            <input type="checkbox" id="regulacjaBrwi" />Regulacja brwi<br />
+        </label>
+        <button type="button">Sprawdź cenę</button>
+        <p id="wynik_17"></p>
+    </div>
+    
+    <script src="skrypt3.js"></script>
+</body>
+
+</html>

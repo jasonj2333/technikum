@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadania JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="zadanie">
+
+
+            <summary>Wymagania dotyczące skryptu:</summary>
+            <ul>
+                <li>Funkcjonalność może być zaimplementowana w jednym skrypcie lub w wielu</li>
+                <li>Zadaniem jest wykonanie działania na liczbach A i B w zależności od wybranego przycisku</li>
+                <li>Skrypt uruchamia się po wciśnięciu dowolnego przycisku na stronie dzialania.html</li>
+                <li>Po uruchomieniu skrypt pobiera wartości z obu pól edycyjnych. Wartości powinny być liczbami
+                    całkowitymi. Nie jest wymagane, aby skrypt sprawdzał poprawność danych</li>
+                <li>Skrypt wyświetla wynik działania pod przyciskami według wzoru: „Wynik: [wartość]”, gdzie
+                    [wartość] oznacza obliczony wcześniej wynik działania</li>
+            </ul>
+
+        <h3>Proste działania</h3>
+        <label>
+            liczba A:
+            <input type="number" id="liczbaA" /><br />
+        </label>
+        <label>
+            liczba B:
+            <input type="number" id="liczbaB" /><br />
+        </label>
+        <button type="button" id="add">+</button>
+        <button type="button" id="sub">-</button>
+        <button type="button" id="mul">*</button>
+        <button type="button" id="div">/</button>
+        <button type="button" id="pow">A^B</button>
+        <p id="wynik_14"></p>
+    </div>
+    
+    <script src="skrypt.js"></script>
+</body>
+
+</html>
