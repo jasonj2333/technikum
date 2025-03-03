@@ -2,6 +2,10 @@
     font-family: Verdana;
 }
 
+body{
+    background-color: azure;
+}
+
 header{
     background-color: yellow;
 }
@@ -20,4 +24,21 @@ h3{
 
 .nieparzyste{
     font-size: 2em;
+}
+
+.large{
+    font-size: 50px;
+}
+
+p, div, h3{
+    text-align: right;
+}
+
+#atrybuty form input[type="text"]{
+    background-color: red;
+}
+
+#atrybuty form input[name="haslo"]{
+    background-color: blue;
+    color: white;
 }
