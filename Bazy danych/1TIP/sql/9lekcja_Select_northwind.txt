@@ -19,3 +19,24 @@ SELECT CompanyName, HomePage FROM suppliers;
 
 7. Wybierz nazwy i adresy wszystkich klientów mających siedziby w Londynie
 SELECT `CompanyName`, `Address` FROM `customers` WHERE `City` = 'London';
+
+8. Znajdź numer zamówienia oraz identyfikator klienta dla zamówień z datą wcześniejszą niż '8/1/96'
+SELECT CustomerID, OrderID FROM `orders` WHERE OrderDate < '1996-08-01';
+
+9. Wybierz nazwy i adresy wszystkich klientów mających siedziby we Francji lub w Hiszpanii
+SELECT CompanyName, Address FROM `customers` WHERE Country = 'France' OR Country = 'Spain';
+SELECT CompanyName, Address FROM `customers` WHERE Country IN ('Spain', 'France');
+
+10. Wybierz nazwy i ceny produktów o cenie jednostkowej pomiędzy 20.00 a 30.00
+SELECT ProductName, UnitPrice FROM `products` WHERE UnitPrice >= 20 AND UnitPrice <= 30;
+SELECT ProductName, UnitPrice FROM `products` WHERE UnitPrice BETWEEN 20 AND 30;
+
+
+
+
+
+
+
+
+
+
