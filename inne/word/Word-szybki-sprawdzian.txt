@@ -1,0 +1,10 @@
+1. Ustaw czcionkę Times New Roman dla całego dokumentu
+2. Dla Tematu B1 i B1 ustaw styl Nagłówek 1
+3. Dla wszystkich punktów np.1, 2 itp ustaw styl Nagłówek 2
+4. Dla wszystkich podpunktów np. 2.1, 2.2 itp ustaw styl Nagłówek 3
+5. Zmodyfikuj styl Nagłówek 2 - zmień kolor na czerwony
+6. W nagłówku dokumentu umieść napis "Informatyka 1-3"
+7. W stopce dokumentu umieść numery stron (na środku)
+8. Do punktu 4.3 w rozdziale B1 dodaj przypis o treści "Umiem robić przypisy"
+9. Dodaj nową pustą stronę na początku dokumentu
+10. Na 1 stronie wygeneruj spis treści
