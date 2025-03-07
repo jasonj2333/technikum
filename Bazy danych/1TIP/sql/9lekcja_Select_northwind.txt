@@ -32,6 +32,20 @@ SELECT ProductName, UnitPrice FROM `products` WHERE UnitPrice >= 20 AND UnitPric
 SELECT ProductName, UnitPrice FROM `products` WHERE UnitPrice BETWEEN 20 AND 30;
 
 
+11. Wyszukaj informacje o produktach o cenach mniejszych niż 10 lub większych niż 20
+SELECT ProductName, UnitPrice FROM `products` WHERE UnitPrice NOT BETWEEN 10 AND 20;
+
+12. Znajdź produkty, których nie ma w magazynie i które nie zostały jeszcze zamówione
+SELECT * FROM `products` WHERE UnitsInStock = 0 AND UnitsOnOrder = 0;
+
+SELECT `ProductID`, `ProductName`, `SupplierID`, `UnitPrice` FROM `products` WHERE `ProductName` LIKE 'T%' OR `ProductID` = 46 AND `UnitPrice` < 11;
+
+SELECT `ProductID`, `ProductName`, `SupplierID`, `UnitPrice` FROM `products` WHERE (`ProductName` LIKE 'T%' OR `ProductID` = 46) AND `UnitPrice` < 11;
+
+SELECT CompanyName, Country FROM `customers` WHERE Country LIKE 'U%';
+SELECT CompanyName, Country FROM `customers` WHERE Country LIKE 'U_';
+
+
 
 
 
