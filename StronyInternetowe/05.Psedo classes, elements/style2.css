@@ -1,0 +1,26 @@
+p::first-letter{
+    font-size: 40px;
+    color: red;
+}
+
+p::first-line{
+    color: green;
+    font-variant: small-caps;
+}
+
+h2::before{
+    content: 'www.style.pl ';
+}
+
+h2:hover::after{
+    content: ' Zasuskrybuj ';
+}
+
+::marker{
+    color:red;
+    font-size: 30px;
+}
+
+::selection{
+    background-color: aqua;
+}
