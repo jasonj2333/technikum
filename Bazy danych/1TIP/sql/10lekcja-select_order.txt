@@ -1,0 +1,25 @@
+SELECT `CompanyName`, `Fax` FROM `suppliers` WHERE `Fax` IS NULL;
+SELECT `CompanyName`, `Fax` FROM `suppliers` WHERE `Fax` IS NOT NULL;
+
+--Napisz instrukcję select tak aby wybrać numer zlecenia, datę zamówienia,
+--numer klienta dla wszystkich niezrealizowanych jeszcze zleceń, dla których
+--krajem odbiorcy jest Argentyna
+SELECT `OrderID`,`OrderDate`,`CustomerID` FROM `orders` WHERE `ShipCountry` = 'Argentina' AND `ShippedDate` IS NULL;
+
+#Sortowanie
+SELECT `FirstName`, `LastName` FROM `employees` ORDER BY `LastName`;
+SELECT `FirstName`, `LastName` FROM `employees` ORDER BY `LastName` DESC;
+
+--Wybierz nazwy i kraje wszystkich klientów, wyniki posortuj według kraju, a w
+--ramach danego kraju nazwy firm posortuj alfabetycznie
+SELECT `CompanyName`, `Country` FROM `customers` ORDER BY `Country`, `CompanyName`;
+SELECT `CompanyName`, `Country` FROM `customers` ORDER BY `Country` DESC, `CompanyName` ASC;
+
+--Wybierz informację o produktach (kategoria, nazwa, cena), produkty posortuj
+--wg kategorii a w kategoriach malejąco wg ceny
+SELECT `CategoryID`, `ProductName`, `UnitPrice` FROM products ORDER BY `CategoryID`, `UnitPrice` DESC;
+
+--Wybierz nazwy i kraje wszystkich klientów mających siedziby w Japonii
+--(Japan) lub we Włoszech (Italy), wyniki posortuj tak jak w pkt 1
+SELECT `CompanyName`, `Country` FROM `customers` WHERE `Country` IN('Japan', 'Italy') ORDER BY `Country`, `CompanyName`;
+
