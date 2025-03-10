@@ -1,0 +1,43 @@
+a {
+    text-decoration: none;
+}
+
+a:link{
+    color: red;
+}
+
+a:visited{
+    color: blueviolet;
+}
+
+a:hover{
+    background-color: antiquewhite;
+}
+
+a:active{
+    color:green;
+}
+
+div:hover{
+    background-color: yellow;
+}
+
+div p {
+    display: none;
+}
+
+div:hover p{
+    display: block;
+}
+
+section :first-child{
+    background-color: red;
+}
+
+section :last-child{
+    background-color: green;
+}
+
+section :nth-child(2){
+    background-color: blue;
+}

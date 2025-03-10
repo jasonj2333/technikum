@@ -1,0 +1,34 @@
+p::first-letter{
+    font-size: 40px;
+    color:green;
+}
+
+p::first-line{
+    color:red;
+    font-variant: small-caps;
+}
+
+h2::before{
+    content: "www.styleCss.pl "
+}
+
+h2:hover::after{
+    content: "- Zasuskrybuj!!!";
+}
+
+ul{
+   list-style-type: square; 
+}
+
+::marker{
+    color: red;
+    font-size: 30px;
+}
+
+::selection{
+    background-color: aqua;
+}
+
+p:not(.special){
+    background: yellow;
+}
