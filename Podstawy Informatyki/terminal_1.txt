@@ -1,0 +1,16 @@
+pwd
+ls
+ls -a
+cd
+cd ~
+cd /
+echo "moj pierwszy plik"
+echo "moj pierwszy plik" > plik1.txt
+cat plik2.txt
+ls -l
+chmod g+w plik1.txt
+u - user
+g - group
+o - other
+a - u + g + o
+chmod a+x plik1.txt
