@@ -1,0 +1,35 @@
+Polecenia SELECT:
+1. Napisz zapytanie, które wyświetli wszystkie kolumny z tabeli `Customers`.
+2. Napisz zapytanie, które wyświetli `CustomerID`, `CompanyName` i `ContactName` z tabeli `Customers`, posortowane według `CompanyName` rosnąco.
+3. Napisz zapytanie, które wyświetli `ProductName` i `UnitPrice` z tabeli `Products`, posortowane według `UnitPrice` malejąco.
+4. Napisz zapytanie, które wyświetli `OrderID`, `OrderDate` i `ShipCountry` z tabeli `Orders`, posortowane według `OrderDate` rosnąco.
+5. Napisz zapytanie, które wyświetli `EmployeeID`, `LastName` i `FirstName` z tabeli `Employees`, posortowane według `LastName` rosnąco.
+6. Napisz zapytanie, które wyświetli `SupplierID`, `CompanyName` i `ContactName` z tabeli `Suppliers`, posortowane według `Country` i `CompanyName` rosnąco.
+7. Napisz zapytanie, które wyświetli `CategoryID`, `CategoryName` i `Description` z tabeli `Categories`.
+8. Napisz zapytanie, które wyświetli `ShipperID` i `CompanyName` z tabeli `Shippers`.
+9. Napisz zapytanie, które wyświetli `OrderID` i `Freight` z tabeli `Orders`, gdzie `Freight` jest większe niż 100.
+10. Napisz zapytanie, które wyświetli `ProductName` i `UnitsInStock` z tabeli `Products`, gdzie `UnitsInStock` jest mniejsze niż 20.
+11. Napisz zapytanie, które wyświetli `CustomerID` i `CompanyName` z tabeli `Customers`, gdzie `Country` jest równe 'Germany'.
+12. Napisz zapytanie, które wyświetli `OrderID` i `OrderDate` z tabeli `Orders`, gdzie `OrderDate` jest pomiędzy '1997-01-01' a '1997-12-31'.
+13. Napisz zapytanie, które wyświetli `EmployeeID` i `LastName` z tabeli `Employees`, gdzie `Title` jest równe 'Sales Representative'.
+14. Napisz zapytanie, które wyświetli `ProductName` i `UnitPrice` z tabeli `Products`, gdzie `UnitPrice` jest większe niż 50.
+15. Napisz zapytanie, które wyświetli `SupplierID` i `CompanyName` z tabeli `Suppliers`, gdzie `Country` jest równe 'USA'.
+16. Napisz zapytanie, które wyświetli `CategoryID` i `CategoryName` z tabeli `Categories`, gdzie `CategoryName` zaczyna się na 'B'.
+17. Napisz zapytanie, które wyświetli `ShipperID` i `CompanyName` z tabeli `Shippers`, gdzie `CompanyName` zawiera 'Express'.
+18. Napisz zapytanie, które wyświetli `OrderID` i `ShipCity` z tabeli `Orders`, gdzie `ShipCity` jest równe 'London'.
+19. Napisz zapytanie, które wyświetli `ProductName` i `UnitsOnOrder` z tabeli `Products`, gdzie `UnitsOnOrder` jest większe niż 0.
+20. Napisz zapytanie, które wyświetli `CustomerID` i `CompanyName` z tabeli `Customers`, gdzie `Region` jest NULL.
+
+Polecenia INSERT:
+Dodaj nowego klienta do tabeli Customers.
+Dodaj nowy produkt do tabeli Products.
+Dodaj nowego pracownika do tabeli Employees.
+Dodaj nowego dostawcę do tabeli Suppliers.
+Dodaj nową kategorię do tabeli Categories.
+
+Polecenia UPDATE:
+Zaktualizuj nazwę firmy klienta o CustomerID 'ALFKI'.
+Zaktualizuj cenę produktu o ProductID 1.
+Zaktualizuj tytuł pracownika o EmployeeID 5.
+Zaktualizuj kraj dostawcy o SupplierID 2.
+Zaktualizuj opis kategorii o CategoryID 1.
