@@ -1,0 +1,12 @@
+##Kolumny wyliczane
+SELECT `ProductID`, `UnitPrice` * 1.05 AS `NewUnitPrice` FROM `order details`;
+
+SELECT CONCAT(LastName, ' ', FirstName) AS name FROM `employees`;
+SELECT `CompanyName`, CONCAT(`Address`, ' ', `PostalCode`, ' ', `City`, ' ', `Country`) AS `Address` FROM `customers`;
+
+-- Wybierz wyjściowe ceny produktów, poziom zniżki i ceny 
+-- uwzględniające zniżkę dla wszystkich pozycji zamówień, 
+-- którym zniżka została przyznana.
+-- UWAGA zniżka Discount została podana w procentach
+
+SELECT `ProductID`, `UnitPrice`, `Discount`, `UnitPrice` * (1-`Discount`/100) AS `FinalPrice` FROM `order details` WHERE `Discount` > 0;
