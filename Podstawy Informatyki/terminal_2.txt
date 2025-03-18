@@ -1,0 +1,24 @@
+#prawa zapis liczbowy
+chmod 644 plik1.txt
+6 - uprawnienia usera
+4 - uprawnienia grupy
+2 - uprawnienia pozostałych
+
+110 rw-
+100 r--
+111 rwx
+010 -w-
+
+drwxrw-r--
+chmod 764 katalog
+
+dr-xrw-r-- temp
+chmod 564 temp
+
+#Users
+cat /etc/passwd
+
+sudo chown root katalog
+
+cat /etc/group
+sudo chgrp staff katalog
