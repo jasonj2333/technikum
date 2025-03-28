@@ -1,0 +1,15 @@
+--SUM()
+--Podaj liczbę sprzedanych jednostek produktów
+SELECT SUM(Quantity) FROM `order details`;
+
+--MAX()
+--Wyświetl informacje o najdroższym produkcie
+SELECT MAX(UnitPrice) FROM `products`;
+SELECT * FROM `products` WHERE `UnitPrice` = 263.5000;
+SELECT * FROM `products` WHERE `UnitPrice` = (SELECT MAX(UnitPrice) FROM `products`);
+
+--Podaj maksymalną cenę produktu o cenie poniżej 20
+SELECT MAX(UnitPrice) FROM `products` WHERE UnitPrice < 20;
+
+--Podaj maksymalną, minimalną (MIN()) i średnią cenę produktów w butelkach
+SELECT MAX(UnitPrice) AS cenaMaks, MIN(UnitPrice) AS cenaMin, AVG(UnitPrice) AS cenaSrednia FROM `products` WHERE `QuantityPerUnit` LIKE "%bottles%";

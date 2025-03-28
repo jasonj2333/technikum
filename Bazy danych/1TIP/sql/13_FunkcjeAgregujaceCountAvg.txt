@@ -5,8 +5,8 @@ SELECT COUNT(Region) FROM `employees`; --Nie liczy NULL
 SELECT COUNT(*) AS fromUK FROM `employees` WHERE Country = 'UK';
 
 --Podaj liczbę produktów o cenach mniejszych niż 10 lub większych niż 20
-SELECT COUNT(*) as priceCount FROM `products` WHERE UnitPrice < 10 OR UnitPrice > 20;
-SELECT COUNT(*) as priceCount FROM `products` WHERE UnitPrice NOT BETWEEN 10 AND 20;
+SELECT COUNT(*) AS priceCount FROM `products` WHERE UnitPrice < 10 OR UnitPrice > 20;
+SELECT COUNT(*) AS priceCount FROM `products` WHERE UnitPrice NOT BETWEEN 10 AND 20;
 
 --Podaj liczbę zakupionych towarów, na które udzielono zniżki
 SELECT COUNT(*) AS znizka FROM `order details` WHERE `Discount` > 0;
@@ -22,5 +22,16 @@ SELECT COUNT(*) AS ile, AVG(`UnitPrice`) AS sredniaCena FROM `products`;
 SELECT AVG(Discount) AS sredniaZnika FROM `order details`;
 --dla towarów dla których przyznano zniżkę
 SELECT AVG(Discount) AS sredniaZnizka FROM `order details` WHERE Discount > 0;
+
+--Wyświetl średnią liczbę zamawianych produktów w jednej pozycji zamówienia
+SELECT AVG(Quantity) FROM `order details`;
+
+--Wyświetl średnią cenę produktów w kategorii o ID=2
+SELECT AVG(UnitPrice) FROM `products` WHERE CategoryID = 2;
+
+--Wyświetl liczbę produktów w cenie powyżej średniej
+SELECT AVG(UnitPrice) FROM `products`;
+SELECT COUNT(*) FROM `products` WHERE UnitPrice > 28.49628205;
+SELECT COUNT(*) FROM `products` WHERE UnitPrice > (SELECT AVG(UnitPrice) FROM `products`);
 
 
