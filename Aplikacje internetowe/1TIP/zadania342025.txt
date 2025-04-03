@@ -1,0 +1,16 @@
+Zadanie 1: Obsługa zdarzenia kliknięcia z dynamicznym dodawaniem elementów
+1. Utwórz plik HTML z przyciskiem o id `addButton` i pustą listą o id `itemList`.
+2. Utwórz plik JavaScript i dodaj kod, który obsłuży zdarzenie kliknięcia na przycisku.
+3. Po kliknięciu przycisku, dodaj nowy element do listy z tekstem "Nowy element".
+
+
+Zadanie 2: Walidacja formularza z wieloma polami
+1. Utwórz plik HTML z formularzem zawierającym pole tekstowe o id `nameInput`, pole email o id `emailInput` i przycisk submit.
+2. Utwórz plik JavaScript i dodaj kod, który sprawdzi, czy wszystkie wymagane pola są wypełnione przed wysłaniem formularza.
+3. Jeśli któreś z pól jest puste, wyświetl odpowiedni komunikat.
+
+Zadanie 3: Obsługa zdarzenia zmiany z dynamiczną aktualizacją treści
+1. Utwórz plik HTML z polem wyboru (select) o id `mySelect` i elementem div o id `displayDiv`.
+2. Utwórz plik JavaScript i dodaj kod, który obsłuży zdarzenie zmiany wartości pola wyboru.
+3. Po zmianie wartości pola wyboru, zaktualizuj treść w elemencie div zgodnie z wybraną opcją.
+
