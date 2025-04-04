@@ -13,3 +13,6 @@ SELECT MAX(UnitPrice) FROM `products` WHERE UnitPrice < 20;
 
 --Podaj maksymalną, minimalną (MIN()) i średnią cenę produktów w butelkach
 SELECT MAX(UnitPrice) AS cenaMaks, MIN(UnitPrice) AS cenaMin, AVG(UnitPrice) AS cenaSrednia FROM `products` WHERE `QuantityPerUnit` LIKE "%bottles%";
+
+--Podaj wartość zamówienia o numerze 10250
+SELECT SUM(`UnitPrice` * `Quantity` * (1-`Discount`/100)) as wartosc FROM `order details` WHERE `OrderID` = 10250;
