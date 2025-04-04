@@ -1,0 +1,9 @@
+--PODZAPYTANIA
+--Podzapytanie jako warunek
+
+SELECT * FROM `products` WHERE CategoryID = ( 
+	SELECT CategoryID FROM categories WHERE CategoryName = 'Seafood' 
+);
+
+--Podzapytanie jako tabela tymczasowa
+SELECT MIN(FinalPrice) AS mininum, MAX(FinalPrice) AS maksimum, AVG(FinalPrice) AS srednia FROM ( SELECT UnitPrice * (1-Discount/100) AS FinalPrice FROM `order details` ) AS temp_table;
