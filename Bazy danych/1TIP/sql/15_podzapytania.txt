@@ -7,3 +7,25 @@ SELECT * FROM `products` WHERE CategoryID = (
 
 --Podzapytanie jako tabela tymczasowa
 SELECT MIN(FinalPrice) AS mininum, MAX(FinalPrice) AS maksimum, AVG(FinalPrice) AS srednia FROM ( SELECT UnitPrice * (1-Discount/100) AS FinalPrice FROM `order details` ) AS temp_table;
+
+-- 1. Wybierz nazwy oraz informacje o stanie magazynowym dla produktów dostarczanych przez firmę 'Tokyo Traders'
+SELECT `ProductName`, `UnitsInStock` FROM `products` WHERE `SupplierID` = (
+	SELECT `SupplierID` FROM `suppliers` WHERE `CompanyName` = 'Tokyo Traders'
+);
+-- 2. Wyświetl informacje o najdroższym produkcie.
+SELECT * FROM Products WHERE UnitPrice = (SELECT MAX(UnitPrice) FROM Products);
+
+-- 3. Wyświetl liczbę produktów o cenie powyżej średniej.
+SELECT COUNT(*) FROM products WHERE UnitPrice > (
+	SELECT AVG(UnitPrice) FROM products
+);
+
+-- 4. Podaj liczbę sprzedanych produktów z kategorii Seafood.
+SELECT SUM(`Quantity`) AS liczbaProduktow FROM `order details` WHERE `ProductID` IN (
+	SELECT ProductID FROM products WHERE CategoryID = (
+    	SELECT CategoryID FROM categories WHERE CategoryName = 'Seafood'
+    )
+);
+
+-- 5. Wyświetl maksymalną, minimalną, średnią i sumaryczną wartość
+-- produktów, które są w magazynie.
