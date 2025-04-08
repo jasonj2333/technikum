@@ -1,0 +1,26 @@
+cat > skrypt1.sh
+#!/bin/bash
+echo "Cześć"
+
+cat skrypt1.sh
+nano skrypt1.sh - do edycji pliku
+chmod a+x skrypt1.sh
+bash skrypt1.sh - wykonanie skryptu
+
+cat > skrypt2.sh
+#!/bin/bash
+echo "Podaj swoje imię:"
+read imie
+echo "Podaje imię to: "$imie
+bash skrypt2.sh
+
+cat > skrypt3.sh
+#!/bin/bash
+echo "Nazwa skryptu: "$0
+echo "Parametr 1: "$1
+echo "Parametr 2: "$2
+echo "Wszystkie parametry: "$*
+echo "Liczbę parametrów: "$#
+bash skrypt3.sh 78 34 Tomek
+
+
