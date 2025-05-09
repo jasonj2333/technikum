@@ -1,0 +1,12 @@
+-- Napisz polecenie zwracające nazwy produktów i firmy je dostarczające
+SELECT products.ProductName, suppliers.CompanyName
+FROM products INNER JOIN suppliers ON products.SupplierID = suppliers.SupplierID;
+
+SELECT p.ProductName, s.CompanyName
+FROM products p INNER JOIN suppliers s ON p.SupplierID = s.SupplierID;
+
+-- Napisz polecenie zwracające jako wynik nazwy klientów, 
+-- którzy złożyli zamówienia po 1 marca 1998
+SELECT DISTINCT CompanyName FROM Customers c 
+INNER JOIN Orders o ON c.CustomerID = o.CustomerID 
+WHERE OrderDate > '1998-03-01';
