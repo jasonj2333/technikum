@@ -1,0 +1,15 @@
+SELECT OrderID, SUM(Quantity) FROM `order details` GROUP BY OrderID;
+SELECT OrderID, SUM(Quantity) as `Suma w zamówieniu` FROM `order details` GROUP BY OrderID;
+SELECT ProductID, SUM(Quantity) as `Suma dla produktów` FROM `order details` GROUP BY ProductID;
+
+SELECT od.ProductID, p.ProductName, SUM(od.Quantity) as `Suma dla produktów` FROM `order details` od JOIN products p ON p.ProductID = od.ProductID GROUP BY od.ProductID;
+
+SELECT od.ProductID, p.ProductName, SUM(od.Quantity) as `Suma dla produktów` 
+FROM `order details` od 
+JOIN products p 
+ON p.ProductID = od.ProductID
+WHERE od.ProductID > 20
+GROUP BY od.ProductID;
+
+-- Wyświetl liczbę pracowników z poszczególnych krajów.
+SELECT Country, COUNT(*) FROM Employees GROUP BY Country;
