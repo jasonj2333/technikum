@@ -13,3 +13,25 @@ GROUP BY od.ProductID;
 
 -- Wyświetl liczbę pracowników z poszczególnych krajów.
 SELECT Country, COUNT(*) FROM Employees GROUP BY Country;
+
+-- Wyświetl liczbę kupionych produktów z podziałem na produkty.
+SELECT ProductID, COUNT(*) FROM `Order Details`
+GROUP BY ProductID;
+
+-- Wyświetl minimalną, maksymalną i średnią cenę zakupu produktów
+-- z podziałem na produkty.
+SELECT ProductID, MIN(UnitPrice) minimalna, MAX(UnitPrice) maksymalna, AVG(UnitPrice) srednia  FROM `order details` GROUP BY ProductID;
+
+-- Wybierz 30 zamówień zawierających najdrożej sprzedane produkty.
+SELECT OrderID, MAX(UnitPrice) najdrozszy 
+FROM `order details` 
+GROUP BY OrderID
+ORDER BY najdrozszy DESC
+LIMIT 30;
+
+-- Podaj liczbę przesyłek dostarczonych przez poszczególnych 
+-- przewoźników z podziałem na miasta.
+SELECT ShipVia, ShipCity, COUNT(*) FROM `orders`
+GROUP BY ShipVia, ShipCity
+ORDER BY ShipCity;
+
