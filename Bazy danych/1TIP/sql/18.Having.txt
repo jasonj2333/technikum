@@ -1,0 +1,25 @@
+--- Który ze spedytorów był najaktywniejszy w 1997 roku
+SELECT `ShipVia`, COUNT(*) iloscZamowien
+FROM `orders` 
+WHERE `OrderDate` BETWEEN '1997-01-01' AND '1997-12-31'
+GROUP BY ShipVia
+ORDER BY iloscZamowien DESC
+LIMIT 1;
+
+-- HAVING
+SELECT `ProductID`, SUM(`Quantity`) total 
+FROM `order details` 
+GROUP BY `ProductID`
+HAVING total < 200;
+
+-- Wyświetl listę identyfikatorów produktów (ProductID) i liczbę sprzedanych sztuk produktów (Quantity), których zamówiono ponad 1200 jednostek
+SELECT `ProductID`, SUM(`Quantity`) total
+FROM `order details`
+GROUP BY `ProductID`
+HAVING SUM(`Quantity`) > 1200;
+
+-- Wyświetl zamowienia (OrderID) w których zamówiono ponad 5 produktów
+SELECT `OrderID`, COUNT(*) ilosc 
+FROM `order details` 
+GROUP BY `OrderID`
+HAVING ilosc > 5;
