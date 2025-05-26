@@ -1,0 +1,39 @@
+CREATE TABLE klienci(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    imie VARCHAR(50),
+    nazwisko VARCHAR(60)
+);
+
+CREATE TABLE zamowienia(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    id_klienta INT,
+    data DATE,
+    FOREIGN KEY (id_klienta) REFERENCES klienci(id)
+);
+
+CREATE TABLE produkty(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nazwa VARCHAR(100)
+);
+
+CREATE TABLE zamowienia_produkty( 
+	id_zamowienia INT, 
+	id_produktu INT, 
+	PRIMARY KEY(id_zamowienia, id_produktu), 
+	FOREIGN KEY(id_zamowienia) REFERENCES zamowienia(id), 
+	FOREIGN KEY(id_produktu) REFERENCES produkty(id) 
+);
+
+CREATE TABLE pracownicy(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    imie VARCHAR(50),
+    nazwisko VARCHAR(70)
+);
+
+CREATE TABLE adresy(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    id_pracownika INT,
+    adres VARCHAR(100),
+    telefon VARCHAR(9),
+    FOREIGN KEY(id_pracownika) REFERENCES pracownicy(id)
+);
