@@ -1,0 +1,33 @@
+ROUND(kolumna, 2) --Zaokrąglanie liczb. Podobne: FLOOR zaokrągla zawsze w dół, CEIL w górę, ale tylko do liczb całkowitych.
+
+-- Wyświetl średnią cenę produktów z kategorii Beverages.
+-- Wynik zaokrąglij do dwóch miejsc po przecinku.
+SELECT ROUND(AVG(UnitPrice), 2) as sredniaCena FROM `products` WHERE CategoryID = ( SELECT CategoryID FROM categories WHERE CategoryName = 'Beverages' );
+
+-- Jak zaokrąglić tę cenę w dół, też do dwóch miejsc po przecinku?
+SELECT FLOOR(AVG(UnitPrice) * 100) / 100 as sredniaCena FROM `products` WHERE CategoryID = ( SELECT CategoryID FROM categories WHERE CategoryName = 'Beverages' );
+
+YEAR(kolumna) --Zwraca rok z kolumny typu datowego. Podobnie: MONTH, DAY
+
+
+-- Który z spedytorów był najaktywniejszy w 1997 roku? Użyj YEAR.
+SELECT ShipVia, COUNT(*) aktywnosci FROM `orders` 
+WHERE YEAR(OrderDate) = 1997
+GROUP BY ShipVia
+ORDER BY aktywnosci DESC 
+LIMIT 1;
+
+
+-- Dla każdego pracownika podaj liczbę obsługiwanych przez 
+-- niego zamówień z podziałem na lata i miesiące.
+SELECT EmployeeID, MONTH(OrderDate) miesiac, YEAR(OrderDate) rok, COUNT(*) liczba
+FROM orders
+GROUP BY EmployeeID, miesiac, rok
+ORDER BY EmployeeID, rok, miesiac;
+
+CURRENT_TIMESTAMP -- Obecna data. Można używać do znalezienia rekordów w zależności od obecnego czasu.
+
+RAND() -- losową wartość od 0 do 1.
+SELECT ProductName FROM `products`
+ORDER BY rand()
+LIMIT 3;
