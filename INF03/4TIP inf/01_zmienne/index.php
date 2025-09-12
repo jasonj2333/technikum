@@ -39,6 +39,43 @@
         echo $licznik . "<br>";
         $licznik--; //postdekrementacja
         --$licznik; //predekrementacja
+
+        echo gettype($a);
+        echo "<br>";
+        echo gettype($b);
+        echo "<br>";
+        echo gettype($imie);
+        echo "<br>";
+        $logiczna = true;
+        echo gettype($logiczna);
+        //Tablica
+        $klasa4tip = ["Oskar", "Jan", "Dawid", "Kacper"];
+        echo "<br>";
+        echo gettype($klasa4tip);
+        echo "<br>";
+        echo $klasa4tip[1];
+        
+        //Zmienne superglobalne
+        echo "<br>";
+        var_dump($_GET);
+
+        echo "<br>";
+        var_dump($_POST);
+
+        echo "<br>";
+        var_dump($_COOKIE);
+
+        echo "<br>";
+        var_dump($_FILES);
+
+        echo "<br>";
+        var_dump($_ENV);
+
+        echo "<br>";
+        var_dump($_REQUEST);
+
+        echo "<br>";
+        var_dump($_SERVER);
     ?>
 </body>
 </html>
