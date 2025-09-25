@@ -24,8 +24,16 @@ c %= 4;
 document.writeln(`<p>Wartość c: ${c}</p>`);
 
 a = 16;
-b = '16';
+//b = '16'; //zmienna tekstowa
+b = 8;
 
 //Operatory logiczne i porównania
 document.writeln(`Porównanie a == b: ${a == b} <br>`);
 document.writeln(`Identyczność a === b: ${a === b} <br>`);
+document.writeln(`Nierowność a != b: ${a != b} <br>`);
+document.writeln(`Większe a > b: ${a > b} <br>`);
+document.writeln(`Mniejsze a < b: ${a < b} <br>`);
+document.writeln(`Większe lub równe a >= b: ${a >= b} <br>`);
+document.writeln(`Mniejsze lub równe a <= b: ${a <= b} <br>`);
+document.writeln((a > b && b > 0) + "<br>"); //AND koniunkcja logiczna
+document.writeln(a > b || b < 0); //OR alternatywa logiczna
