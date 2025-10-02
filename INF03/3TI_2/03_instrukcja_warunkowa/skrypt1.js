@@ -1,4 +1,4 @@
-let wiek = -8;
+let wiek = 8;
 
 //Jeżeli wiek >= 18 - Możesz głosować w wyborach
 //w przeciwnym razie - Nie możesz głosować.
