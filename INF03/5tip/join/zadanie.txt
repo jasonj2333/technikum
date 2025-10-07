@@ -1,0 +1,45 @@
+
+Zadanie 1: Wyświetl imię i nazwisko ucznia oraz nazwę przedmiotu, z którego otrzymał ocenę.
+SELECT u.imie, u.nazwisko, p.nazwa_przedmiotu FROM uczniowie u
+JOIN Oceny o ON u.id_ucznia = o.id_ucznia
+JOIN Przedmioty p ON o.id_przedmiotu = p.id_przedmiotu;
+
+Zadanie 2: Wyświetl imię i nazwisko nauczyciela, nazwę przedmiotu, który uczy, oraz imię i nazwisko ucznia, który uczęszcza na ten przedmiot i otrzymał z niego ocenę.
+SELECT n.imie, n.nazwisko, p.nazwa_przedmiotu, u.imie, u.nazwisko FROM nauczyciele n
+JOIN przedmioty p ON n.id_nauczyciela = p.id_nauczyciela
+JOIN oceny o ON p.id_przedmiotu = o.id_przedmiotu
+JOIN uczniowie u ON u.id_ucznia = o.id_ucznia;
+
+Zadanie 3: Wyświetl wszystkie przedmioty i jeśli mają przypisanego nauczyciela, jego imię i nazwisko. Pamiętaj, aby uwzględnić przedmioty, które nie mają przypisanego nauczyciela (np. "Fizyka").
+SELECT p.nazwa_przedmiotu, n.imie, n.nazwisko FROM przedmioty p 
+LEFT JOIN nauczyciele n ON p.id_nauczyciela = n.id_nauczyciela;
+
+Zadanie 4: Wyświetl imię i nazwisko każdego nauczyciela oraz nazwy przedmiotów, które uczy. Jeśli nauczyciel nie uczy żadnego przedmiotu (co w naszej obecnej bazie się nie zdarzy, ale gdyby), powinien być i tak widoczny.
+SELECT n.imie, n.nazwisko, p.nazwa_przedmiotu
+FROM nauczyciele n
+LEFT JOIN przedmioty p ON n.id_nauczyciela = p.id_nauczyciela;
+
+Zadanie 5: Wyświetl imiona i nazwiska uczniów oraz oceny, ale tylko dla ocen, które są wyższe niż 4.
+SELECT u.imie, u.nazwisko, o.ocena FROM uczniowie u JOIN oceny o ON u.id_ucznia = o.id_ucznia WHERE o.ocena > 4;
+
+Zadanie 6: Utwórz widok o nazwie WidokNauczycielePrzedmioty, który będzie wyświetlał imię i nazwisko nauczyciela oraz nazwy przedmiotów, które prowadzi.
+CREATE VIEW WidokNauczycielePrzedmioty AS SELECT n.imie, n.nazwisko, p.nazwa_przedmiotu FROM nauczyciele n JOIN przedmioty p ON n.id_nauczyciela = p.id_nauczyciela;
+
+Zadanie 7: Korzystając z widoku WidokNauczycielePrzedmioty, wyświetl tylko te przedmioty, które prowadzi nauczyciel 'Anna Kowalska'.
+SELECT nazwa_przedmiotu FROM widoknauczycieleprzedmioty WHERE imie = "Anna" AND nazwisko = "Kowalska";
+
+Zadanie 8: Utwórz widok o nazwie WidokUczniowieSrednieOcenyPrzedmiotow, który będzie pokazywał imię i nazwisko ucznia, nazwę przedmiotu oraz średnią ocenę z tego przedmiotu dla każdego ucznia.
+CREATE VIEW WidokUczniowieSrednieOcenyPrzedmiotow AS
+SELECT u.imie, u.nazwisko, p.nazwa_przedmiotu, AVG(o.ocena) AS srednia
+FROM uczniowie u
+JOIN oceny o ON u.id_ucznia = o.id_ucznia
+JOIN przedmioty p ON p.id_przedmiotu = o.id_przedmiotu
+GROUP BY u.id_ucznia, p.nazwa_przedmiotu;
+
+Zadanie 9: Korzystając z widoku WidokUczniowieSrednieOcenyPrzedmiotow, znajdź uczniów, którzy mają średnią ocenę z przedmiotu 'Matematyka' większą niż 3.0.
+SELECT imie, nazwisko, srednia
+FROM widokuczniowiesrednieocenyprzedmiotow
+WHERE nazwa_przedmiotu = "Matematyka" AND srednia > 3.0;
+
+Zadanie 10: Usuń widok WidokNauczycielePrzedmioty.
+DROP VIEW WidokNauczycielePrzedmioty;
