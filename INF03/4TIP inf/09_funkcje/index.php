@@ -55,6 +55,7 @@
 
     echo "Pole prostokąta o bokach $a i $b wynosi ".poleProstokata($a, $b);
     echo "Pole prostokąta o bokach 3 i 4 wynosi ".poleProstokata(3, 4);
+    $pole = poleProstokata(13, 14);
 
 ?>
 <!DOCTYPE html>
