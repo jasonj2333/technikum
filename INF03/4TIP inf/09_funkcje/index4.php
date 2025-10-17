@@ -22,6 +22,15 @@
         echo $urodziny . "<br>";
         echo date('Y-m-d', $urodziny). "<br>";
         var_dump(getdate($urodziny));
+
+        //Dzisiaj mamy piątek - 17 października
+        // l - dzień tygodnia pełny np. Monday
+        // D - dzień tygodnia skrócony np. Mon
+        // w - 0 Sunday, 6 Saturday
+        // N - dni tygodnia 1 - Monday
+        // F - pełna nazwa
+        // n - miesiąc od 1 do 12
+        // https://www.w3schools.com/php/func_date_date.asp
     ?>
 </body>
 </html>
