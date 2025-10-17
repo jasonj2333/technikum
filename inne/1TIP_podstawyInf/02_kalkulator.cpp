@@ -23,8 +23,23 @@ int main()
     if(dzialanie == 1){
         cout << "Wynik dodawania: " << liczba1 + liczba2 << endl;
     }
-    if(dzialanie == 2){
+    else if(dzialanie == 2){
         cout << "Wynik odejmowania: " << liczba1 - liczba2 << endl;
+    }
+    else if(dzialanie == 3){
+        cout << "Wynik mnozenia: " << liczba1 * liczba2 << endl;
+    }
+    else if(dzialanie == 4){
+        if(liczba2 == 0){
+            cout << "Niedozwolana operacja" << endl;
+        }else{
+            cout << "Wynik dzielenia calkowitego: " << liczba1 / liczba2 << endl;
+        }
+    }
+    else if(dzialanie == 5){
+        cout << "Reszta z dzielenia: " << liczba1 % liczba2 << endl;
+    }else{
+        cout << "Nieznane dzialanie !" << endl;
     }
     return 0;
 }
