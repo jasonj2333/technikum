@@ -8,9 +8,11 @@
 <body>
     <h2>If .. else ...</h2>
     <?php 
-        if(isset($_GET['id']))
-            $menu = $_GET['id'];
-        else $menu = 1;
+        // if(isset($_GET['id']))
+        //     $menu = $_GET['id'];
+        // else $menu = 1;
+
+        $menu = (isset($_GET['id'])) ? $_GET['id'] : 1;
 
         echo "<p>Menu</p>";
         echo "<ol>";
