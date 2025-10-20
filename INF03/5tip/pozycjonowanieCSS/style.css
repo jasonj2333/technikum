@@ -1,0 +1,21 @@
+.item{
+    background-color: aqua;
+    border: 1px solid red;
+    text-align: center;
+    color: yellow;
+    font-size: 1.5em;
+    padding: 10px;
+    font-weight: bold;
+}
+
+#item1{
+    float: left;
+    width: 20%;
+}
+#item2{
+    float: left;
+    width: 20%;
+}
+#item3{
+    clear: both;
+}
