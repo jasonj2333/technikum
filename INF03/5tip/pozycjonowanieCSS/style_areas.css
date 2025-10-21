@@ -1,0 +1,41 @@
+.item{
+    background-color: aqua;
+    border: 1px solid red;
+    text-align: center;
+    color: yellow;
+    font-size: 1.5em;
+    padding: 10px;
+    font-weight: bold;
+} 
+
+#container{
+    width: 80vw;
+    margin: 40px auto;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px auto 70px;
+    grid-template-areas: "naglowek naglowek naglowek naglowek"
+                         "glowny glowny sidebar reklama"
+                         "stopka stopka stopka stopka";
+}
+
+header{
+    grid-area: naglowek;
+}
+
+footer{
+    grid-area: stopka;
+}
+
+main{
+    grid-area: glowny;
+}
+
+section{
+    grid-area: sidebar;
+}
+
+aside{
+    grid-area: reklama;
+}
