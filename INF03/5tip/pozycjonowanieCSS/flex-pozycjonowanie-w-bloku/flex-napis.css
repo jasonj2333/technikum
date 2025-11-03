@@ -1,0 +1,17 @@
+section{
+    background-color: aquamarine;
+    height: 400px;
+    display: flex;
+    justify-content: center; /*lewo-prawo */
+    align-items: center; /*góra-dół */
+    gap: 10px;
+}
+
+div{
+    background-color: aliceblue;
+    width: 30%;
+    height: 100px;
+    display: flex;
+    justify-content: center; /*lewo-prawo */
+    align-items: center; /*góra-dół */
+}
