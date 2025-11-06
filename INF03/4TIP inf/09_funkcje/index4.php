@@ -23,7 +23,7 @@
         echo date('Y-m-d', $urodziny). "<br>";
         var_dump(getdate($urodziny));
 
-        //Dzisiaj mamy piątek - 17 października
+        //Dzisiaj mamy czwartek - 6 listopada
         // l - dzień tygodnia pełny np. Monday
         // D - dzień tygodnia skrócony np. Mon
         // w - 0 Sunday, 6 Saturday
@@ -31,6 +31,15 @@
         // F - pełna nazwa
         // n - miesiąc od 1 do 12
         // https://www.w3schools.com/php/func_date_date.asp
+
+        $tydzien = ["niedziela", "poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota"];
+
+        $miesiac = ["", "stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "września", "października", "listopada", "grudnia"];
+
+        $dzien_tygodnia = $tydzien[date('w')];
+        $dzien_miesiaca = date('j');
+        $b_miesiac = $miesiac[date('n')];
+        echo "Dzisiaj mamy $dzien_tygodnia - $dzien_miesiaca $b_miesiac";
     ?>
 </body>
 </html>
