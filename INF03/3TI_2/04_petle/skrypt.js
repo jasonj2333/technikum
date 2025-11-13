@@ -17,8 +17,8 @@ for(let i=40; i>=21; i-=3){
 }
 
 //Policz sumę i średnią liczb nieparzystych w zakresie <67, 134)
-suma = 0;
-licznik = 0;
+let suma = 0;
+let licznik = 0;
 for(let i=67; i<134; i++){
     if(i%2 != 0) { //nie jest podzielna przez 2
         suma = suma + i; //suma += i
