@@ -1,0 +1,121 @@
+Ćwiczenia – CASE w MySQL
+🔹 Ćwiczenie 1
+
+Wyświetl listę produktów (nazwa, cena) i dodaj kolumnę "Poziom ceny":
+
+tania – cena poniżej 20
+
+średnia – 20–100
+
+droga – powyżej 100
+
+🔹 Ćwiczenie 2
+
+W tabeli uczniowie wyświetl imie, nazwisko, srednia. Dodaj kolumnę "status":
+
+≥ 4.75 → "Wyróżnienie"
+
+3.0–4.74 → "Zaliczone"
+
+< 3.0 → "Niezaliczone"
+
+🔹 Ćwiczenie 3
+
+W tabeli pracownicy dodaj kolumnę "Kategoria etatu":
+
+jeśli etat = '1/1' → "Pełny etat"
+
+jeśli etat = '1/2' → "Pół etatu"
+
+inaczej → "Inna forma"
+
+🔹 Ćwiczenie 4
+
+Wyświetl kierowców z tabeli kierowcy i dodaj informację:
+
+jeśli punkty_karne ≥ 20 → "Do kontroli"
+
+inaczej → "OK"
+
+🔹 Ćwiczenie 5
+
+W tabeli zamowienia utwórz kolumnę "koszt_dostawy":
+
+jeśli kwota zamówienia ≥ 200 → koszt = 0
+
+jeśli kwota 100–199 → koszt = 5
+
+jeśli < 100 → koszt = 10
+
+🔹 Ćwiczenie 6
+
+W tabeli filmy wyświetl filmy z kolumną "Kategoria wiekowa":
+
+długość < 60 min → "Krótkometrażowy"
+
+60–120 min → "Średniometrażowy"
+
+120 min → "Długometrażowy"
+
+🔹 Ćwiczenie 7 (INF.03 typowe)
+
+W tabeli produkty dodaj kolumnę "Stan magazynowy":
+
+liczba_sztuk = 0 → "Brak"
+
+1–10 → "Mało"
+
+> 10 → "Dostępne"
+
+🔹 Ćwiczenie 8 (INF.03 typowe)
+
+W tabeli pracownicy utwórz kolumnę "Podwyżka":
+
+jeśli staż pracy ≥ 10 lat → 15%
+
+5–9 → 10%
+
+<5 → 5%
+
+🔹 Ćwiczenie 9
+
+W tabeli transakcje dodaj kolumnę "Typ transakcji":
+
+jeśli kwota < 0 → "Wydatek"
+
+jeśli kwota > 0 → "Wpłata"
+
+= 0 → "Bez zmian"
+
+🔹 Ćwiczenie 10
+
+W tabeli klienci opisz wiek klientów:
+
+< 18 → "Niepełnoletni"
+
+18–64 → "Dorosły"
+
+≥ 65 → "Senior"
+
+🔹 Ćwiczenie 11 – CASE w ORDER BY
+
+Wyświetl produkty tak, aby najpierw były produkty promocyjne (promo = 1), a potem pozostałe.
+Wykorzystaj CASE w sortowaniu.
+
+🔹 Ćwiczenie 12 – CASE w UPDATE
+
+W tabeli oceny zaktualizuj kolumnę opis:
+
+jeśli ocena = 6 → "Celujący"
+
+5 → "Bardzo dobry"
+
+4 → "Dobry"
+
+3 → "Dostateczny"
+
+2 → "Dopuszczający"
+
+1 → "Niedostateczny"
+
+Wykonaj to jednym zapytaniem UPDATE z CASE.

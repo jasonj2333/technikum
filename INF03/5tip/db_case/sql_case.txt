@@ -1,0 +1,82 @@
+SELECT kwota, 
+	CASE
+    		WHEN kwota < 50 THEN "Małe zamówienie"
+        	WHEN kwota <= 200 THEN "Średnie zamówienie"
+        	ELSE "Duże zamówienie"
+    	END as "Wielkość zamówienia"
+FROM `zamowienia`;
+
+
+Ćwiczenie 1
+
+Wyświetl listę produktów (nazwa, cena) i dodaj kolumnę "Poziom ceny":
+tania – cena poniżej 20
+średnia – 20–100
+droga – powyżej 100
+
+SELECT nazwa, cena, 
+   CASE
+    	WHEN cena < 20 THEN "tania"
+        WHEN cena BETWEEN 20 AND 100 THEN "średnia"
+        WHEN cena > 200 THEN "droga"
+    END as "Poziom ceny"
+FROM `produkty`;
+
+
+Ćwiczenie 2
+
+W tabeli uczniowie wyświetl imie, nazwisko, srednia. Dodaj kolumnę "status":
+≥ 4.75 → "Wyróżnienie"
+3.0–4.74 → "Zaliczone"
+< 3.0 → "Niezaliczone"
+
+SELECT imie, nazwisko, srednia,
+    CASE
+        WHEN srednia >= 4.75 THEN 'Wyróżnienie'
+        WHEN srednia >= 3.00 THEN 'Zaliczone'
+        ELSE 'Niezaliczone'
+    END AS status
+FROM uczniowie;
+
+
+Ćwiczenie 3
+Posortuj dane w tabeli uczniowie w następującej kolejności
+- uczniowie ze średnią pomiędzy 3.0 i 4.0
+- uczniowie ze średnią powyżej 4.0
+- pozostali uczniowie
+
+SELECT imie, nazwisko, srednia FROM `uczniowie` ORDER BY 
+CASE 
+    WHEN srednia BETWEEN 3.0 AND 4.0 THEN 1
+    WHEN srednia > 4.0 THEN 2
+    ELSE 3
+END;
+
+Ćwiczenie 4 – CASE w UPDATE
+
+W tabeli oceny zaktualizuj kolumnę opis:
+jeśli 
+ocena = 6 → "Celujący"
+5 → "Bardzo dobry"
+4 → "Dobry"
+3 → "Dostateczny"
+2 → "Dopuszczający"
+1 → "Niedostateczny"
+
+Wykonaj to jednym zapytaniem UPDATE z CASE.
+UPDATE `oceny` SET opis = CASE ocena
+  WHEN 6 THEN "Celujący"
+    WHEN 5 THEN "Bdb"
+    WHEN 4 THEN "Db"
+    WHEN 3 THEN "Dst"
+    WHEN 2 THEN "Dop"
+    WHEN 1 THEN "Ndst"
+END;
+
+Ćwiczenie 5 - COUNT
+Policz pracowników pełnoetatowych i niepełnoetatowych jednym zapytaniem używając CASE
+SELECT COUNT(
+	CASE WHEN etat = "1/1" THEN 1 END
+) as "Pełnoetatowi", COUNT(
+	CASE WHEN etat != "1/1" THEN 1 END
+) as "Niepełnoetatowi" FROM `pracownicy`;
