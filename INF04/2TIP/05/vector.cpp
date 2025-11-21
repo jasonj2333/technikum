@@ -47,7 +47,45 @@ int main()
     numbers.insert(numbers.begin() + 2, 88);
     cout << endl;
 
+    numbers.erase(numbers.begin() + 2);
+
+    numbers.erase(numbers.begin() + 4, numbers.end() - 1);
+
+    numbers.pop_back();
+    numbers.clear();
+
+    numbers.resize(5);
+
+    cout << numbers.size() << endl;
+
     for (auto element : numbers) {
+        cout << element << endl;
+    }
+
+    //Tworzenie wektorów
+    vector<float> v1;
+    v1.push_back(5.7);
+    v1.push_back(3.14);
+
+    vector<int> v2(50); //vector o rozmiarze 50 - wartosci domyslne
+
+    for (int i = 0; i < v2.size(); i++)
+    {
+        //v2[i] = i*3;
+        v2.at(i) = i * 4;
+    }
+
+    vector<int> v3(10, 100); //10 elementow o wartosci 100
+
+    cout << endl;
+
+
+    vector<int> v4(v3); //kopia vectora v3
+    vector<int> v5(v2.begin(), v2.end()); //kopia vectora v2 za pomocą iteratora
+
+    vector<string> cars { "Volvo", "BMW", "FIAT", "Toyota" };
+
+    for (auto element : cars) {
         cout << element << endl;
     }
 }
