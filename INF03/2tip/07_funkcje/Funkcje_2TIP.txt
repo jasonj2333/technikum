@@ -1,0 +1,115 @@
+1. Funkcja zwracająca większą liczbę
+
+Polecenie:
+Napisz funkcję maxLiczba(int $a, int $b): int, która zwróci większą z dwóch liczb.
+
+Podpowiedź:
+Użyj instrukcji if lub operatora warunkowego ? :.
+
+2. Funkcja sprawdzająca, czy liczba jest dodatnia
+
+Polecenie:
+Napisz funkcję czyDodatnia(int $n): bool, która zwróci true jeśli liczba jest większa od 0.
+
+Podpowiedź:
+Zwracasz wynik porównania: return $n > 0;.
+
+3. Funkcja zamieniająca stopnie Celsjusza na Fahrenheita
+
+Polecenie:
+Napisz funkcję
+cToF(float $c): float
+która zwróci temperaturę w Fahrenheitach.
+
+Wzór:
+°F = °C × 1.8 + 32
+
+Podpowiedź:
+W jednej linijce możesz to policzyć i zwrócić.
+
+4. Funkcja zwracająca długość tekstu
+
+Polecenie:
+Napisz funkcję dlugosc(string $tekst): int, która zwróci liczbę znaków.
+
+Podpowiedź:
+Użyj strlen().
+
+5. Funkcja dodająca wykrzyknik na końcu tekstu
+
+Polecenie:
+Napisz funkcję
+dodajWykrzyknik(string $tekst): string
+która zwróci ten sam tekst, ale z dodanym "!" na końcu.
+
+Podpowiedź:
+Łączenie tekstu → operator kropki: .
+
+6. Funkcja zwracająca sumę elementów w tablicy
+
+Polecenie:
+Napisz funkcję suma(array $tab): int, która zsumuje wszystkie liczby całkowite w tablicy.
+
+Podpowiedź:
+Możesz użyć pętli foreach lub funkcji array_sum().
+
+7. Funkcja licząca potęgę liczby
+
+Polecenie:
+Napisz funkcję
+potega(int $podstawa, int $wykladnik): int
+która zwróci wynik potęgowania.
+
+Podpowiedź:
+W PHP potęgę liczy operator **.
+
+8. Funkcja podająca pierwszą literę imienia
+
+Polecenie:
+Napisz funkcję pierwszaLitera(string $imie): string, która zwróci pierwszą literę tekstu.
+
+Podpowiedź:
+Możesz użyć indeksowania: $imie[0].
+
+9. Funkcja zwracająca tekst N razy
+
+Polecenie:
+Napisz funkcję powtorz(string $tekst, int $n): string, która zwróci tekst powtórzony N razy.
+
+Podpowiedź:
+PHP ma funkcję str_repeat().
+
+10. Funkcja sprawdzająca, czy słowo zaczyna się na literę "A"
+
+Polecenie:
+Napisz funkcję czyA(string $wyraz): bool, która zwróci true jeśli pierwsza litera to „A”.
+
+Podpowiedź:
+Sprawdź:
+strtoupper($wyraz[0]) === 'A'
+
+11. Funkcja z parametrem domyślnym i typowaniem nullable
+
+Polecenie:
+Napisz funkcję:
+
+powitanie(?string $imie = null): string
+
+• jeśli imię jest podane → zwróć: "Witaj, $imie!"
+• jeśli nie → "Witaj nieznajomy!"
+
+12. Funkcja zwracająca inicjały
+Polecenie:
+
+Napisz funkcję inicjaly(string $imie, string $nazwisko): string,
+która zwróci inicjały w formie:
+
+Jan Kowalski → J.K.
+
+Podpowiedź dla uczniów:
+
+Pamiętaj, że litery możesz pobrać z tekstu tak jak z tablicy (np. $imie[0]).
+
+Do łączenia tekstów w PHP używa się kropki .
+
+Sprawdź też funkcję strtoupper() jeśli chcesz mieć wielkie litery.
