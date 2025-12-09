@@ -27,3 +27,49 @@ function roznica(a, b){
 document.writeln("<br>Wynik odejmowania " + roznica(5, 9));
 document.writeln("<br>Wynik odejmowania " + roznica(6, 8));
 
+//Napisz funkcje obliczającą i zwracającą pole kwadratu o boku a
+//Przetestuj funkcje na argumentach 5, 12
+
+function poleKwadratu(a){
+    return a * a;
+}
+
+document.writeln("<br>");
+
+document.writeln( poleKwadratu(5) + "<br>");
+document.writeln( poleKwadratu(12) + "<br>");
+
+//Napisz funkcje srednia(a, b, c), która oblicza i zwraca srednią z podanych argumentów
+//Przetestuj działanie funkcji na zestawach liczby 1, 2, 3 oraz 5, 34, 11
+
+function srednia(a, b, c){
+    let srednia = (a + b + c) / 3;
+    return srednia.toFixed(2);
+}
+
+document.writeln(srednia(1, 2, 3) + "<br>");
+document.writeln(srednia(5, 34, 11) + "<br>");
+
+let liczby = [5, 3, 4, 6, 71, 67];
+
+function srednia2(tablicaLiczb){
+    let suma = 0;
+    for(let i = 0; i < tablicaLiczb.length; i++){
+        suma += tablicaLiczb[i];
+    }
+    return suma / tablicaLiczb.length;
+}
+
+document.writeln(srednia2(liczby) + "<br>");
+document.writeln(srednia2([1, 2, 3]) + "<br>");
+
+//Napisz funkcje opisUcznia(imie, nazwisko, klasa = "nieznana"), która wyświetlić tekst "Uczeń: imie nazwisko, klasa: klasa"
+//Uczen: Tomek Atomek, klasa: 3
+
+function opisUcznia(imie, nazwisko, klasa = "nieznana"){
+    document.writeln(`Uczeń: ${imie} ${nazwisko}, klasa: ${klasa}`);
+}
+
+opisUcznia("Michał", "Podolecki", "3TI");
+document.writeln("<br>");
+opisUcznia("Tomek", "Atomek");
