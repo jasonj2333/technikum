@@ -1,14 +1,3 @@
-Poniżej znajdziesz kompletny konspekt lekcji dla uczniów technikum na temat **funkcji w JavaScript**, uwzględniający:
-
-* funkcje zwracające i niezwracające wartości,
-* różnicę między **parametrem** a **argumentem**,
-* **parametry domyślne**,
-* przykłady + krótkie zadania.
-
-Możesz użyć tego bezpośrednio jako materiał na lekcję.
-
----
-
 # **Lekcja: Funkcje w JavaScript**
 
 ## **1. Wprowadzenie – po co nam funkcje?**
@@ -218,3 +207,4 @@ Wywołaj ją raz z trzema argumentami i raz z dwoma.
 3. Jak działa parametr domyślny?
 4. Czy można mieć wiele parametrów domyślnych?
 5. Co się stanie, jeśli po `return` dodamy jeszcze `console.log()`?
+
