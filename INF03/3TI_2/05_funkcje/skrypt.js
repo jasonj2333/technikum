@@ -32,3 +32,11 @@ function roznica(a, b){
 }
 
 document.writeln(roznica(34, 8));
+
+//Napisz funkcje poleProstokata(a, b), która zwraca pole prostokąta o bokach a i b. 
+//Przestuj działanie funkcji na argumentach 9, 4
+function poleProstokata(a, b){
+    return a * b;
+}
+
+document.writeln("Pole prostokąta wynosi: " + poleProstokata(9,4) );
