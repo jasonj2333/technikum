@@ -234,9 +234,6 @@ Wczytaj dwa napisy i sprawdź, czy są identyczne.
 
 ---
 
-Poniżej masz **czytelne porównanie `std::string` i `char[]` w C++**, przygotowane typowo pod **lekcję szkolną** – z tabelą, przykładami i wnioskami dla uczniów.
-
----
 
 # Porównanie: `std::string` vs `char[]` w C++
 
@@ -421,4 +418,5 @@ cout << "Dlugosc: " << strlen(imie);
 * jeśli nie ma polecenia „użyj `char[]`” → użyj `string`
 
 ---
+
 
