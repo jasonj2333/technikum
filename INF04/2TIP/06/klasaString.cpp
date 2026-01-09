@@ -42,5 +42,11 @@ int main()
     cout << c.at(2) << endl;
     cout << c.append("d") << endl;
     cout << nazwisko.find("ski") << endl;
+    cout << c.insert(2, "0123") << endl;
+
+    string s1 = "C++11";
+    string s2 = s1.substr(0, 3);
+    cout << s2 << endl;
+    cout << s1.replace(4, 1, "7") << endl;
 }
 
