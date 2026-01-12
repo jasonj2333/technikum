@@ -58,4 +58,24 @@ echo "<br>";
 echo strlen(rtrim($imie));
 echo "<br>";
 echo strlen(trim($imie));
+
+//Dzielenie i łączenie tekstu
+echo "<br>";
+$dane = explode(" ", $nowy_tekst);
+var_dump($dane);
+echo "<br>";
+$dane2 = explode(",", "Ala,ma,kota");
+var_dump($dane2);
+echo "<br>";
+echo implode("-", $dane2);
+
+//Sprawdzanie początku i końca (od PHP 8)
+echo "<br>";
+var_dump(str_starts_with($tekst2, "Dzisiaj"));
+echo "<br>";
+var_dump(str_ends_with($tekst2, "dzień"));
+
+// Funkcja bezpieczeństwa - tekst od użytkownika
+echo "<br>";
+echo htmlspecialchars("<script>alert('Uwaga wirus')</script>");
 ?>
