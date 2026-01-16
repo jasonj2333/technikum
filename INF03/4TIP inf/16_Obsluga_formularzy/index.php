@@ -10,19 +10,19 @@
     <form action="rejestracja.php" method="post">
         <div>
             <label for="imie">Podaj imię: </label>
-            <input type="text" id="imie" name="imie">
+            <input type="text" id="imie" name="imie" required>
         </div>
         <div>
             <label for="nazwisko">Podaj nazwisko: </label>
-            <input type="text" id="nazwisko" name="nazwisko">
+            <input type="text" id="nazwisko" name="nazwisko" required>
         </div>
         <div>
             <label for="zawod">Podaj zawód: </label>
-            <input type="text" id="zawod" name="zawod">
+            <input type="text" id="zawod" name="zawod" required>
         </div>
         <div>
             <label for="email">Podaj email: </label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" required>
         </div>
         <div>
             <p>Wykształcenie:</p>
