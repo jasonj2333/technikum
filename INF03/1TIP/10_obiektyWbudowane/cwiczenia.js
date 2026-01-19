@@ -1,6 +1,8 @@
 // 1. Utwórz skrypt pobierający dowolny tekst, a następnie wyświetlający długość tego tekstu.
 let tekst = "Nie lubię poniedziałku.";
+console.log(tekst.length);
 // 2. Utwórz skrypt pobierający dowolny tekst pisany dużymi i małymi literami, a następnie wyświetli ten tekst dużymi literami.
+console.log(tekst.toUpperCase());
 // 3. Utwórz skrypt pobierający dowolny tekst pisany dużymi i małymi literami, a następnie wyświetli ten tekst małymi literami.
 // 4. Utwórz skrypt który z łańcucha o twoim imieniu i nazwisku, wytnie i wyświetli tylko twoje imię.
 // 5. Utwórz skrypt wyświetlający aktualną datę i godzinę.
