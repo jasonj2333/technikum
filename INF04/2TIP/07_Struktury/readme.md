@@ -421,11 +421,8 @@ p->x = 5; // BŁĄD – niezdefiniowany adres
 
 ---
 
-Tak — **to stwierdzenie jest w dużej mierze prawdziwe**, ale **zależy od kontekstu i stylu programowania**. Wyjaśnijmy to precyzyjnie, bo to częsty punkt nieporozumień.
 
----
-
-## 1. Struktury nie powinny mieć metod - skąd się wzięło to zalecenie?
+# 1. Struktury nie powinny mieć metod - skąd się wzięło to zalecenie?
 
 Zalecenie:
 
