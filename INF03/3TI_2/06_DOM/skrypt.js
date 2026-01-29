@@ -41,7 +41,10 @@ const parzyste2 = document.querySelectorAll(".even");
 console.log(nieparzyste2);
 console.log(parzyste2);
 
+//Funkcja obsługująca zdarzenie
 function sprawdz(){
     let imie = document.querySelector("#imie").value;
-    console.log(imie);
+    //console.log(imie);
+    const wynik = document.querySelector("#wynik");
+    wynik.innerHTML = "Cześć " + imie;
 }
