@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Ćwiczenia DOM – drzewo dokumentu</title>
+</head>
+<body>
+
+<header id="page-header">
+    <h1 class="title">Ćwiczenia z DOM</h1>
+    <p class="subtitle">Wybieranie elementów w drzewie dokumentu</p>
+</header>
+
+<main id="content">
+
+    <section class="section intro">
+        <h2>Wprowadzenie</h2>
+        <p class="text">DOM to obiektowy model dokumentu HTML.</p>
+        <p class="text important">Każdy element HTML jest węzłem drzewa.</p>
+    </section>
+
+    <section class="section articles">
+        <h2>Artykuły</h2>
+
+        <article class="article" data-id="1">
+            <h3>Artykuł 1</h3>
+            <p class="text">Treść artykułu pierwszego.</p>
+            <ul class="list">
+                <li class="item">Punkt 1</li>
+                <li class="item">Punkt 2</li>
+                <li class="item special">Punkt 3</li>
+            </ul>
+        </article>
+
+        <article class="article" data-id="2">
+            <h3>Artykuł 2</h3>
+            <p class="text">Treść artykułu drugiego.</p>
+            <ul class="list">
+                <li class="item">Element A</li>
+                <li class="item">Element B</li>
+            </ul>
+        </article>
+
+    </section>
+
+    <section class="section sidebar">
+        <h2>Panel boczny</h2>
+        <p class="info">Dodatkowe informacje</p>
+
+        <ul class="menu">
+            <li class="menu-item">Start</li>
+            <li class="menu-item">O nas</li>
+            <li class="menu-item">Kontakt</li>
+        </ul>
+    </section>
+
+</main>
+
+<footer id="page-footer">
+    <p class="footer-text">© 2026 – Ćwiczenia DOM</p>
+    <button id="action-btn">Kliknij mnie</button>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
