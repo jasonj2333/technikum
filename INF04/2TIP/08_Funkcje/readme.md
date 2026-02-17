@@ -1,5 +1,3 @@
-Jasne! Funkcje w C++ to absolutna podstawa programowania — pozwalają dzielić kod na mniejsze, czytelne kawałki i unikać powtarzania tych samych instrukcji.
-
 # Funkcje na przykładzie C++
 
 ## 🔹 Co to jest funkcja?
@@ -376,4 +374,5 @@ Napisz funkcję `czyPierwsza(int n)`, która sprawdza czy liczba jest pierwsza.
 W `main()` wypisz wszystkie liczby pierwsze z zakresu 1–100 używając tej funkcji.
 
 ---
+
 
