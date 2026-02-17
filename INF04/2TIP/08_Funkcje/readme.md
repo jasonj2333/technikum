@@ -211,11 +211,6 @@ Funkcje pozwalają pisać **modularny**, **czytelny** i **profesjonalny** kod.
 
 
 ---
-Super temat na ćwiczenia 💪 Funkcje najlepiej wchodzą, gdy uczniowie dużo piszą sami. Poniżej masz gotowy zestaw zadań — od bardzo prostych do trochę trudniejszych.
-
-Możesz je rozdzielić na lekcji albo jako kartkówkę / pracę domową.
-
----
 
 # 🟢 Zadania – Funkcje w C++
 
@@ -374,5 +369,6 @@ Napisz funkcję `czyPierwsza(int n)`, która sprawdza czy liczba jest pierwsza.
 W `main()` wypisz wszystkie liczby pierwsze z zakresu 1–100 używając tej funkcji.
 
 ---
+
 
 
