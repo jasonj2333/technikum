@@ -59,3 +59,40 @@ const secondArticle = document.querySelector("[data-id = '2']");
 console.log(secondArticle);
 secondArticle.style.backgroundColor = "beige";
 console.log(secondArticle.dataset.folder);
+
+const wynik = document.querySelector("#wynik");
+
+//Obsługa zdarzeń
+//Metoda 1 – atrybut HTML (niezalecana)
+function akcja_html(){
+    //console.log("Działa");
+    //akcja odpalona przez onclick w html
+    wynik.innerText = "akcja odpalona przez onclick w html";
+}
+
+const buttonZdarzenieJS = document.querySelector("#zdarzenie-js");
+const buttonZdarzenieListener = document.querySelector("#zdarzenie-listener");
+console.log(buttonZdarzenieListener);
+
+//Metoda 2 – przypisanie do właściwości
+buttonZdarzenieJS.onclick = function(){
+    wynik.innerText = "akcja odpalona przez onclick w js";
+}
+
+//Metoda 3 – addEventListener (najlepsza)
+buttonZdarzenieListener.addEventListener("click", ()=>{
+    //console.log("Działa");
+    wynik.innerText = "akcja odpalona za pomocą Listenera";
+})
+
+const buttonPB = document.querySelector("#zmien-kolor");
+buttonPB.addEventListener("click", ()=>{
+    //console.dir(buttonPB);
+
+    if(buttonPB.parentElement.style.color == "red"){
+        buttonPB.parentElement.style.color = "black";
+    }else{
+        buttonPB.parentElement.style.color = "red"
+    }
+
+})
