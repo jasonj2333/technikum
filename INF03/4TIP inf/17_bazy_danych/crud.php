@@ -26,14 +26,15 @@
         mysqli_close($conn);
     ?>
 
-    <h2>R - READ (odczytywanie rekordów do bazy)</h2>
+    <h2>R - READ (pobieranie rekordów z bazy)</h2>
     <?php 
         $conn = new mysqli("localhost", "root", "", "firma");
-        $query = "SELECT imie, nazwisko, email FROM klienci;";
+        $query = "SELECT id, imie, nazwisko, email FROM klienci;";
         $result = $conn->query($query);
 
         while($row = $result->fetch_object()){
-            echo "<p>$row->imie $row->nazwisko, email: $row->email</p>";
+            $id = $row->id;
+            echo "<p>$row->imie $row->nazwisko, email: $row->email <a href='update.php?id=$id'>Edytuj</a></p>";
         }
         $conn->close();
     ?>
