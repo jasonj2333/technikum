@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obsługa formularzy</title>
+</head>
+<body>
+    <form action="dane.php" method="post">
+        <label for="imie">Podaj imię: </label>
+        <input type="text" id="imie" name="imie" required><br>
+
+        <label for="nazwisko">Podaj nazwisko: </label>
+        <input type="text" id="nazwisko" name="nazwisko" required><br>
+
+        <label for="email">Podaj email: </label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="haslo">Podaj hasło: </label>
+        <input type="password" id="haslo" name="haslo" required><br>
+
+        <!-- <input type="submit" value="Wyślij"> -->
+         <button type="submit">Wyślij</button>
+    </form>
+    <script src="skrypt.js"></script>
+</body>
+</html>
