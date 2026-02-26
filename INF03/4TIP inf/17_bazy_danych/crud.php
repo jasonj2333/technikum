@@ -34,9 +34,44 @@
 
         while($row = $result->fetch_object()){
             $id = $row->id;
-            echo "<p>$row->imie $row->nazwisko, email: $row->email <a href='update.php?id=$id'>Edytuj</a></p>";
+            echo "<p>$row->imie $row->nazwisko, email: $row->email <a href='update.php?id=$id'>Edytuj</a> | <a href='crud.php?uid=$id'>Usuń</a></p>";
         }
         $conn->close();
+    ?>
+    <h2>U - UPDATE (aktualizowanie rekodów rekordów z bazy)</h2>
+    <?php 
+        if(isset($_POST['id'])){
+            $id = $_POST['id'];
+            $name = $_POST['imie'];
+            $surname = $_POST['nazwisko'];
+            $email = $_POST['email'];
+
+            $conn = new mysqli("localhost", "root", "", "firma");
+
+            $query = "UPDATE klienci SET imie='$name', nazwisko='$surname', email='$email' WHERE id=$id; ";
+            $result = mysqli_query($conn, $query);
+            if($result) {
+                echo "<p>Klient został zaaktualizowany</p>";
+            }
+            mysqli_close($conn); 
+        }
+        else{
+            echo "<p>Brak danych do aktualizacji - formularz nie został przesłany</p>";
+        }
+    ?>
+
+    <h2>D - Delete (usuwanie rekodów rekordów z bazy)</h2>
+    <?php 
+    if(isset($_GET['uid'])){
+        $id = $_GET['uid'];
+        $conn = mysqli_connect("localhost", "root", "", "firma");
+        $query = "DELETE FROM klienci WHERE id = $id";
+            $result = mysqli_query($conn, $query);
+            if($result) {
+                echo "<p>Klient został usunięty</p>";
+            }
+        mysqli_close($conn); 
+    }
     ?>
 </body>
 </html>
