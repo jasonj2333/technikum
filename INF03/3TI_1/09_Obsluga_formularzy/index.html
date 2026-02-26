@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obsługa formularzy</title>
+</head>
+<body>
+    <form action="zaloguj.php" method="post">
+        <label for="imie">Podaj imię: </label>
+        <input type="text" name="imie" id="imie" required><br>
+
+        <label for="nazwisko">Podaj nazwisko: </label>
+        <input type="text" name="nazwisko" id="nazwisko" required><br>
+
+        <label for="email">Podaj email: </label>
+        <input type="email" name="email" id="email" required><br>
+
+        <label for="haslo">Podaj hasło: </label>
+        <input type="password" name="haslo" id="haslo" required><br>
+
+        <!-- <input type="submit" value="Wyślij"> -->
+        <button type="submit">Wyślij</button>
+    </form>
+    <div id="wynik">
+
+    </div>
+
+    <script src="skrypt.js"></script>
+</body>
+</html>
