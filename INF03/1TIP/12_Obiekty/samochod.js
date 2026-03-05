@@ -11,15 +11,15 @@
 
 class Samochod{
     //pola prywatne - nie widoczne poza klasą
-    #paliwo = 50;
-    #punkty = 1;
-    #przebieg = 1;
+    #paliwo = 20;
+    #punkty = 0;
+    #przebieg = 0;
 
     constructor(marka, model, rok){
         this.marka = marka;
         this.model = model;
         this.rok = rok;
-        this.predkosc = 1;
+        this.predkosc = 0;
     }
 
     info(){
@@ -34,6 +34,13 @@ class Samochod{
         this.predkosc -= wartosc;
         if(this.predkosc < 0){
             this.predkosc = 0;
+        }
+    }
+
+    tankuj(wartosc){
+        this.#paliwo += wartosc;
+        if(this.#paliwo > 50){
+            this.#paliwo = 50;
         }
     }
 
@@ -68,9 +75,29 @@ const jedz = document.querySelector("#jedz");
 const tankuj = document.querySelector("#tankuj");
 const hamuj = document.querySelector("#hamuj");
 
+//Obsługa akcji
+gaz.addEventListener("click", ()=>{
+    if(skoda.predkosc <= 160) skoda.przyspiesz(20);
+    aktualizacja();
+});
+
+hamulec.addEventListener("click", ()=>{
+    skoda.hamuj(20);
+    aktualizacja();
+});
+
+tankuj.addEventListener("click", ()=>{
+    skoda.tankuj(10);
+    aktualizacja();
+});
+
 //Aktualizacja
-nazwa.textContent = skoda.info();
-paliwo.textContent = skoda.paliwo;
-przebieg.textContent = skoda.przebieg;
-punkty.textContent = skoda.punkty;
-predkosc.textContent = skoda.predkosc;
+function aktualizacja(){
+    nazwa.textContent = skoda.info();
+    paliwo.textContent = skoda.paliwo;
+    przebieg.textContent = skoda.przebieg;
+    punkty.textContent = skoda.punkty;
+    predkosc.textContent = skoda.predkosc;
+}
+
+aktualizacja();
