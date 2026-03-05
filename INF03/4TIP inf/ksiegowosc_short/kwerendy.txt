@@ -1,0 +1,4 @@
+SELECT logo_firmy, nazwa_firmy, opinia FROM opinia WHERE ulubione = 1;
+SELECT firmy.nazwa_firmy, firmy.rodzaj_firmy, firmy.rodzaj_rozliczenia, firmy.adres_email, ksiegowi.imie, ksiegowi.nazwisko FROM firmy JOIN ksiegowi ON firmy.id_ksiegowego = ksiegowi.id_ksiegowego;
+SELECT * FROM `podatki` ORDER BY `podatki`.`wielkosc_podatku` ASC LIMIT 4
+SELECT COUNT(*) FROM ksiegowi WHERE ilosc_firm > 0 AND ilosc_firm < 15;

@@ -1,0 +1,199 @@
+#wrapper{
+    width: 1200px;
+    margin: 0 auto
+}
+body {
+    font-family: Tahoma;
+}
+
+nav {
+    background-color: #3B4A6B;
+    width: 100%;
+    height: 100px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#nawigacja-ksiegoappka {
+    font-size: 24px;
+    color: #22b2da;
+    padding-top: 24px;
+    margin-bottom: 8px;
+    margin-left: 72px;
+    margin-top: 0;
+    font-weight: bold;
+}
+
+.kontener-tekst > p {
+    font-size: 14px;
+    color: #22b2da;
+    margin-left: 72px;
+    margin-top: 4px;
+}
+
+.kontener-odnosniki {
+    margin-right: 150px;
+    margin-top: 36px;
+}
+
+.kontener-odnosniki > a {
+    font-size: 14px;
+    color: white;
+    margin-right: 40px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#lewy {
+    width: 80%;
+}
+
+#prawy {
+    width: 20%;
+}
+
+#lewy > h1 {
+    font-size: 36px;
+    color: #f23557;
+    font-weight: bold;
+    margin-left: 72px;
+    margin-top: 60px;
+    margin-bottom: 4px;
+}
+
+#lewy > p {
+    margin-top: 8px;
+    margin-left: 72px;
+    font-weight: normal;
+    max-width: 500px;
+}
+
+#prawy > img {
+    max-width: 100%;
+    margin-top: 25px;
+    margin-right: 140px;
+    border-radius: 10px;
+}
+
+h3 {
+    margin-top: 48px;
+    margin-left: 72px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #22b2da;
+    margin-bottom: 24px;
+}
+
+.komponent:nth-child(1) {
+    margin-left: 72px;
+}
+
+.komponent {
+    border: 1px solid #d4d4d4;
+    width: 300px;
+    padding-top: 16px;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding: 16px 16px 0 16px;
+    height: 200px;
+    margin-right: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.kontener {
+    width: 100%;
+    height: 55px;
+    background-color: #3b4a6b;
+    color: white;
+    font-size: 20px;
+}
+
+.kontener > p {
+    font-weight: bold;
+    margin-left: 48px;
+    padding-top: 16px;
+    margin-bottom: 16px;
+}
+
+.komponent > h4 {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.komponent > p {
+    font-style: italic;
+}
+
+#stopka-lewy {
+    width: 25%;
+}
+
+#stopka-prawy {
+    width: 75%;
+}
+
+form {
+    padding-left: 50px;
+    margin-top: 24px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+select {
+    border: 1px solid #d9d9d9;
+    width: 330px;
+    height: 45px;
+    margin-bottom: 16px;
+    margin-top: 8px;
+}
+
+button {
+    background-color: #3b4a6b;
+    color: white;
+    width: 165px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    border: 0;
+    border-radius: 15px;
+    margin-top: 4px;
+}
+
+button:hover {
+    background-color: #21293b;
+}
+
+#koszt {
+    margin-top: 32px;
+    margin-left: 80px;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+#cena {
+    font-weight: bold;
+    font-size: 48px;
+    margin-left: 80px;
+    margin-bottom: 16px;
+}
+
+#miesiecznie {
+    font-size: 17px;
+    margin-left: 80px;
+}
+
+.kontener-glowny,
+.kontener-komponenty {
+    display: flex;
+}
+
+footer {
+    display: flex;
+}
