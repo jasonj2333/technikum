@@ -20,5 +20,20 @@ while($row = mysqli_fetch_assoc($result)){
     // echo "<p>".$row['imie']." ".$row['nazwisko']." - ".$row['klasa']."</p>";
     echo "<p>{$row['imie']} {$row['nazwisko']} - {$row['klasa']}</p>";
 }
+echo "<hr>";
+
+echo "<h2>Fetch array</h2>";
+$result = mysqli_query($conn, $query);
+while($row = mysqli_fetch_array($result)){  
+    echo "<p>{$row['imie']} {$row[1]} - {$row['klasa']}</p>";
+}
+
+echo "<hr>";
+echo "<h2>Fetch object</h2>";
+$result = mysqli_query($conn, $query);
+while($row = mysqli_fetch_object($result)){  
+    echo "<p>$row->imie $row->nazwisko - $row->klasa</p>";
+}
+
 mysqli_close($conn);
 
