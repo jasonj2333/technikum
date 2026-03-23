@@ -42,6 +42,14 @@
     ?>
 
     <h2>U - Update (aktualizowanie rekordów)</h2>
+    <?php 
+        if(isset($_POST['id'])){
+            $id = $_POST['id'];
+            $imie = $_POST['imie'];
+            $nazwisko = $_POST['nazwisko'];
+            $email = $_POST['email'];
+        }
+    ?>
     <h2>D - Delete (usuwanie rekordów)</h2>
 </body>
 </html>
