@@ -22,7 +22,7 @@ function dateToPl(){
     console.log(miesiace[miesiac]);
 
     let dataPrint = "Dzisiaj jest: ";
-    dataPrint += `${dni_tygodnia[dzien_tyg]}, ${dzien} ${miesiace[miesiac]} ${rok}`;
+    dataPrint += `${dni_tygodnia[dzien_tyg]}, ${dzien} ${miesiace[miesiac]} ${rok}, ${godzina < 10 ? '0'+godzina : godzina}:${minuty < 10 ? '0'+minuty : minuty}:${sekundy < 10 ? '0'+sekundy : sekundy}`;
 
     //16:05:21
 
