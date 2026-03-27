@@ -4,6 +4,17 @@
         header("location: index.php");
         exit;
     }
+
+    if(isset($_POST['imie']) && isset($_POST['haslo'])){
+        if($_POST['imie'] == "janek" && $_POST['haslo'] == "jan23"){
+            $_SESSION['log'] = $_POST['imie'];
+            header("location: index.php");
+            exit;
+        }else{
+            echo "<p>Nieprawidłowe dane logowania</p>";
+        }
+
+    }
 ?>
 <!DOCTYPE html>
 <html lang="pl">

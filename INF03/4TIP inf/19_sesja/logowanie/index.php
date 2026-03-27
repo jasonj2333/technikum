@@ -15,8 +15,8 @@
 <body>
     <?php if(isset($imie)): ?>
         <h1>Witaj <?php echo $imie; ?></h1>
-        <p>Jako zalogowany użytkownik możesz przejść do <a href="">Strefy użytkowników</a></p>
-        <p>Przed opuszczeniem strony <a href="">wyloguj się</a></p>
+        <p>Jako zalogowany użytkownik możesz przejść do <a href="strefa.php">Strefy użytkowników</a></p>
+        <p>Przed opuszczeniem strony <a href="wyloguj.php">wyloguj się</a></p>
     <?php else: ?>
         <h1>Witaj nieznajomy</h1>
         <p>Większość informacji na stronie jest przeznaczona dla zalogowany użytkowników - <a href="loguj.php">zaloguj się</a></p>
