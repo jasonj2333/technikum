@@ -10,9 +10,20 @@ function bmi(){
     let wg = +waga.value;
     // console.dir(typeof wzr);
     // console.dir(wzr);
+    let bmi = wg / Math.pow(wzr / 100, 2);
+    return bmi;
+}
+
+function opisBmi(wskaznikBmi){
+    if(wskaznikBmi < 18.5) return "niedowaga";
+    else if(wskaznikBmi < 25) return "optimum";
+    else if(wskaznikBmi < 30) return "nadwaga";
+    else return "otyłość";
 }
 
 button.addEventListener("click", (event)=>{
     event.preventDefault();
-    bmi();
+    const wskaznikBmi = Math.round(bmi() * 100) / 100;
+
+    wynik.innerHTML = wskaznikBmi + " (" + opisBmi(wskaznikBmi) + ")";
 });
