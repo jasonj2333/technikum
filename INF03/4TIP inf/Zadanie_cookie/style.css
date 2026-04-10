@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #222;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.banners {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.banner {
+    width: 100%;
+    min-width: 200px;
+}
+
+.banner img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.form-container {
+    margin-top: 15px;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+#cookie-box {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#cookie-box button {
+    padding: 8px 15px;
+    background: green;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
