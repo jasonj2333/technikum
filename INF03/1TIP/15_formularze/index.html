@@ -8,27 +8,27 @@
 <body>
     <form action="">
         <label for="imie">Imię</label>
-        <input type="text" id="imie">
+        <input type="text" id="imie" name="imie">
         <br>
         <label>
             Nazwisko
-            <input type="text" id="nazwisko">
+            <input type="text" id="nazwisko" name="nazwisko">
         </label>
         <br>
         <label for="wyksztalcenie">Wykształcenie</label>
-        <input type="text" id="wyksztalcenie">
+        <input type="text" id="wyksztalcenie" name="wyksztalcenie">
         <br>
         <label for="email">Email</label>
-        <input type="text" id="email">
+        <input type="text" id="email" name="email">
         <br>
         <label for="rodo">RODO</label>
-        <input type="checkbox" id="rodo">
+        <input type="checkbox" id="rodo" name="rodo">
         <br>
         <div>
             Prawo jazdy
-            <input type="radio" name="prawoJazdy" id="pjTak">
+            <input type="radio" name="prawoJazdy" id="pjTak" value="TAK">
             <label for="pjTak">TAK</label>
-            <input type="radio" name="prawoJazdy" id="pjNie" checked>
+            <input type="radio" name="prawoJazdy" id="pjNie" value="NIE" checked>
             <label for="pjNie">NIE</label>
         </div>
         <button type="submit">Wyślij</button>
@@ -36,6 +36,6 @@
         <!-- <input type="submit" value="Wyślij"> -->
     </form>
     <div id="bledy"></div>
-    <script src="skrypt.js"></script>
+    <script src="skrypt2.js"></script>
 </body>
 </html>

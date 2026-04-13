@@ -42,5 +42,10 @@ formularz.addEventListener("submit", (e)=>{
         errors++;
     }
 
+    if(errors == 0){
+        //formularz.submit(); //wysyłanie formularza na serwer
+        bledy.innerHTML += "<p>Dane zostały wysłane !!!</p>";
+    }
+
 });
 
