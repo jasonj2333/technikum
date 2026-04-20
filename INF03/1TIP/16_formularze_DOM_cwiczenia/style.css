@@ -1,0 +1,83 @@
+#r {
+    background-color: red;
+    width: 15px;
+    height: 15px;
+}
+
+#g {
+    background-color: green;
+    width: 15px;
+    height: 15px;
+}
+
+#b {
+    background-color: blue;
+    width: 15px;
+    height: 15px;
+}
+
+#pies1,
+#pies12,
+#pies2,
+#pies22,
+#pies3,
+#pies32 {
+    width: 15%;
+}
+
+h2 {
+    text-align: center;
+}
+
+.ozdoba {
+    width: 30%;
+}
+
+#Indigo {
+    background-color: indigo;
+}
+#SteelBlue {
+    background-color: steelblue;
+}
+#Olive {
+    background-color: olive;
+}
+#lewy19 {
+    width: 30%;
+    float: left;
+}
+#prawy19 {
+    width: 70%;
+    float: left;
+}
+.zadanie {
+    clear: both;
+    padding: 25px;
+    margin: 15px;
+}
+#lewy20 {
+    width: 80%;
+    float: left;
+}
+#lewy20 img {
+    height: 40%;
+}
+#prawy20 {
+    width: 20%;
+    float: left;
+}
+table, 
+td,
+th {
+	border: 1px solid black;
+	border-collapse: collapse;
+    text-align: center;
+}
+table {
+	margin: auto;
+	width: 95%;
+}
+td, 
+th {
+	padding: 20px 0;
+}

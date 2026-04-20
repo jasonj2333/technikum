@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadania JS z poprzednich egzaminów</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="zadanie">
+        <h2>ee09_2022_01_06</h2>
+        <details>
+            <summary>Wymagania dotyczące skryptu:</summary>
+            <ul>
+                <li>Napisany w języku JavaScript i wykonujący akcje spowodowane zdarzeniami kontrolek. Akcje
+                    modyfikują styl CSS bloku prawego i jego elementów, na podstawie przykładu przedstawionego na
+                    Obrazie 2b
+                </li>
+                <li>Po kliknięciu na dowolny przycisk zmieniający tło, zostaje zmienione tło bloku prawego na kolor
+                    odpowiadający podpisowi przycisku
+                </li>
+                <li>Po kliknięciu pola wyboru koloru czcionki, zostaje zmieniony kolor czcionki bloku prawego na kolor
+                    odpowiadający wyborowi</li>
+                <li>Po wpisaniu rozmiaru czcionki i wyjściu z kontrolki (tabulacją lub kliknięciem myszą w obszar poza
+                    kontrolką), zmieniany jest rozmiar czcionki dla całego bloku prawego. Nie jest wymagana walidacja
+                    tego pola, należy założyć, że pole jest wypełnione poprawnie
+                </li>
+                <li>Po kliknięciu w pole checkbox, w zależności od stanu pola, jest dodawane lub usuwane obramowanie
+                    obrazu – wymagana realizacja zdarzenia za pomocą funkcji
+                </li>
+                <li>Po kliknięciu w pola radio jest ustawiony wybrany rodzaj formatowania punktorów listy</li>
+            </ul>
+        </details>
+        <div id="lewy19">
+            <h1>Konfigurator stylu</h1>
+            <p>Podaj kolor tła</p>
+            <button type="button" id="Indigo" >Indigo</button>
+            <button type="button" id="SteelBlue" >SteelBlue</button>
+            <button type="button" id="Olive" >Olive</button>
+            <p>Podaj kolor czcionki</p>
+            <select id="fontColor" >
+                <option value="White">White</option>
+                <option value="Tan">Tan</option>
+                <option value="Bisque">Bisque</option>
+                <option value="Plum">Plum</option>
+            </select>
+            <p>Podaj rozmiar czcionki w procentach, np. 200%</p>
+            <input type="number" id="fontSize" />
+            <p>Czy rysunek ma mieć ramkę?</p>
+            <input type="checkbox" id="borderCheck" />Rysuj ramkę
+            <p>Jaki jest typ punktora listy?</p>
+            <input type="radio" name="listStyle" id="dysk"  />Dysk<br />
+            <input type="radio" name="listStyle" id="kwadrat"  />Kwadrat<br />
+            <input type="radio" name="listStyle" id="okrąg"  />Okrąg<br />
+        </div>
+        <div id="prawy19">
+            <img src="gibraltar.jpg" id="gibraltar" alt="półwysep Gibraltar" />
+            <ul id="lista">
+                <li>element 1</li>
+                <li>element 2</li>
+                <li>element 3</li>
+            </ul>
+            <p id="wynik_19">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt mollit anim id est laborum. </p>
+        </div>
+    </div>
+    <script src="skrypt.js"></script>
+</body>
+</html>
