@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8">
+	<title>Złoty podział</title>
+	<link href="arkusz.css" rel="stylesheet">
+	
+</head>
+<body>
+
+	<header>
+	
+		<h1>Generator złotych ciągów</h1>
+		
+	</header>
+
+	<main>
+	
+		<article>
+			<div class="interfejs">
+				<label>
+					n<sub>01</sub> = <input type="number" id="a" value="2">
+				</label>
+				<label>
+					n<sub>02</sub> = <input type="number" id="b" value="3">
+				</label>
+				<label>
+					Ile wyrazów złotego ciągu? -> <input type="number" id="ile" value="20">
+				</label>
+			</div>
+			
+			<div>
+				<input type="button" id="generuj_ciag" value="Generuj ciąg">
+			</div>
+			
+			<div>
+				<div id="ciag">
+					<p>n<sub>x</sub></p>
+					<div id="elementyCiagu"></div>
+				</div>
+				<div id="fi">
+					<p>&Phi; = n<sub>x</sub> &divide; n<sub>x-1</sub></p>
+					<div id="zlotaProporcja"></div>
+				</div>
+			</div>	
+			
+		</article>
+
+		<section>
+			<h2>Treść zadania:</h2>
+			<p>Utwórz generator złotych ciągów. Pierwszy wyraz ciągu to wartość pobrana z pola n01, drugi to wartość pobrana z pola n02, a każdy kolejny to suma dwóch poprzednich. Ilość wyrazów ciągu to liczba w polu "Ile wyrazów złotego ciągu?"</p>
+			<p>Przyjmij założenie, że zarówno n01 jak i n02 są liczbami całkowitymi, przy czym n01 musi być większe lub równe 2.</p>
+			<p>Dodatkowo obliczaj i wyświetlaj współczynik proporcji kolejnych wyrazów &Phi; = n<sub>x</sub> &divide; n<sub>x-1</sub>. Obliczenie takie możesz wykonać, począwszy od 2 wyrazy ciągu.</p>
+			<div>
+				<img src="Fibonacci_Spiral.png" alt="Złota podział" width="600">
+			</div>
+		</section>
+		
+	</main>
+	
+	<script src="ciagi.js"></script>
+
+</body>
+</html>
