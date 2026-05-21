@@ -1,0 +1,51 @@
+# Cennik
+
+| Rodzaj mycia | Cena za minutę |
+| ------------ | -------------- |
+| basic        | 2 zł           |
+| premium      | 4 zł           |
+| turbo        | 6 zł           |
+
+---
+
+# Dodatkowe informacje
+
+* Woskowanie kosztuje dodatkowo 15 zł.
+* Rodzaj mycia użytkownik wpisuje ręcznie:
+
+  * `basic`
+  * `premium`
+  * `turbo`
+
+---
+
+# Wymagania JavaScript
+
+Po kliknięciu przycisku:
+
+1. Pobierz dane z formularza.
+2. Sprawdź:
+
+   * czy wpisano poprawny rodzaj mycia,
+   * czy liczba minut jest większa od 0.
+
+3. Jeśli dane są błędne:
+
+   * wyświetl komunikat:
+
+
+Błędne dane!
+
+
+4. Jeśli dane są poprawne:
+
+   * oblicz koszt usługi,
+   * dodaj koszt woskowania jeśli zaznaczono checkbox,
+   * wyświetl wynik na stronie.
+
+---
+
+# Przykładowy komunikat
+
+Koszt usługi wynosi 43 zł.
+

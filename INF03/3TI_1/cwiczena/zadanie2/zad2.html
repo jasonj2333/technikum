@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadania JS z poprzednich egzaminów</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="zadanie">
+        <h2>e14_2018_06_06</h2>
+        <details>
+            <summary>Wymagania dotyczące skryptu:</summary>
+            <ul>
+                <li>Pobiera dane z obu pól z panelu dolnego (liczbę oraz stan pola typu checkbox)</li>
+                <li> Zależnie od stanu pola typu checkbox podejmowane są działania:</li>
+                <ul>
+                    <li> W przypadku zaznaczenia, wypisywany jest pod przyciskiem tekst: „Dowieziemy Twoją pizzę za
+                        darmo”</li>
+                    <li>W przypadku odznaczenia, wyliczany jest koszt dowozu, równy 1 zł za 1 km liczony w obie strony
+                        (np. dla 5 km koszt jest równy 10 zł). Następnie wypisywany jest pod przyciskiem tekst: „Dowóz
+                        będzie Cię kosztował … złotych”, gdzie kropki oznaczają koszt dowozu.</li>
+                </ul>
+            </ul>
+        </details>
+        <h3>Oblicz koszt dostawy</h3>
+        <label>
+            <input id="zielonaGora" type="checkbox" />Jestem z Zielonej Góry<br /></label>
+        </label>
+        <p>albo</p>
+        <label>Podaj liczbę kilometrów od Zielonej Góry:
+            <input id="iloscKilometrowZG" type="number" /><br />
+        </label>
+        <button type="button">Oblicz</button>
+        <p id="wynik_2"></p>
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+Zadanie 1: Funkcja z parametrami
+
+Napisz funkcję info(imię, klasa), która:
+
+przyjmuje dwa argumenty (imię, klasa),
+
+wyświetla w konsoli tekst:
+
+Uczeń <imię> chodzi do klasy <klasa>.
+
+📌 Przykład wywołania:
+
+info("Bartek", "2A");
+
+✅ Oczekiwany wynik w konsoli:
+
+Uczeń Bartek chodzi do klasy 2A.
+
+
+Zadanie 2: Pętla + zwracanie wartości
+
+Napisz funkcję sumaParzystych(n), która:
+
+przyjmuje liczbę n,
+
+oblicza sumę wszystkich liczb parzystych od 1 do n,
+
+wykorzystuje pętlę for,
+
+zwraca wynik.
+
+📌 Przykład wywołania:
+
+let wynik = sumaParzystych(6);
+console.log(wynik);
+
+✅ Oczekiwany wynik:
+
+12
+
+(bo liczby parzyste to: 2 + 4 + 6 = 12)
+
+
+
+Zadanie 3: Analiza tablicy + warunki + funkcja
+
+Napisz funkcję operacjeNaTablicy(tablica, operacja = 0), która:
+
+Przyjmuje tablicę liczb oraz typ operacji.
+
+Zwraca wynik zależny od wybranej operacji:
+
+jeżeli operacja = 0 → zwraca liczbę elementów w tablicy,
+
+jeżeli operacja = 1 → zwraca sumę liczb większych od 5,
+
+jeżeli operacja = 2 → zwraca pierwszą liczbę mniejszą od 0 (jeśli brak – zwraca null).
+
+📌 Przykład wywołania:
+
+let dane = [4, 7, -2, 10, 5];
+
+let wynik = operacjeNaTablicy(dane, 2);
+console.log(wynik);
+
+✅ Oczekiwany wynik:
+
+-2

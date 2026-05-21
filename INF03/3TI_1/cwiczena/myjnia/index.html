@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myjnia samochodowa</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            background-color: #e9eef2;
+            margin: 0;
+        }
+
+        h1 {
+            background-color: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .box {
+            width: 350px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        .check {
+            margin-top: 15px;
+            display: flex;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        #wynik {
+            margin-top: 20px;
+            background-color: #f1f5f9;
+            padding: 15px;
+            border-radius: 5px;
+            min-height: 20px;
+        }
+
+
+        .check input{
+            margin-top: 15px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Myjnia samochodowa</h1>
+
+    <div class="box">
+
+        <label for="rodzaj">Rodzaj mycia:</label>
+        <input type="text" id="rodzaj" placeholder="basic / premium / turbo">
+
+        <label for="czas">Czas mycia:</label>
+        <input type="number" id="czas">
+
+        <div class="check">
+            <input type="checkbox" id="wosk">
+            <label for="wosk">Woskowanie</label>
+        </div>
+
+        <button id="btn">Oblicz koszt</button>
+
+        <div id="wynik"></div>
+
+    </div>
+
+    <script src="skrypt.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadania JS z poprzednich egzaminów</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="zadanie">
+        <h2>e14_2019_01_02</h2>
+        <details>
+            <summary>Wymagania dotyczące skryptu:</summary>
+            <ul>
+                <li>Wykonywany po stronie przeglądarki, wywoływany przez zdarzenie kliknięcia w dowolny przycisk</li>
+                <li>Skrypt ma za zadanie zmienić styl CSS dla paragrafu o treści „To jest przykład paragrafu, który…”
+                    znajdującego się w panelu głównym</li>
+                <li>Po wciśnięciu czerwonego przycisku, zmieniany jest kolor tekstu paragrafu na czerwony. Po wciśnięciu
+                    zielonego przycisku – na zielony. Po wciśnięciu niebieskiego przycisku – na niebieski</li>
+                <li>Ponadto wciśnięcie dowolnego przycisku powoduje</li>
+                <ul>
+                    <li>Pobranie wartości z pola edycyjnego i ustawienie rozmiaru czcionki paragrafu pobraną
+                        wartością
+                        wyrażoną w procentach. Na przykład, jeżeli wpisano wartość 150 – rozmiar czcionki powinien być
+                        ustawiony na „150%”</li>
+                    <li> Pobranie wyboru z listy i ustawienie czcionki paragrafu na pochyłą lub wyprostowaną</li>
+                </ul>
+            </ul>
+        </details>
+        <label>Podaj rozmiar tekstu w procentach:
+            <input id="rozmiarTekstu" type="number" />%<br />
+        </label>
+        <select>
+            <option value="normal">Prosty</option>
+            <option value="italic">Kursywa</option>
+        </select>
+        <p>Jakim kolorem sformatować tekst? Wybierz przycisk</p>
+        <button type="button" id='r' ></button>
+        <button type="button" id='g' ></button>
+        <button type="button" id='b' ></button>
+        <p id="wynik_3">To jest przykład paragrafu, który może być dowolnie formatowany przez JavaScript</p>
+    </div>
+    
+</body>
+
+</html>
