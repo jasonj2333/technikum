@@ -1,0 +1,42 @@
+Zadanie 1: Funkcja z parametrem
+
+Napisz funkcję powitaj(imie), która:
+- przyjmuje dwa argumenty (imie, wiek),
+- wyświetla w konsoli tekst:
+Mam na imię <imię> i mam <wiek>  lat!
+
+Przykład wywołania:
+powitaj("Ania", 15);
+
+Oczekiwany wynik w konsoli:
+Mam na imię Ania i mam 15 lat!
+
+
+Zadanie 2: Pętla + zwracanie wartości
+
+Napisz funkcję sumaDoN(n), która:
+- przyjmuje liczbę n,
+- oblicza sumę wszystkich liczb od 1 do n,
+- wykorzystuje pętlę for i zwraca wynik.
+
+sumaDoN(5);
+
+Oczekiwany wynik w konsoli: 15
+(bo 1 + 2 + 3 + 4 + 5 = 15)
+
+Zadanie 3: Analiza tablicy + warunki + funkcja
+
+Napisz funkcję analizujTablice(tablica, operacja = 0), która:
+- przyjmuje tablicę liczb oraz typ operacji.
+- zwraca wynik zależny od wybranej operacji:
+	jeżeli operacja = 0  -> sumę liczb,
+	jeżeli operacja = 1  -> największą liczbę,
+	jeżeli operacja = 2  -> najmniejszą liczbę,
+
+Przykład wywołania:
+let dane = [4, 7, 2, 10, 5];
+
+let wynik = analizujTablice(dane, 1);
+console.log(wynik);
+Oczekiwany wynik:
+10

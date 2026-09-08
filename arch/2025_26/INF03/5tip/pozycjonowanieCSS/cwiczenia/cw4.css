@@ -1,0 +1,38 @@
+/* Domyślny Układ (Desktop):
+W .page-layout stwórz układ 3 kolumn (200px, 1fr, 200px) i 4 wierszy (70px, auto, auto, 50px).
+Użyj grid-template-areas, aby:
+Wiersz 1: header (cała szerokość).
+Wiersz 2: nav (lewa), main (środek), sidebar (prawa).
+Wiersz 3: Pusty w środku (.), nav po lewej, sidebar po prawej (rozciągają się w dół).
+Wiersz 4: footer (cała szerokość).
+
+Układ Mobilny (@media):
+Dodaj zapytanie mediów @media (max-width: 768px).
+Wewnątrz zdefiniuj jedną kolumnę (1fr).
+Użyj grid-template-areas, aby ułożyć wszystkie elementy w jedną pionową kolumnę w następującej kolejności: header, nav, main, sidebar, footer.
+
+*/
+
+.page-layout {
+    /* display: grid; */
+    width: 80vw;
+    min-height: 500px; /* Dla lepszej widoczności w pionie */
+    margin: 40px auto;
+    border: 3px solid #004d99;
+    padding: 5px;
+}
+
+.item {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2em;
+    color: white;
+    border: 1px solid #ffffff;
+}
+
+/* Kolorowanie dla czytelności */
+header   { background-color: #33aaff; grid-area: header; }
+nav      { background-color: #0077cc; grid-area: nav; }
+main     { background-color: #e6e6e6; color: #333; grid-area: main; }
+section  { background-color: #ff9933; grid-area: sidebar; }
+footer   { background-color: #33aaff; grid-area: footer; }

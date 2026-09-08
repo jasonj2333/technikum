@@ -1,0 +1,38 @@
+/* Użyj układu z 3 kolumn o równej szerokości (1fr każda) i 4 wierszy (60px, auto, 100px, 60px).
+Użyj grid-template-areas do:
+Rozciągnięcia header na 3 kolumny (Wiersz 1).
+Umieszczenia nav po lewej, main w środku, a sidebar po prawej (Wiersz 2).
+Rozciągnięcia nav i sidebar na kolejny wiersz (Wiersz 3). Pamiętaj, że main się kończy, więc jego miejsce będzie wolne (użyj .).
+Rozciągnięcia footer na 3 kolumny (Wiersz 4).
+Wymagany Układ:
+Wiersz / Kolumna	1	2	3
+Wiersz 1	header	header	header
+Wiersz 2	nav	main	sidebar
+Wiersz 3	nav	.	sidebar
+Wiersz 4	footer	footer	footer
+
+*/
+
+.page-layout {
+    /* display: grid; */
+    width: 80vw;
+    min-height: 500px; /* Dla lepszej widoczności w pionie */
+    margin: 40px auto;
+    border: 3px solid #004d99;
+    padding: 5px;
+}
+
+.item {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2em;
+    color: white;
+    border: 1px solid #ffffff;
+}
+
+/* Kolorowanie dla czytelności */
+header   { background-color: #33aaff; grid-area: header; }
+nav      { background-color: #0077cc; grid-area: nav; }
+main     { background-color: #e6e6e6; color: #333; grid-area: main; }
+section  { background-color: #ff9933; grid-area: sidebar; }
+footer   { background-color: #33aaff; grid-area: footer; }

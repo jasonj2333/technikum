@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Gra - Symulator Kierowcy</title>
+<style>
+  body { 
+    font-family: Arial; 
+    text-align: center; 
+    background-color: #f2f2f2; 
+  }
+
+  .panel {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+
+  button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  img {
+    width: 200px;
+    margin: 10px;
+  }
+
+  .lowFuel {
+    color: red;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<h1>🎮 Mini Symulator Kierowcy</h1>
+
+<img src="https://cdn-icons-png.flaticon.com/512/744/744465.png">
+
+<div class="panel">
+  <h2 id="nazwa"></h2>
+  <p>🚗 Prędkość: <span id="predkosc">0</span> km/h</p>
+  <p>⛽ Paliwo: <span id="paliwo">0</span> l</p>
+  <p>📏 Przebieg: <span id="przebieg">0</span> km</p>
+  <p>⭐ Punkty: <span id="punkty">0</span></p>
+
+  <button id="gaz" onclick="gaz()">Gaz +20</button>
+  <button id="hamulec">Hamuj -20</button>
+  <button id="jedz">Jedź 10 km</button>
+  <button id="tankuj">Tankuj +10l</button>
+</div>
+
+<script src="skrypt.js"></script>
+</body>
+</html>

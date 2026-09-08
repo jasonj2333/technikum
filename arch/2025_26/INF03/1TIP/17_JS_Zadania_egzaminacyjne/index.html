@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacja benzynowa</title>
+</head>
+<body>
+    <h1>Stacja benzynowa</h1>
+    <form action="">
+        <label for="rodzaj">Rodzaj paliwa</label>
+        <select id="rodzaj">
+            <option value="pb95">Benzyna 95 - 6,70</option>
+            <option value="pb98">Benzyna 98 - 7,10</option>
+            <option value="on">Olej napędowy - 6,92</option>
+            <option value="gas">Gas - 3,84</option>
+        </select>
+        <br>
+        <label for="ilosc">Ilość paliwa</label>
+        <input type="number" id="ilosc" value="0" step="0.1">
+        <br>
+        <button>Oblicz koszt</button>
+    </form>
+    <div id="wynik"></div>
+</body>
+</html>

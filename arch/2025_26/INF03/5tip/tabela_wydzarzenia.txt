@@ -1,0 +1,38 @@
+CREATE TABLE wydarzenia (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nazwa VARCHAR(100) NOT NULL,
+    data_wydarzenia DATE,
+    godzina_rozpoczecia TIME,
+    data_i_czas_dodania DATETIME DEFAULT CURRENT_TIMESTAMP,
+    ostatnia_aktualizacja TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    rok_wydania YEAR
+);
+
+INSERT INTO wydarzenia (nazwa, data_wydarzenia, godzina_rozpoczecia, rok_wydania)
+VALUES ('Spotkanie zespołu', '2024-10-26', '14:30:00', 2024);
+
+INSERT INTO wydarzenia (nazwa, data_wydarzenia, godzina_rozpoczecia, rok_wydania)
+VALUES ('Prezentacja projektu', '2025-01-15', '10:00:00', 2025);
+
+INSERT INTO wydarzenia (nazwa, data_wydarzenia, godzina_rozpoczecia, rok_wydania)
+VALUES 
+('Warsztaty kreatywne', '2024-11-05', '09:00:00', 2024),
+('Szkolenie BHP', '2024-12-01', '11:00:00', 2024),
+('Konferencja branżowa', '2025-03-10', '08:30:00', 2025),
+('Integracja firmowa', '2025-04-20', '18:00:00', 2025),
+('Zebranie zarządu', '2025-05-02', '16:00:00', 2025),
+('Webinar marketingowy', '2025-06-12', '14:00:00', 2025),
+('Rozmowy kwalifikacyjne', '2025-07-01', '09:30:00', 2025),
+('Audyt wewnętrzny', '2025-08-08', '10:00:00', 2025),
+('Kick-off nowego projektu', '2025-09-19', '13:00:00', 2025),
+('Szkolenie z oprogramowania', '2025-10-22', '09:00:00', 2025),
+('Spotkanie z klientem', '2025-11-14', '11:30:00', 2025),
+('Debata panelowa', '2025-12-05', '17:00:00', 2025),
+('Planowanie budżetu', '2026-01-25', '10:00:00', 2026),
+('Ocena roczna', '2026-02-18', '09:00:00', 2026),
+('Dzień otwarty', '2026-03-07', '10:00:00', 2026),
+('Testy systemowe', '2026-04-10', '14:00:00', 2026),
+('Gala rocznicowa', '2026-05-28', '19:00:00', 2026),
+('Szkolenie z zarządzania projektem', '2026-06-15', '09:00:00', 2026),
+('Wewnętrzne warsztaty programistyczne', '2026-07-30', '10:00:00', 2026),
+('Burza mózgów nad nowymi pomysłami', '2026-08-22', '15:00:00', 2026);

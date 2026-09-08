@@ -1,0 +1,53 @@
+Zadanie 1: Funkcja z parametrem
+
+Napisz funkcję przedstawSie(imie, miasto), która:
+- przyjmuje dwa argumenty (imie, miasto),
+- wyświetla w konsoli tekst:
+	Nazywam się <imię> i mieszkam w <miasto>.
+
+
+Przykład wywołania:
+przedstawSie("Kuba", "Kraków");
+
+Oczekiwany wynik w konsoli:
+	Nazywam się Kuba i mieszkam w Kraków.
+
+
+Zadanie 2: Pętla + zwracanie wartości
+
+Napisz funkcję silnia(n), która:
+- przyjmuje liczbę n,
+- oblicza silnię liczby n,
+- wykorzystuje pętlę for,
+- zwraca wynik.
+
+Przykład wywołania:
+
+let wynik = silnia(5);
+console.log(wynik);
+
+Oczekiwany wynik:
+120
+(bo 5 × 4 × 3 × 2 × 1 = 120)
+
+
+Zadanie 3: Analiza tablicy + warunki + funkcja
+
+Napisz funkcję przetworzTablice(tablica, operacja = 0), która:
+- przyjmuje tablicę liczb oraz typ operacji.
+- zwraca wynik zależny od wybranej operacji:
+	jeżeli operacja = 0 → zwraca średnią liczb,
+	jeżeli operacja = 1 → zwraca ilość liczb parzystych,
+	jeżeli operacja = 2 → zwraca ilość liczb nieparzystych.
+
+Przykład wywołania:
+
+let dane = [4, 7, 2, 10, 5];
+
+let wynik = przetworzTablice(dane, 1);
+console.log(wynik);
+
+
+Oczekiwany wynik:
+3
+(bo liczby parzyste to: 4, 2, 10)

@@ -1,0 +1,31 @@
+/* Użyj tego samego HTML (ignorując element .nav – usuniemy go z siatki, ale nie z HTML) i pracuj z obszarami header, main, sidebar, footer.
+Zdefiniuj trzy kolumny: sidebar (lewy) na 200px, main (środek) na 3fr, i prawa kolumna (na razie pusta) na 1fr.
+Zdefiniuj trzy wiersze: 80px, auto, 60px.
+Użyj grid-template-areas do stworzenia układu, który:
+Rozciągnie header i footer na całą szerokość (3 kolumny).
+W środkowym wierszu umieści sidebar po lewej, main w środku i pozostawi prawą kolumnę pustą (użyj .). 
+*/
+
+.page-layout {
+    /* display: grid; */
+    width: 80vw;
+    min-height: 500px; /* Dla lepszej widoczności w pionie */
+    margin: 40px auto;
+    border: 3px solid #004d99;
+    padding: 5px;
+}
+
+.item {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2em;
+    color: white;
+    border: 1px solid #ffffff;
+}
+
+/* Kolorowanie dla czytelności */
+header   { background-color: #33aaff; grid-area: header; }
+nav      { background-color: #0077cc; grid-area: nav; }
+main     { background-color: #e6e6e6; color: #333; grid-area: main; }
+section  { background-color: #ff9933; grid-area: sidebar; }
+footer   { background-color: #33aaff; grid-area: footer; }

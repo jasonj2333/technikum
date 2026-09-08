@@ -1,0 +1,32 @@
+/* Ustaw element .page-layout jako siatkę (display: grid;).
+Zdefiniuj dwie kolumny: lewa (nawigacja) o stałej szerokości 150px i prawa (główna zawartość) elastyczna (1fr).
+Zdefiniuj trzy wiersze: 70px (header), auto (środek), 50px (footer).
+Użyj grid-template-areas do stworzenia następującego układu:
+Wiersz 1: header na całą szerokość.
+Wiersz 2: nav po lewej, a reszta to main.
+Wiersz 3: footer na całą szerokość.
+Ustaw odstęp (gap) na 10px. */
+
+.page-layout {
+    /* display: grid; */
+    width: 80vw;
+    min-height: 500px; /* Dla lepszej widoczności w pionie */
+    margin: 40px auto;
+    border: 3px solid #004d99;
+    padding: 5px;
+}
+
+.item {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2em;
+    color: white;
+    border: 1px solid #ffffff;
+}
+
+/* Kolorowanie dla czytelności */
+header   { background-color: #33aaff; grid-area: header; }
+nav      { background-color: #0077cc; grid-area: nav; }
+main     { background-color: #e6e6e6; color: #333; grid-area: main; }
+section  { background-color: #ff9933; grid-area: sidebar; }
+footer   { background-color: #33aaff; grid-area: footer; }

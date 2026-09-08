@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kino Relax</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        main {
+            width: 400px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        .checkbox {
+            margin-top: 15px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px;
+            background-color: #0078d7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+
+        #wynik {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e8f4ff;
+            border-radius: 5px;
+            min-height: 20px;
+        }
+        div.checkbox{
+            display: flex;
+        }
+
+        div.checkbox label {
+            margin-top: auto;
+            display: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Kino Relax</h1>
+    </header>
+
+    <main>
+
+        <label for="imie">Imię:</label>
+        <input type="text" id="imie">
+
+        <label for="bilety">Liczba biletów:</label>
+        <input type="number" id="bilety" min="1">
+
+        <label for="seans">Rodzaj seansu:</label>
+        <select id="seans">
+            <option value="20">2D</option>
+            <option value="28">3D</option>
+            <option value="40">VIP</option>
+        </select>
+
+        <div class="checkbox">
+            <input type="checkbox" id="karta">
+            <label for="karta">Posiadam kartę stałego klienta</label>
+        </div>
+
+        <button id="przycisk">Oblicz koszt</button>
+
+        <div id="wynik"></div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

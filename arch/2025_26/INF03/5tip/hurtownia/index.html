@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - ZADANIA</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <section id="cointainer">
+        <header><section style="margin-bottom: 5px;">Stronę wykonał: <span id="special">TheFenix2000#6380</span></section><section style="margin-bottom: 5px;"><span class="przyklad">*</span> - poziom trudności</section></header>
+        
+        <main>
+            <section id="zad1">
+                <section class="trudnosc"><span>*</span></section>
+                <h2>Zadanie z forem</h2>
+                <h3>Napisz skrypt który po kliknięciu przycisku (o id <span class="klasa">guzik1</span>, <span class="klasa">guzik2</span>, <span class="klasa">guzik3</span>) wypisze w sekcji poniżej o id <span class="klasa">wynik1</span> odpowiednio <span class="przyklad">od 1 do numer guzika * 10 elementów</span>. <br>
+                     Dla pierwszego: <span class="przyklad">1, 2, 3, 4, 5, 6, 7, 8, 9, 10</span>.</h3>
+                <section class="zadanie_blok">
+                    <section class="guziki">
+                        <button id="guzik1">Guzik 1</button>
+                        <button id="guzik2">Guzik 2</button>
+                        <button id="guzik3">Guzik 3</button>
+                    </section>
+                    <section id="wynik1">Wynik: </section>
+                </section>
+            </section>
+            <hr>
+            <section id="zad2">
+                <section class="trudnosc"><span>**</span></section>
+                <h2>Zadanie z warunkami i zaznaczaniem</h2>
+                <h3>Napisz skrypt który po kliknieciu guzika (o id <span class="klasa">guzik4</span>) i po wpisaniu typu paliwa w input o id <span class="klasa">paliwo</span> oraz jego ilości w input o id <span class="klasa">litry</span> wyliczy ilość punktówm, jakie otrzyma kupujący na swoja kartę PAYBACK. <br>
+                Dla paliwa <span class="przyklad">1 - 5,6 zł/l</span>; <span class="przyklad">2 - 6,7 zł/l</span>; <span class="przyklad">3 - 7,8 zł/l</span>; <span class="przyklad">pozostałe - wyświetl błąd</span>.
+                Za każde <span class="przyklad">5 zł</span> klient otrzyma <span class="przyklad">1 pkt</span>. Jeżeli kupił hot-doga (zaznaczy checkbox o id <span class="klasa">hot-dog</span>) dostanie bonusowe <span class="przyklad">3pkt</span>. <br>
+                Wynik zapisz poniżej w sekcji o id <span class="klasa">wynik2</span>. <br>
+                Dla paliwa 1 i 12 litrów powinno wyjść 13 bez hot-doga</h3>
+                <section class="zadanie_blok">
+                    <section class="inputy">
+                        <label for="paliwo">Wybierz rodzaj paliwa</label>
+                        <input type="number" id="paliwo">
+                        <label for="litry">Wpisz ilość litrów</label>
+                        <input type="number" id="litry">
+                        <button id="guzik4">Oblicz</button>
+                        <section id="check"><label for="hot-dog">Kupił hot-doga?</label><input type="checkbox" id="hot-dog"></section>
+                    </section>
+                    <section id="wynik2">Punkty: </section>
+                </section>
+            </section>
+            <hr>
+            <section id="zad3">
+                <section class="trudnosc"><span>***</span></section>
+                <h2>Hurtownia - wersja moja</h2>
+                <h3>Napisz skrypt który:
+                    <ul>
+                        <li>Po kliknieciu "Zamów" wyświetli alert z nr zamówienia i przedmiotem z wiersza w którym jest przycisk (każdy przycisk ma wpisaną funkcję <span class="klasa">zamow(<span class="przyklad">x</span>)</span>, gdzie <span class="przyklad">x</span> - numer buttona liczony od 0) <br>
+                        Wszystkie komórki z nazwą produktu posiadają klasę <span class="klasa">produkt</span>. Dla pierwszego: <span class="przyklad">Zamówienie 1 - Monitor</span>. <span class="przyklad">*</span> </li>
+                        <li>
+                            Po kliknieciu "-", "Wpisz" lub "+" w danym wierszu (o klasie <span class="klasa">ilosc</span>) w kolumnie ilość ma zostać zmieniona liczba sztuk. <br>
+                            Wpisane funckje guzików: "-" (<span class="klasa">usunSztuke(<span class="przyklad">x</span>)</span>), "Wpisz" (<span class="klasa">wpiszIlosc(<span class="przyklad">x</span>)</span>), "+" (<span class="klasa">dodajSztuke(<span class="przyklad">x</span>)</span>), gdzie <span class="przyklad">x</span> - nr wiersza liczony od zera. <br>
+                            Ilość nie może być mniejsza niż 0. <span class="przyklad">**</span>
+                        </li>
+                        <li>
+                            Napisz funkcję <span class="klasa">wyliczSume()</span>, która pomnoży każdy wiersz (ilość produktu razy jego cenę) i sumę z tych wyników wpisze do komórki o id <span class="klasa">wynik3</span>. <br>
+                            Ma być ona wykonywana po każdej modyfikacji ilości produktów oraz po załadowaniu się strony. Każda komórka z cena posiada klasę <span class="klasa">cena</span>. <br>
+                            Jeżeli cena jest <span class="przyklad">większa niż 20000 zł</span> to ustaw tło komórki na <span class="klasa">darkred</span>, jeżeli jest <span class="przyklad">mniejsza niż 20000 zł, ale większa niż 5000 zł</span> wtedy ustaw <span class="klasa">orangered</span> w pozostałych przypadkach <span class="klasa">honeydew</span>. <span class="przyklad">***</span>
+                        </li>
+                    </ul>
+                </h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Lp.</th>
+                            <th>Nazwa produktu</th>
+                            <th>Aktualizacja</th>
+                            <th>Zamów</th>
+                            <th>Ilość</th>
+                            <th>Cena</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td class="produkt">Monitor</td>
+                            <td>
+                                <section class="aktualizuj">
+                                    <button onclick="usunSztuke(0)">-</button>
+                                    <button onclick="wpiszIlosc(0)">Wpisz</button>
+                                    <button onclick="dodajSztuke(0)">+</button>
+                                </section>
+                            </td>
+                            <td>
+                                <section class="zamow"><button onclick="zamow(0)" class="zamowB">Zamów</button></section>
+                            </td>
+                            <td class="ilosc">0</td>
+                            <td class="cena">499 zł</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="produkt">Myszka</td>
+                            <td>
+                                <section class="aktualizuj">
+                                    <button onclick="usunSztuke(1)">-</button>
+                                    <button onclick="wpiszIlosc(1)">Wpisz</button>
+                                    <button onclick="dodajSztuke(1)">+</button>
+                                </section>
+                            </td>
+                            <td>
+                                <section class="zamow"><button onclick="zamow(1)" class="zamowB">Zamów</button></section>
+                            </td>
+                            <td class="ilosc">0</td>
+                            <td class="cena">199 zł</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td class="produkt">Klawiatura</td>
+                            <td>
+                                <section class="aktualizuj">
+                                    <button onclick="usunSztuke(2)">-</button>
+                                    <button onclick="wpiszIlosc(2)">Wpisz</button>
+                                    <button onclick="dodajSztuke(2)">+</button>
+                                </section>
+                            </td>
+                            <td>
+                                <section class="zamow"><button onclick="zamow(2)" class="zamowB">Zamów</button></section>
+                            </td>
+                            <td class="ilosc">0</td>
+                            <td class="cena">379 zł</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td class="produkt">Słuchawki</td>
+                            <td>
+                                <section class="aktualizuj">
+                                    <button onclick="usunSztuke(3)">-</button>
+                                    <button onclick="wpiszIlosc(3)">Wpisz</button>
+                                    <button onclick="dodajSztuke(3)">+</button>
+                                </section>
+                            </td>
+                            <td>
+                                <section class="zamow"><button onclick="zamow(3)" class="zamowB">Zamów</button></section>
+                            </td>
+                            <td class="ilosc">0</td>
+                            <td class="cena">240 zł</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5">SUMA</td>
+                            <td id="wynik3">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </section>
+</body>
+</html>
