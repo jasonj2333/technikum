@@ -24,7 +24,7 @@
 
         //Rzutowanie - czyli zamiana typów
         $tekst = "12abc";
-        $liczba = (int) $tekst;
+        $liczba = (float) $tekst;
         echo "<p>Miałem tekst: $tekst i wykonałem rzutowanie na int - efekt $liczba </p>";
 
         $liczbaUzytkownika = 10.5;
@@ -33,6 +33,16 @@
 
         $zdal  = (bool) 0;
         var_dump($zdal);
+
+        //Stałe
+        const VAT = 23;
+        echo "VAT wynosi " . VAT . "%";
+        
+        define("SZKOLA", "ZS Nce");
+        echo "<br>Nasza szkoła to " . SZKOLA;
+
+        $podatek = 12;
+        echo "<br>Podatek dochodowy wynosi {$podatek}%";
     ?>
 </body>
 </html>
