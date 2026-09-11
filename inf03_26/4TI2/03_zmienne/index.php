@@ -30,6 +30,32 @@
         echo $logiczna;
         echo "<br>";
         var_dump($logiczna2);
+        echo "<br>";
+
+        //Rzutowanie
+        $bokInt = (int) $bok;
+        var_dump($bok);
+        var_dump($bokInt);
+
+        echo "<br>";
+        $srednia = "4.76addas";
+        $srednia = (float)$srednia;
+        var_dump($srednia);
+
+        echo "<br>";
+        $zdal = (bool) 0;
+        var_dump($zdal);
+
+        //Stałe
+        const VAT = 23;
+        echo "<br>Podatek VAT wynosi " . VAT . "%";
+
+        define("SZKOŁA", "ZS Nce");
+        echo "<br>Nasza szkoła to " . SZKOŁA;
+
+        $klasa = 2;
+        echo "<br>Moja klasa to " . $klasa ."A";
+        echo "<br>Moja klasa to {$klasa}A";
     ?>
 </body>
 </html>
