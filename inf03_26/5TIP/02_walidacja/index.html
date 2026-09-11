@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walidacja formularzy</title>
+</head>
+<body>
+    <h1>Formularz</h1>
+    <form action="zapisNaKurs.php" method="POST">
+        <div>
+            <label for="imie">Imię</label>
+            <input type="text" id="imie">
+        </div>
+
+        <div>
+            <label for=""><!-- Inne sposób - niezalecam -->
+                Nazwisko
+                <input type="text" id="nazwisko">
+            </label>
+        </div>
+        
+
+        <div>
+            <label for="wyksztalcenie">Wykształcenie</label>
+            <input type="text" id="wyksztalcenie">
+        </div>
+        
+
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email">
+        </div>
+        
+
+        <div>
+            <label for="rodo">RODO</label>
+            <input type="checkbox" id="rodo">
+        </div>
+        
+
+        <div>
+            <p>Prawo jazdy</p>
+            <input type="radio" value="Tak" id="pjTak" name="prawoJazdy">
+            <label for="pjTak">Tak</label>
+            <input type="radio" value="Nie" id="pjNie" name="prawoJazdy" checked>
+            <label for="pjNie">Nie</label>
+        </div>
+        <button id="wyslij">Wyślij</button>
+    </form>
+    <div id="info"></div>
+
+    <script src="skrypt.js"></script>
+</body>
+</html>
