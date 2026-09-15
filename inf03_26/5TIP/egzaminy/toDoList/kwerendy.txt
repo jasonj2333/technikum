@@ -1,0 +1,12 @@
+‒ Zapytanie 1: wybierające jedynie najmniejszą wartość priorytetu notatki dla osoby o id równym 3
+‒ Zapytanie 2: wybierające jedynie nazwę notatki i jej priorytet dla notatek, których nazwa
+zawiera cząstkę „na”
+‒ Zapytanie 3: wybierające jedynie imię osoby i odpowiadającą mu nazwę notatki dla notatek,
+których priorytet jest równy 5. Należy posłużyć się relacją
+‒ Zapytanie 4: liczące dla każdego imienia osoby liczbę jego notatek. Kwerenda wybiera jedynie
+imię i odpowiadającą mu liczbę notatek. Należy posłużyć się relacją
+
+SELECT priorytet FROM `notatki` WHERE Osoby_id = 3 ORDER BY priorytet LIMIT 1;
+SELECT nazwa, priorytet FROM notatki WHERE nazwa LIKE "%na%";
+SELECT o.imie, n.nazwa FROM `osoby` o JOIN notatki n ON o.id = n.Osoby_id WHERE n.priorytet = 5;
+SELECT o.imie, COUNT(n.Osoby_id) `Liczba notatek` FROM osoby o JOIN notatki n ON o.id = n.Osoby_id GROUP BY n.Osoby_id;
