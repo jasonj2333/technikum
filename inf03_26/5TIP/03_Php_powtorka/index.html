@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamówienia</title>
+</head>
+<body>
+    <h1>Zamówienia</h1>
+    <form action="zamow.php" method="post">
+        <label for="imie">Imię</label>
+        <input type="text" id="imie" name="imie"><br>
+        <label for="nazwisko">Nazwisko</label>
+        <input type="text" id="nazwisko" name="nazwisko"><br>
+        <label for="adres">Adres</label>
+        <textarea name="adres" id="adres"></textarea><br>
+        <label for="wysylka">Metoda wysyłki</label>
+        <select name="wysylka" id="wysylka">
+            <option value="p">paczkomat</option>
+            <option value="k">kurier</option>
+            <option value="pp">Poczta Polska</option>
+        </select>
+        <br>
+        <h2>Produkty</h2>
+        <input type="checkbox" name="produkty[]" id="komputer" value="komputer">
+        <label for="komputer">Komputer</label><br>
+        <input type="checkbox" name="produkty[]" id="konsola" value="konsola">
+        <label for="konsola">Konsola</label><br>
+        <input type="checkbox" name="produkty[]" id="tv" value="tv">
+        <label for="tv">Telewizor</label><br>
+        <button>Zamów</button>
+    </form>
+</body>
+</html>
