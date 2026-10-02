@@ -5,7 +5,7 @@
         $rokWydania = $_POST['rokWydania'];
         $id_autor = $_POST['autor'];
 
-        $conn = mysqli_connect("localhost", "root", "", "biblioteka2");
+        $conn = mysqli_connect("localhost", "root", "", "biblioteka");
         $query = "INSERT INTO ksiazki (isbn, tytul, rokWydania, id_autor) VALUES ('$isbn', '$tytul', $rokWydania, $id_autor)";
         $result = mysqli_query($conn, $query);
         mysqli_close($conn);
@@ -22,12 +22,12 @@
 <body>
     <h1>Biblioteka</h1>
     <?php 
-        $conn = mysqli_connect("localhost", "root", "", "biblioteka2");
+        $conn = mysqli_connect("localhost", "root", "", "biblioteka");
         //$conn = new mysqli("localhost", "root", "", "biblioteka2");
         mysqli_set_charset($conn, "utf8");
         //$conn->set_charset("utf8");
         //var_dump($conn);
-        $query = "SELECT isbn, tytul, rokWydania, imie, nazwisko FROM ksiazki k JOIN autor a ON k.id_autor = a.id";
+        $query = "SELECT isbn, tytul, rokWydania, imie, nazwisko, k.id FROM ksiazki k JOIN autor a ON k.id_autor = a.id";
         $result = mysqli_query($conn, $query);
         //$result = $conn->query($query);
         //var_dump($result);
@@ -37,6 +37,7 @@
             <th>Tytuł</th>
             <th>Rok wydania</th>
             <th>Autor</th>
+            <th>Operacje</th>
         </tr>";
         while($row = mysqli_fetch_row($result)){
             echo "<tr>
@@ -44,6 +45,10 @@
                 <td>$row[1]</td>
                 <td>$row[2]</td>
                 <td>$row[3] $row[4]</td>
+                <td>
+                    <a href='zmien.php?id=$row[5]'>Edycja</a>
+                    <a href='usun.php?id=$row[5]'>Usuń</a>
+                </td>
             </tr>";
         }
         // while($row = mysqli_fetch_assoc($result)){
