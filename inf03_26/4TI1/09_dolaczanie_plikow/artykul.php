@@ -8,16 +8,17 @@
 <body>
     <?php include_once "layout/header.php" ?>
     <main>
-        <h2>Artykuły</h2>
         <?php require_once "dbase.php" ?>
         <?php 
-            foreach($artykuly as $id => $artykul){
-                echo "<article>";
-                echo tnij($artykul);
-                echo "<a href='artykul.php?id=$id'> >>> czytaj więcej </a> 
-                </article>";
-            }
+            $id = $_GET['id'];
         ?>
+        <h2>Artykuł - Temat <?= $id ?></h2>
+        <article>
+            <?php 
+                echo $artykuly[$id];
+            ?>
+        </article>
+        
     </main>
     <?php include_once "layout/footer.php" ?>
 </body>
