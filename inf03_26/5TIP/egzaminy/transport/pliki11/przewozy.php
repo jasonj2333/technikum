@@ -26,6 +26,34 @@
                     <th>Akcja</th>
                 </tr>
                 <!-- skrypt 1 i 2 -->
+                 <?php 
+                    $conn = new mysqli("localhost", "root", "", "przewozy");
+
+                    if(isset($_GET['id'])){
+                        $id = $_GET['id'];
+                        $query = "DELETE FROM zadania WHERE id_zadania = $id;";
+                        $result = $conn->query($query);
+                    }
+
+                    if(isset($_POST['zadanie'])){
+                        $zadanie = $_POST['zadanie'];
+                        $data = $_POST['data'];
+                        $query = "INSERT INTO `zadania`(`zadanie`, `data`, `osoba_id`) VALUES ('$zadanie','$data', 1);";
+                        $result = $conn->query($query);
+                    }
+
+                    $query = "SELECT id_zadania, zadanie, data FROM `zadania`;";
+                    $result = $conn->query($query);
+                    while($row = $result->fetch_row()){
+                        echo "<tr>";
+                        echo "<td>$row[1]</td>";
+                        echo "<td>$row[2]</td>";
+                        echo "<td><a href='przewozy.php?id=$row[0]'>Usuń</a></td>";
+                        echo "</tr>";
+                    }
+
+                    $conn->close();
+                 ?>
             </table>
             <form action="" method="post">
                 <label for="zadanie">Zadanie do wykonania:</label>
