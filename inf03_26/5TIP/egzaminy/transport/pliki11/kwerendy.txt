@@ -1,0 +1,11 @@
+− Zapytanie 1: wybierające jedynie id_zadania, zadanie i datę z tabeli zadania 
+− Zapytanie 2: wstawiające do tabeli zadania rekord z danymi: „spotkanie firmowe”, dnia 
+„2024-05-10” dla osoby o id równym 1  
+− Zapytanie 3: usuwające rekord o id_zadania równym 2 z tabeli zadania  
+− Zapytanie 4: wybierające jedynie imię, nazwisko i numer telefonu osoby oraz odpowiadające im  
+zadanie i datę z tabeli zadania. Należy posłużyć się relacją
+
+SELECT id_zadania, zadanie, data FROM `zadania`;
+INSERT INTO `zadania`(`zadanie`, `data`, `osoba_id`) VALUES ('spotkanie firmowe','2024-05-10', 1);
+DELETE FROM zadania WHERE id_zadania = 2;
+SELECT imie, nazwisko, telefon, zadanie, data FROM osoby o JOIN zadania z ON o.id_osoba = z.osoba_id;
