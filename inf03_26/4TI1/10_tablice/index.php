@@ -67,16 +67,47 @@
         $uczen["uwagi"] = [
             "Przeszkadza na lekcji",
             "Korzysta z telefonu i nie pisze kodu PHP",
+            "Je ciastka na lekcji"
         ];
         echo "<pre>";
         var_dump($uczen);
         echo "</pre>";
 
         echo $uczen["uwagi"][1];
+        //var_dump(gettype($uczen['uwagi']));
 
+        echo "<ul>";
         foreach($uczen as $klucz => $wartosc){
-            echo "<p>$klucz: $wartosc</p>";
+            if(gettype($uczen[$klucz]) == "array"){
+                echo "<li> $klucz";
+                    echo "<ul>";
+                    foreach($uczen[$klucz] as $uwaga){
+                        echo "<li>$uwaga</li>";
+                    }
+                    echo "</ul>";
+                echo "</li>";
+            }else echo "<li>$klucz: $wartosc</li>";
         }
+        echo "</ul>";
+
+        $produkty = [
+            ['nazwa' => "Zeszyt", 'cena' => 2.50],
+            ['nazwa' => "Długopis", 'cena' => 5.25],
+            ['nazwa' => "Linijka", 'cena' => 3],
+            ['nazwa' => "Piórnik", 'cena' => 35],
+        ];
+
+        echo $produkty[1]['nazwa'] . " - " . $produkty[1]['cena'] . " zł";
+
+        echo"<table>";
+        echo "<tr><th>Nazwa produktu</th><th>Cena</th></tr>";
+        foreach($produkty as $produkt){
+            echo "<tr>";
+            echo "<td> {$produkt['nazwa']} </td>";
+            echo "<td> {$produkt['cena']} </td>";
+            echo "</tr>";
+        }
+        echo"</table>";
     ?>
 </body>
 </html>
