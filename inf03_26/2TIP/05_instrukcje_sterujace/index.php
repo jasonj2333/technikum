@@ -51,3 +51,41 @@ echo "<h2>Pętla for (instrukcja iteracyjna)</h2>";
 for($i = 1; $i <= 10; $i++){
     echo "<p>$i. Będę się uczył PAI</p>";
 }
+
+echo "<h2>Pętla while</h2>";
+$liczba = -5;
+while($liczba < 10){
+    echo "<p>Liczba wynosi $liczba, kwadrat liczby to: ".$liczba ** 2 ."</p>";
+    $liczba += 2;
+}
+
+echo "<h2>Pętla do .. while</h2>";
+do{
+    echo "<p>Liczba wynosi $liczba, kwadrat liczby to: ".$liczba ** 2 ."</p>";
+    $liczba += 2;
+}while($liczba < 20);
+
+echo "<h2>Pętla foreach</h2>";
+$kolory = ["żółty", "niebieski", "czerwony", "pomarańczowy"];
+echo $kolory[2] . "<br>";
+
+foreach($kolory as $kolor){
+    echo "<p>Mój kolor to $kolor</p>";
+}
+
+for($i = 0; $i < count($kolory); $i++){
+    if($i == 2) continue; //przerwij bieżącą iteracje i przejść do kolejnego powtórzenia pętli
+    echo "<p>" . $i+1 . ". $kolory[$i]</p>";
+}
+
+$liczba = 1;
+while($liczba < 100){
+    if($liczba == 83) break; //przerywa pętle
+    if($liczba % 3 == 0) {
+        $liczba+=2;
+        continue;
+    }
+    echo $liczba." ";
+    $liczba++;
+}
+echo "<br>";
