@@ -47,3 +47,30 @@ $csv = "7, 8, 9, 12, 3, 56, 8, 12, 0, 56";
 $liczby2 = explode(',', $csv);
 echo "<br>";
 var_dump($liczby2);
+
+$netto = [10, 40, 78, 100, 150];
+$brutto = array_map(function($n){
+    return $n * 1.23;
+}, $netto);
+
+echo "<br><br>";
+var_dump($brutto);
+
+$parzyste = array_filter($liczby2, function($liczba){
+    return $liczba % 2 == 0;
+});
+
+echo "<br><br>";
+foreach($parzyste as $liczba){
+    echo $liczba . ", ";
+}
+echo "<br><br>";
+
+// $suma = 0;
+// foreach($netto as $cena){
+//     $suma += $cena;
+// }
+$suma = array_reduce($netto, function($acc, $cena){
+    return $acc + $cena;
+});
+echo $suma;
